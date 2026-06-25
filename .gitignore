@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Generati dagli script al build time — non committare
+public/projects.json
+public/posts.json
+
+# Build output
+dist/
+
+# Environment variables con dati sensibili (se presenti in futuro)
+.env.local
+.env.*.local
+
+# Vite cache
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

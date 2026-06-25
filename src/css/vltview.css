@@ -1,0 +1,141 @@
+/* vltview.css                                                               */
+/*****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* ── Brand hero ─────────────────────────────────────────────────────────── */
+
+.vlt-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem var(--pad);
+  border-bottom: 1px solid #1e1e1e;
+  gap: 0;
+}
+
+.vlt-brand-logo-wrap {
+  min-width: calc(4rem + 5rem);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: brandLogoExpand 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes brandLogoExpand {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(var(--cube-w) * -0.62)); }
+}
+
+/* Cubo non trasla da solo: è il wrapper a gestire il centraggio */
+.vlt-brand-logo-wrap .vlt-logo--static .vlt-cube,
+.vlt-brand-logo-wrap .vlt-logo--static:hover .vlt-cube {
+  animation: none;
+  transform: translateX(0);
+  transition: none;
+}
+
+.vlt-brand-slogan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  font-weight: 300;
+  color: #dddddd;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.vlt-brand-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.76rem, 1.4vw, 0.86rem);
+  font-weight: 300;
+  color: #b5b5b5;
+  line-height: 1.95;
+  max-width: 560px;
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.vlt-brand-text:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.vlt-brand-text strong {
+  color: #e8e8e8;
+  font-weight: 600;
+}
+
+/* ── Blog teaser ─────────────────────────────────────────────────────────── */
+
+.blog-teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem var(--pad) 4rem;
+  border-top: 1px solid #1a1a1a;
+  gap: 0;
+}
+
+.teaser-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.teaser-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.7rem, 1.3vw, 0.82rem);
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+}
+
+.teaser-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8f080f;
+  background: rgba(143, 8, 15, 0.06);
+  border: 1px solid rgba(143, 8, 15, 0.28);
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.teaser-cta:hover {
+  color: #c01010;
+  background: rgba(143, 8, 15, 0.12);
+  border-color: rgba(143, 8, 15, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .vlt-brand {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem var(--pad);
+  }
+
+  .vlt-brand-logo-col {
+    min-width: unset;
+  }
+
+  .vlt-brand-text {
+    max-width: 100%;
+  }
+}

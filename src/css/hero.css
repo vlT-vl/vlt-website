@@ -1,0 +1,62 @@
+/* hero.css                                                                  */
+/*****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 2rem 1.4rem;
+  background: #111111;
+  border-bottom: 3px solid #8f080f;
+  gap: 0.25rem;
+}
+
+.hero-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #8f080f;
+  text-transform: uppercase;
+}
+
+/* Wrapper: anima a sinistra all'apertura per centrare [cubo+vlT] sul nome.
+   Delay 0.35s sincronizzato con staticTextIn (0.4s) in vltlogo.css. */
+.hero-logo-wrap {
+  animation: heroWrapExpand 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes heroWrapExpand {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(var(--cube-w) * -0.62)); }
+}
+
+/* Nel contesto hero il cubo non trasla autonomamente:
+   è il wrapper a gestire l'offset di centratura. */
+.hero-logo-wrap .vlt-logo--static .vlt-cube,
+.hero-logo-wrap .vlt-logo--static:hover .vlt-cube {
+  animation: none;
+  transform: translateX(0);
+  transition: none;
+}
+
+.hero-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.hero-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+  font-weight: 300;
+  color: #909090;
+  max-width: 520px;
+  line-height: 2;
+  letter-spacing: 0.3px;
+}

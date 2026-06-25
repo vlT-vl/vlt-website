@@ -1,0 +1,167 @@
+/* licensemodal.css                                                           */
+/*****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.lmo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: lmoIn 0.2s ease both;
+}
+
+@keyframes lmoIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lmo-card {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 580px;
+  max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  animation: lmoCardIn 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+  overflow: hidden;
+}
+
+@keyframes lmoCardIn {
+  from { opacity: 0; transform: scale(0.96) translateY(16px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+/* ── Header ── */
+.lmo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  border-bottom: 1px solid #21262d;
+  flex-shrink: 0;
+  background: #161b22;
+  border-radius: 10px 10px 0 0;
+}
+
+.lmo-header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.lmo-header-icon {
+  font-size: 1.4rem;
+  color: #8b949e;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.lmo-eyebrow {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #8f080f;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.lmo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 600;
+  color: #e6edf3;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.lmo-spdx {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.63rem;
+  font-weight: 400;
+  color: #484f58;
+  letter-spacing: 0.5px;
+}
+
+.lmo-close {
+  flex-shrink: 0;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #8b949e;
+  font-size: 1.1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.lmo-close:hover {
+  color: #e6edf3;
+  border-color: #8b949e;
+  background: #30363d;
+}
+
+/* ── Body ── */
+.lmo-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 1.75rem;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d #0d1117;
+}
+
+.lmo-spinner-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.lmo-spinner {
+  width: 24px; height: 24px;
+  border: 2px solid #21262d;
+  border-top-color: #8f080f;
+  border-radius: 50%;
+  animation: lmoSpin 0.7s linear infinite;
+}
+
+@keyframes lmoSpin { to { transform: rotate(360deg); } }
+
+.lmo-empty {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: #484f58;
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.lmo-text {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.72rem;
+  color: #adbac7;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .lmo-overlay { padding: 0; align-items: flex-end; }
+  .lmo-card    { max-height: 90vh; border-radius: 12px 12px 0 0; }
+  .lmo-header  { padding: 1.25rem; border-radius: 12px 12px 0 0; }
+  .lmo-body    { padding: 1.25rem; }
+}

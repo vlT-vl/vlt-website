@@ -1,0 +1,216 @@
+/* app.css — layout radice + footer                                          */
+/*****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1;
+}
+
+.view-content {
+  animation: viewFadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes viewFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Footer ── */
+.ftr {
+  background: #0d0d0d;
+  border-top: 1px solid #1e1e1e;
+}
+
+.ftr-body {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 2rem;
+  padding: 1.75rem var(--pad) 1.5rem;
+  border-bottom: 1px solid #181818;
+}
+
+/* brand col */
+.ftr-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ftr-logo-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.ftr-logo-btn:hover { opacity: 1; }
+
+.ftr-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #cccccc;
+  letter-spacing: 0.2px;
+}
+
+.ftr-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: #666666;
+  letter-spacing: 0.2px;
+}
+
+.ftr-location {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: #444444;
+  margin-bottom: 0.5rem;
+}
+
+.ftr-socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.ftr-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid #252525;
+  border-radius: 6px;
+  color: #555555;
+  font-size: 0.85rem;
+  text-decoration: none;
+  background: #161616;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.ftr-social-btn:hover {
+  color: #cccccc;
+  border-color: #3a3a3a;
+  background: #1e1e1e;
+}
+
+/* nav + links cols */
+.ftr-nav,
+.ftr-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.ftr-col-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #3a3a3a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.2rem;
+}
+
+.ftr-nav-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #666666;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.2s;
+  letter-spacing: 0.2px;
+}
+.ftr-nav-link:hover { color: #cccccc; }
+
+.ftr-ext-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #666666;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition: color 0.2s;
+}
+.ftr-ext-link:hover { color: #cccccc; }
+
+/* bottom bar */
+.ftr-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem var(--pad);
+}
+
+.ftr-copy {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: #333333;
+  letter-spacing: 0.3px;
+}
+
+.ftr-stack {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: #333333;
+  letter-spacing: 0.2px;
+}
+
+.ftr-stack-icon {
+  font-size: 0.7rem;
+  color: #444444;
+  flex-shrink: 0;
+}
+
+.ftr-version {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #2a2a2a;
+  background: #111111;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.52rem;
+  font-weight: 500;
+  color: #666666;
+  letter-spacing: 0.4px;
+  user-select: none;
+}
+
+/* responsive */
+@media (max-width: 700px) {
+  .ftr-body {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem var(--pad) 1.75rem;
+  }
+  .ftr-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 420px) {
+  .ftr-body  { grid-template-columns: 1fr; }
+  .ftr-brand { grid-column: auto; }
+  .ftr-bottom { flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+}

@@ -1,0 +1,702 @@
+/* projects.css                                                               */
+/*****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* ── Intro ────────────────────────────────────────────────────────────────── */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  animation: projectsFadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+}
+
+@keyframes projectsFadeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.projects-intro {
+  padding: 3rem var(--pad) 2rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.projects-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.projects-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.72rem, 1.3vw, 0.82rem);
+  font-weight: 300;
+  color: #888888;
+  line-height: 1.9;
+  max-width: 560px;
+}
+
+/* ── Hero repo card ───────────────────────────────────────────────────────── */
+
+.hero-repo-wrap {
+  padding: 2rem var(--pad) 0;
+}
+
+.hero-repo-card {
+  width: 100%;
+  background: #111111;
+  border: 1px solid #222222;
+  border-top: 3px solid var(--lang-color, #f47067);
+  border-radius: 12px;
+  padding: 2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  animation: heroCardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+@keyframes heroCardIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-repo-card:hover {
+  border-color: var(--lang-color, #f47067);
+  box-shadow: 0 0 32px rgba(0,0,0,0.4);
+}
+
+.hero-repo-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hero-repo-img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 10px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-repo-img-icon {
+  font-size: 1.8rem;
+  color: #30363d;
+}
+
+.hero-repo-img-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0d1117;
+  padding: 6px;
+}
+
+.hero-repo-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-repo-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.45rem;
+}
+
+.hero-repo-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.hero-repo-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  color: var(--lang-color, #8b949e);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+}
+
+.hero-repo-lang-icon {
+  font-size: 0.78rem;
+}
+
+.hero-repo-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: #888888;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.hero-repo-gh {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #8b949e;
+  font-size: 1rem;
+  text-decoration: none;
+  background: #161b22;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.hero-repo-gh:hover { color: #e6edf3; border-color: #8b949e; }
+
+.hero-repo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.hero-repo-topic {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  color: #4493f8;
+  background: rgba(68,147,248,0.08);
+  border: 1px solid rgba(68,147,248,0.16);
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+}
+
+.hero-repo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px solid #1a1a1a;
+}
+
+.hero-repo-stats {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.hero-repo-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.63rem;
+  color: #555555;
+}
+
+.hero-repo-cta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--lang-color, #f47067);
+  letter-spacing: 0.3px;
+  transition: opacity 0.15s;
+}
+
+.hero-repo-card:hover .hero-repo-cta { opacity: 0.75; }
+
+/* ── Search bar ───────────────────────────────────────────────────────────── */
+
+.view-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.75rem var(--pad) 0;
+  animation: searchBarDrop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes searchBarDrop {
+  from { opacity: 0; transform: translateY(-14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.view-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  animation: searchExpand 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+
+@keyframes searchExpand {
+  from { transform: translateY(-20px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+.view-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555555;
+  font-size: 1rem;
+  pointer-events: none;
+  opacity: 0;
+  animation: searchIconIn 0.3s ease 0.55s forwards;
+}
+
+@keyframes searchIconIn {
+  to { opacity: 1; }
+}
+
+.view-search-wrap:focus-within .view-search-icon {
+  color: #888888;
+  opacity: 1;
+  animation: none;
+}
+
+.view-search-input {
+  width: 100%;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 0.72rem 1rem 0.72rem 2.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: #e8e8e8;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.view-search-input::placeholder {
+  color: #555555;
+  letter-spacing: 0.4px;
+  font-style: italic;
+}
+
+.view-search-input:focus {
+  border-color: #444444;
+  background: #181818;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.45), 0 0 0 2px rgba(255,255,255,0.04);
+}
+
+.view-search-input::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.view-filter-count {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: #555555;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Filter ───────────────────────────────────────────────────────────────── */
+
+.projects-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  padding: 1.75rem var(--pad) 0;
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.63rem;
+  font-weight: 400;
+  color: #555555;
+  padding: 0.28rem 0.7rem;
+  background: transparent;
+  border: 1px solid #1e1e1e;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  letter-spacing: 0.2px;
+}
+
+.filter-btn:hover {
+  color: #bbbbbb;
+  border-color: #3a3a3a;
+}
+
+/* --tag-c non è settato nelle pills lingua → fallback brand red */
+.filter-btn--active {
+  color: var(--tag-c, #e0e0e0);
+  border-color: color-mix(in srgb, var(--tag-c, #8f080f) 45%, transparent);
+  background: color-mix(in srgb, var(--tag-c, #8f080f) 8%, transparent);
+}
+
+.filter-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Grid uniforme — tutte le card della stessa dimensione ───────────────── */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  padding: 2rem var(--pad) 2.5rem;
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  background: #111111;
+  border: 1px solid #1e1e1e;
+  border-left: 3px solid var(--lang-color, #2a2a2a);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  animation: cardIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition:
+    border-color  0.3s ease,
+    transform     0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow    0.35s ease,
+    background    0.25s ease;
+}
+
+.repo-card:hover {
+  background: #161616;
+  border-color: #2e2e2e;
+  border-left-color: var(--lang-color, #555);
+  transform: translateY(-5px);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(143, 8, 15, 0.07);
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(22px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+
+/* ── Card body ── */
+
+.repo-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 1.25rem 1.1rem;
+  flex: 1;
+  gap: 0;
+}
+
+.repo-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  margin-bottom: 0.75rem;
+}
+
+.repo-card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.repo-card-name-group {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  flex: 1;
+}
+
+/* ── Repo image / placeholder ── */
+
+.repo-card-img {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  border-radius: 11px;
+  background: #181818;
+  border: 1px solid #222;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.repo-card-img-icon {
+  font-size: 1.8rem;
+  color: var(--lang-color, #333);
+  opacity: 0.55;
+}
+
+.repo-card-img-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #181818;
+  padding: 3px;
+}
+
+.repo-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dddddd;
+  line-height: 1.3;
+  word-break: break-word;
+  transition: color 0.2s;
+}
+
+.repo-card:hover .repo-name { color: #ffffff; }
+
+.repo-gh-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 4px;
+  color: #2e2e2e;
+  font-size: 0.9rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.2s, background 0.2s;
+}
+
+.repo-gh-link:hover {
+  color: #aaaaaa;
+  background: #1e1e1e;
+}
+
+.repo-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.73rem;
+  font-weight: 300;
+  color: #666666;
+  line-height: 1.75;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* ── Meta ── */
+
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.repo-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  color: #666666;
+}
+
+.repo-lang-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%; flex-shrink: 0;
+}
+
+.repo-lang-icon {
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.filter-lang-icon {
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.repo-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  color: #484848;
+}
+
+/* ── Topics ── */
+
+.repo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.28rem;
+}
+
+.repo-topic {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 400;
+  color: #4493f8;
+  padding: 0.1rem 0.48rem;
+  background: rgba(68, 147, 248, 0.06);
+  border: 1px solid rgba(68, 147, 248, 0.14);
+  border-radius: 20px;
+  letter-spacing: 0.15px;
+}
+
+/* ── License row ── */
+
+.repo-license-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #181818;
+}
+
+.repo-license-label {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.59rem;
+  font-weight: 400;
+  color: #3e3e3e;
+  letter-spacing: 0.25px;
+  flex-shrink: 0;
+}
+
+.repo-license-icon {
+  font-size: 0.72rem;
+  color: #3e3e3e;
+}
+
+.repo-license-pill {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.57rem;
+  font-weight: 600;
+  color: #8f080f;
+  padding: 0.13rem 0.52rem;
+  background: rgba(143, 8, 15, 0.07);
+  border: 1px solid rgba(143, 8, 15, 0.22);
+  border-radius: 20px;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+}
+
+.repo-license-pill:hover {
+  background: rgba(143, 8, 15, 0.15);
+  border-color: rgba(143, 8, 15, 0.45);
+  color: #c01010;
+  transform: scale(1.05);
+}
+
+.repo-license-none {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.57rem;
+  color: #2e2e2e;
+  font-style: italic;
+}
+
+/* ── Skeleton ── */
+
+.repo-card--skeleton {
+  min-height: 155px;
+  border-color: #181818;
+  border-left-color: #222222;
+  cursor: default;
+  background: linear-gradient(90deg, #111111 25%, #171717 50%, #111111 75%);
+  background-size: 200% 100%;
+  animation: repoShimmer 1.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+
+@keyframes repoShimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+/* ── Error ── */
+
+.projects-error {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: #8f080f;
+  padding: 1.5rem;
+  border: 1px solid #2a1010;
+  border-radius: 4px;
+  background: #110808;
+  text-align: center;
+  margin: 2rem var(--pad);
+}
+
+/* ── Footer CTA ───────────────────────────────────────────────────────────── */
+
+.projects-cta {
+  padding: 1.25rem var(--pad) 3rem;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projects-cta-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #555555;
+}
+
+.projects-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #8f080f;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  transition: color 0.2s;
+}
+
+.projects-cta-link:hover { color: #c01010; }
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 680px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem var(--pad) 1.5rem;
+  }
+  .projects-cta { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}

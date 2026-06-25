@@ -1,0 +1,717 @@
+/* repomodal.css                                                              */
+/*****************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* ── Overlay ─────────────────────────────────────────────────────────────── */
+
+.rmo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: rmoOverlayIn 0.22s ease both;
+}
+
+@keyframes rmoOverlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+
+.rmo-card {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1080px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: rmoCardIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rmo-scroll {
+  overflow-y: auto;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d #0d1117;
+}
+
+@keyframes rmoCardIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Header ───────────────────────────────────────────────────────────────── */
+
+.rmo-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.4rem 1.75rem 1.2rem;
+  border-bottom: 1px solid #21262d;
+  flex-shrink: 0;
+  background: #161b22;
+  border-radius: 10px 10px 0 0;
+}
+
+.rmo-header-img-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.rmo-repo-img {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.rmo-repo-img-icon {
+  font-size: 1.4rem;
+  color: #30363d;
+}
+
+.rmo-repo-img-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0d1117;
+  padding: 4px;
+}
+
+.rmo-header-info { flex: 1; min-width: 0; }
+
+.rmo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.rmo-repo-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  color: #e6edf3;
+  line-height: 1.2;
+}
+
+.rmo-lang-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: #8b949e;
+  padding: 0.13rem 0.5rem;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 20px;
+}
+
+.rmo-lang-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%; flex-shrink: 0;
+}
+
+.rmo-lang-icon {
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.rmo-repo-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: #8b949e;
+  line-height: 1.65;
+}
+
+.rmo-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.rmo-gh-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #8b949e;
+  font-size: 1rem;
+  text-decoration: none;
+  background: #21262d;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.rmo-gh-btn:hover { color: #e6edf3; border-color: #8b949e; background: #30363d; }
+
+.rmo-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #8b949e;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.rmo-close:hover { color: #e6edf3; border-color: #8b949e; background: #30363d; }
+
+/* ── Stats bar ────────────────────────────────────────────────────────────── */
+
+.rmo-stats-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.65rem 1.75rem;
+  border-bottom: 1px solid #21262d;
+  flex-shrink: 0;
+}
+
+.rmo-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.63rem;
+  color: #8b949e;
+}
+
+.rmo-stat-sep {
+  color: #30363d;
+  font-size: 0.7rem;
+  user-select: none;
+}
+
+/* ── Topics ───────────────────────────────────────────────────────────────── */
+
+.rmo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  padding: 0.65rem 1.75rem;
+  border-bottom: 1px solid #21262d;
+  flex-shrink: 0;
+}
+
+.rmo-topic {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  color: #4493f8;
+  padding: 0.15rem 0.55rem;
+  background: rgba(68, 147, 248, 0.08);
+  border: 1px solid rgba(68, 147, 248, 0.16);
+  border-radius: 20px;
+}
+
+/* ── Tab bar ──────────────────────────────────────────────────────────────── */
+
+.rmo-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  padding: 0 1.75rem;
+  border-bottom: 1px solid #21262d;
+  flex-shrink: 0;
+}
+
+.rmo-tab {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #8b949e;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.18s, border-color 0.18s;
+  letter-spacing: 0.25px;
+}
+
+.rmo-tab:hover { color: #e6edf3; }
+
+.rmo-tab--active {
+  color: #e6edf3;
+  border-bottom-color: #f47067;
+  font-weight: 600;
+}
+
+/* ── Body / Dashboard ─────────────────────────────────────────────────────── */
+
+.rmo-body {
+  padding: 1.4rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.rmo-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.rmo-spinner {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #21262d;
+  border-top-color: #4493f8;
+  border-radius: 50%;
+  animation: rmoSpin 0.7s linear infinite;
+}
+
+@keyframes rmoSpin { to { transform: rotate(360deg); } }
+
+/* ── Sections ─────────────────────────────────────────────────────────────── */
+
+.rmo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.rmo-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #484f58;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+/* ── Language bar ─────────────────────────────────────────────────────────── */
+
+.rmo-lang-bar {
+  display: flex;
+  height: 7px;
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 1px;
+  background: #21262d;
+}
+
+.rmo-lang-seg {
+  height: 100%;
+  min-width: 2px;
+  transition: opacity 0.2s;
+}
+
+.rmo-lang-seg:hover { opacity: 0.75; cursor: default; }
+
+.rmo-lang-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.2rem;
+}
+
+.rmo-lang-item {
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.63rem;
+  color: #8b949e;
+}
+
+.rmo-lang-pct {
+  color: #484f58;
+  font-size: 0.58rem;
+}
+
+/* ── File tree ────────────────────────────────────────────────────────────── */
+
+.rmo-files {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #21262d;
+}
+
+.rmo-file-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.7rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.67rem;
+  color: #8b949e;
+  text-decoration: none;
+  background: #0d1117;
+  transition: color 0.15s, background 0.15s;
+}
+
+.rmo-file-row:hover { color: #4493f8; background: #161b22; }
+
+.rmo-file-icon {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: #484f58;
+}
+
+.rmo-file-dir { color: #4493f8 !important; }
+
+.rmo-file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Commits ──────────────────────────────────────────────────────────────── */
+
+.rmo-commits {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.rmo-commit-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.6rem 0.8rem;
+  background: #0d1117;
+  border-bottom: 1px solid #21262d;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.rmo-commit-row:last-child { border-bottom: none; }
+.rmo-commit-row:hover { background: #161b22; }
+
+.rmo-commit-icon {
+  color: #484f58;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.rmo-commit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.rmo-commit-msg {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  color: #e6edf3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.15s;
+}
+
+.rmo-commit-row:hover .rmo-commit-msg { color: #4493f8; }
+
+.rmo-commit-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  color: #484f58;
+}
+
+.rmo-commit-author { color: #768390; }
+.rmo-commit-dot    { color: #30363d; }
+.rmo-commit-time   {}
+
+.rmo-commit-sha {
+  margin-left: auto;
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 0.57rem;
+  color: #484f58;
+  background: #161b22;
+  padding: 0.08rem 0.32rem;
+  border-radius: 3px;
+  border: 1px solid #21262d;
+  flex-shrink: 0;
+}
+
+/* ── Release ──────────────────────────────────────────────────────────────── */
+
+.rmo-release {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.rmo-release:hover { background: #161b22; border-color: #30363d; }
+
+.rmo-release-icon {
+  color: #4493f8;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.rmo-release-tag {
+  font-family: ui-monospace, 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #e6edf3;
+  background: rgba(68, 147, 248, 0.09);
+  border: 1px solid rgba(68, 147, 248, 0.18);
+  padding: 0.08rem 0.42rem;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.rmo-release-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  color: #8b949e;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rmo-release-time {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  color: #484f58;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* ── README content ───────────────────────────────────────────────────────── */
+
+.rmo-readme {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: #c9d1d9;
+  line-height: 1.85;
+  word-break: break-word;
+}
+
+.rmo-readme-empty {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #484f58;
+  font-style: italic;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Headings */
+.rmo-readme h1, .rmo-readme h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #e6edf3;
+  border-bottom: 1px solid #21262d;
+  padding-bottom: 0.35rem;
+  margin: 1.6rem 0 0.8rem;
+  line-height: 1.3;
+}
+
+.rmo-readme h1 { font-size: 1.3rem; }
+.rmo-readme h2 { font-size: 1.05rem; }
+
+.rmo-readme h3, .rmo-readme h4, .rmo-readme h5, .rmo-readme h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #e6edf3;
+  margin: 1.25rem 0 0.55rem;
+  line-height: 1.3;
+}
+
+.rmo-readme h3 { font-size: 0.95rem; }
+.rmo-readme h4 { font-size: 0.85rem; }
+.rmo-readme h5, .rmo-readme h6 { font-size: 0.78rem; }
+
+/* Paragraphs */
+.rmo-readme p { margin: 0 0 0.9rem; }
+.rmo-readme p:last-child { margin-bottom: 0; }
+
+/* Links */
+.rmo-readme a { color: #4493f8; text-decoration: none; }
+.rmo-readme a:hover { text-decoration: underline; color: #79b8ff; }
+
+/* Inline code */
+.rmo-readme code {
+  font-family: ui-monospace, 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.78rem;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 0.1rem 0.38rem;
+  color: #e6edf3;
+}
+
+/* Code blocks */
+.rmo-readme pre {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  margin: 0.75rem 0 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d #161b22;
+}
+
+.rmo-readme pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.75rem;
+  color: #c9d1d9;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+/* Blockquote */
+.rmo-readme blockquote {
+  border-left: 3px solid #30363d;
+  margin: 0 0 0.9rem;
+  padding: 0.2rem 0.85rem;
+  color: #8b949e;
+  font-style: italic;
+}
+
+.rmo-readme blockquote p { margin-bottom: 0; }
+
+/* Lists */
+.rmo-readme ul, .rmo-readme ol {
+  margin: 0.25rem 0 0.9rem;
+  padding-left: 1.5rem;
+}
+
+.rmo-readme li { margin-bottom: 0.25rem; }
+.rmo-readme li > ul, .rmo-readme li > ol { margin: 0.2rem 0; }
+
+/* Tables */
+.rmo-readme table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  margin: 0.75rem 0 1rem;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.rmo-readme thead { background: #161b22; }
+
+.rmo-readme th {
+  font-weight: 600;
+  color: #e6edf3;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #30363d;
+}
+
+.rmo-readme td {
+  padding: 0.42rem 0.75rem;
+  border-bottom: 1px solid #21262d;
+  color: #c9d1d9;
+}
+
+.rmo-readme tr:last-child td { border-bottom: none; }
+.rmo-readme tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+/* Images */
+.rmo-readme img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+  margin: 0.75rem 0;
+}
+
+/* Horizontal rule */
+.rmo-readme hr {
+  border: none;
+  border-top: 1px solid #21262d;
+  margin: 1.5rem 0;
+}
+
+/* Strong / em */
+.rmo-readme strong { font-weight: 600; color: #e6edf3; }
+.rmo-readme em     { font-style: italic; color: #c9d1d9; }
+
+/* Details / summary (GitHub supports these) */
+.rmo-readme details {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin: 0.5rem 0 0.9rem;
+}
+
+.rmo-readme summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #e6edf3;
+  font-size: 0.78rem;
+}
+
+/* ── Mobile ───────────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .rmo-overlay   { padding: 1rem; }
+  .rmo-card      { border-radius: 12px; }
+  .rmo-scroll    { max-height: 92vh; }
+  .rmo-header    { padding: 1.2rem 1.25rem 1rem; border-radius: 12px 12px 0 0; }
+  .rmo-stats-bar { padding: 0.6rem 1.25rem; }
+  .rmo-topics    { padding: 0.6rem 1.25rem; }
+  .rmo-tabs      { padding: 0 1.25rem; }
+  .rmo-body      { padding: 1.2rem 1.25rem; }
+  .rmo-files     { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,43 @@
+/* index.css — stili globali                                                 */
+/*****************************************************************************/
+
+:root {
+  /* Padding orizzontale responsive: centra il contenuto fino a max 1360px.
+     Su schermi <1360px usa almeno 1.5rem. Su 21:9+ il contenuto resta centrato. */
+  --pad: max(1.5rem, calc((100vw - 1360px) / 2));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  background-color: #232325;
+  color: #ffffff;
+}
+
+.disable-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #282828;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 10px;
+  background-color: #282828;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background-color: #363636;
+}
