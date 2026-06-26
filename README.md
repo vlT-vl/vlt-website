@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/versione-0.1.0--R250626-blue?style=flat-square" alt="versione"/>
-  <img src="https://img.shields.io/badge/react-18-61DAFB?style=flat-square&logo=react&logoColor=white" alt="react"/>
-  <img src="https://img.shields.io/badge/vite-6-646CFF?style=flat-square&logo=vite&logoColor=white" alt="vite"/>
+  <img src="https://img.shields.io/badge/versione-0.1.1--R260626-blue?style=flat-square" alt="versione"/>
+  <img src="https://img.shields.io/badge/react-19-61DAFB?style=flat-square&logo=react&logoColor=white" alt="react"/>
+  <img src="https://img.shields.io/badge/vite-8-646CFF?style=flat-square&logo=vite&logoColor=white" alt="vite"/>
   <img src="https://img.shields.io/badge/licenza-proprietaria-critical?style=flat-square" alt="licenza"/>
 </p>
 
@@ -41,23 +41,23 @@ Non richiede backend: i dati GitHub dei progetti e i post del blog vengono fetch
 
 | Sezione | Descrizione |
 |---|---|
-| **Home** | Hero animato, card competenze con modale di dettaglio, dashboard ultimo progetto GitHub e ultimo articolo blog |
+| **Home** | Hero animato, 3 card competenze con modale di dettaglio, dashboard ultimo progetto + ultimo articolo + 4 mini card riepilogative |
 | **About Me** | Profilo personale, background professionale, certificazioni |
-| **About vlT** | Storia e filosofia del brand vlT |
-| **Progetti** | Browser repository GitHub con hero card, README renderizzato, statistiche linguaggi, commit e release |
-| **Blog** | Articoli con hero card, filtri per tag e ricerca, lettura inline completa |
+| **About vlT** | Storia e filosofia del brand vlT, skills infrastruttura e sviluppo |
+| **Progetti** | Browser repository GitHub con ricerca e filtro lingua, modale con README renderizzato, statistiche e licenza |
+| **Blog** | Articoli con hero card, filtri per tag, ricerca full-text, lettura inline con cover image |
 
 ---
 
 ## Integrazione dati
 
-| Sorgente | Dati | Cache / Aggiornamento |
+| Sorgente | Dati | Modalità |
 |---|---|---|
-| `projects.json` | Lista repo pubblici | Generato in CI ogni 15 min / deploy |
-| GitHub API | README HTML, immagini e licenze | Solo in CI, salvati in `projects.json` |
-| Hashnode RSS | Articoli blog (`posts.json`) | Generato durante il deploy |
+| `projects.json` | Lista repo, README HTML, immagini, licenze, statistiche | Generato in CI ogni 15 min e in dev all'avvio |
+| `posts.json` | Articoli blog | Generato da RSS Hashnode al build time |
+| RSS Hashnode | Articoli in dev (proxy `/api/rss`) | Solo in dev via proxy Vite |
 
-Il client non chiama `api.github.com`: usa solo asset statici (`projects.json`, `posts.json`) per evitare rate-limit lato visitatore.
+Il client non chiama `api.github.com` a runtime: usa solo asset statici per evitare rate-limit lato visitatore.
 
 ---
 
@@ -66,41 +66,41 @@ Il client non chiama `api.github.com`: usa solo asset statici (`projects.json`, 
 ```
 vlt-website/
 ├── index.html
-├── vite.config.js          # proxy /api/rss in dev, base URL, esbuild obfuscation
+├── vite.config.js          # plugin dev auto-genera projects.json, proxy /api/rss, esbuild obfuscation
 ├── package.json
 ├── .env                    # variabili VITE_* (valori pubblici, committato)
 │
 ├── scripts/
-│   ├── fetch-projects.js   # fetch GitHub API pubblica → public/projects.json (usato in CI)
-│   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json (usato in CI)
+│   ├── fetch-projects.js   # fetch GitHub API pubblica → public/projects.json
+│   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json
 │
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml      # build + deploy su GitHub Pages (sourcecode push/schedule/dispatch)
+│       └── deploy.yml      # build + deploy su GitHub Pages (push/schedule/dispatch)
 │
 ├── public/
-│   ├── posts.json          # generato da fetch-posts.js al build — NON committare
-│   ├── projects.json       # metadati aggiuntivi per i progetti
+│   ├── projects.json       # generato da fetch-projects.js — NON committare
+│   ├── posts.json          # generato da fetch-posts.js — NON committare
 │   └── vltcube.svg
 │
 └── src/
     ├── main.jsx
     ├── context/
-    │   └── DataContext.jsx     # lettura JSON statici, caching TTL, RSS parser dev
+    │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage, RSS parser dev
     ├── components/
-    │   ├── App.jsx             # root: routing view, navbar, footer
+    │   ├── App.jsx             # root: routing view a stato, navbar, footer
     │   ├── Navbar.jsx
     │   ├── Hero.jsx
-    │   ├── Landing.jsx         # home: skill cards + dashboard GitHub/Blog
+    │   ├── Landing.jsx         # home: skill cards + dashboard 2 big card + 4 mini card
     │   ├── AboutMe.jsx
     │   ├── VltView.jsx
-    │   ├── ProjectsView.jsx    # browser repository con hero card e search
+    │   ├── ProjectsView.jsx    # browser repository con search e filtro lingua
     │   ├── BlogView.jsx        # articoli con hero card, tag filter e search
-    │   ├── VltLogo.jsx
-    │   ├── Modal.jsx
-    │   ├── RepoModal.jsx       # modale repo: tab README + tab Dettagli
-    │   ├── BlogPostModal.jsx
-    │   └── LicenseModal.jsx
+    │   ├── VltLogo.jsx         # logo animato cubo SVG + testo vlT
+    │   ├── Modal.jsx           # modale skill card (home)
+    │   ├── RepoModal.jsx       # modale repo: README + dettagli + licenza
+    │   ├── BlogPostModal.jsx   # modale articolo: hero cover + contenuto completo
+    │   └── LicenseModal.jsx    # modale testo licenza
     ├── css/
     └── res/
         ├── vltcube.svg
@@ -116,7 +116,7 @@ Il file `.env` è committato nel repo (nessun dato sensibile):
 
 ```env
 VITE_GITHUB_USER=vlT-vl
-VITE_BLOG_URL=https://vlt.hashnode.dev
+VITE_BLOG_URL=https://lorenzoveronesi.it
 VITE_COMPANY_NAME=S2E | Business Technology Consultants
 VITE_COMPANY_URL=https://it.linkedin.com/company/s2e-solutions-to-enterprises
 VITE_BASE_URL=/
@@ -130,12 +130,12 @@ VITE_BASE_URL=/
 
 ```bash
 npm install
-npm run dev       # http://localhost:5173 — HMR attivo, proxy RSS verso vlt.hashnode.dev
+npm run dev       # http://localhost:5173 — genera projects.json all'avvio, proxy RSS attivo
 npm run build     # build produzione in dist/ (bundle offuscato, no source map)
 npm run preview   # anteprima locale del build produzione
 ```
 
-In sviluppo Vite serve `/projects.json` generandolo on the fly lato dev server, come il proxy RSS del blog. Il file resta ignorato da git. In produzione i dati vengono generati in CI.
+All'avvio del dev server il plugin Vite controlla se `public/projects.json` esiste ed è fresco (< 5 minuti). Se assente o scaduto, lo genera automaticamente in background tramite la GitHub API pubblica (senza token). Il proxy `/api/rss` inoltra le richieste blog verso l'origine Hashnode per evitare problemi CORS in dev.
 
 ---
 
@@ -165,9 +165,9 @@ Il deploy è completamente automatizzato via **GitHub Actions**:
 
 | Campo | Valore |
 |---|---|
-| Versione | 0.1.0 |
-| Build | R250626 |
-| Aggiornato | 25 Giugno 2026 |
+| Versione | 0.1.1 |
+| Build | R260626 |
+| Aggiornato | 26 Giugno 2026 |
 
 ---
 

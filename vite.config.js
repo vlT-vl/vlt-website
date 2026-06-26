@@ -1,33 +1,35 @@
 import { defineConfig, loadEnv } from 'vite'
+import { writeFileSync, existsSync, statSync } from 'node:fs'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import react from '@vitejs/plugin-react'
 import { generateProjectsPayload } from './scripts/fetch-projects.js'
 
-const projectsDevMiddleware = () => {
-  let cached = null
-  let cachedAt = 0
-  const ttl = 5 * 60 * 1000
+const OUT_FILE = join(dirname(fileURLToPath(import.meta.url)), 'public', 'projects.json')
+const DEV_TTL  = 5 * 60 * 1000   // rigenera se il file ha più di 5 minuti
 
-  return {
-    name: 'vlt-projects-json-dev',
-    configureServer(server) {
-      server.middlewares.use('/projects.json', async (_req, res) => {
-        try {
-          if (!cached || Date.now() - cachedAt > ttl) {
-            cached = (await generateProjectsPayload()).payload
-            cachedAt = Date.now()
-          }
-          res.statusCode = 200
-          res.setHeader('Content-Type', 'application/json; charset=utf-8')
-          res.end(JSON.stringify(cached))
-        } catch (e) {
-          res.statusCode = 503
-          res.setHeader('Content-Type', 'application/json; charset=utf-8')
-          res.end(JSON.stringify({ generatedAt: null, repos: [], error: e.message }))
-        }
+const projectsDevPlugin = () => ({
+  name: 'vlt-projects-dev',
+  configureServer() {
+    const isStale = () => {
+      if (!existsSync(OUT_FILE)) return true
+      return Date.now() - statSync(OUT_FILE).mtimeMs > DEV_TTL
+    }
+
+    if (!isStale()) {
+      console.log('[vlt-dev] projects.json recente, skip generazione')
+      return
+    }
+
+    console.log('[vlt-dev] generazione projects.json in background…')
+    generateProjectsPayload()
+      .then(({ payload }) => {
+        writeFileSync(OUT_FILE, JSON.stringify(payload, null, 2) + '\n', 'utf8')
+        console.log(`[vlt-dev] projects.json pronto (${payload.repos.length} repo)`)
       })
-    },
-  }
-}
+      .catch(e => console.warn(`[vlt-dev] projects.json fallito: ${e.message}`))
+  },
+})
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
@@ -36,7 +38,7 @@ export default defineConfig(({ mode }) => {
   })()
 
   return {
-    plugins: [react(), projectsDevMiddleware()],
+    plugins: [react(), projectsDevPlugin()],
     base: env.VITE_BASE_URL || '/',
 
     server: {
@@ -49,16 +51,8 @@ export default defineConfig(({ mode }) => {
       },
     },
 
-    esbuild: {
-      drop:             ['console', 'debugger'],
-      legalComments:    'none',
-      minifyIdentifiers: true,
-      minifySyntax:      true,
-      minifyWhitespace:  true,
-    },
-
     build: {
-      minify:    'esbuild',
+      minify:    'oxc',
       sourcemap: false,
       rollupOptions: {
         output: {

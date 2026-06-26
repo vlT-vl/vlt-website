@@ -19,6 +19,18 @@ const getTag = (str, tag) =>
 const stripCdata = str => str.replace(/<!\[CDATA\[|\]\]>/g, '').trim()
 const stripHtml  = str => str.replace(/<[^>]+>/g, '').trim()
 
+const sanitizeHtml = html => html
+  .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, '')
+  .replace(/\s+on\w+="[^"]*"/gi, '')
+  .replace(/\s+on\w+='[^']*'/gi, '')
+  .replace(/<a\b([^>]*)>/gi, (_, attrs) => {
+    const clean = attrs
+      .replace(/\s+target="[^"]*"/gi, '')
+      .replace(/\s+rel="[^"]*"/gi, '')
+    return `<a${clean} target="_blank" rel="noopener noreferrer">`
+  })
+
 const getAllMatches = (str, tag) =>
   [...str.matchAll(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)<\\/${tag}>`, 'gi'))]
     .map(m => m[1].trim())
@@ -48,7 +60,7 @@ const posts = items.map(item => {
   const brief = stripHtml(stripCdata(getTag(item, 'description')))
 
   const contentRaw = item.match(/<content:encoded>([\s\S]*?)<\/content:encoded>/i)?.[1] ?? null
-  const content    = contentRaw ? stripCdata(contentRaw) : null
+  const content    = contentRaw ? sanitizeHtml(stripCdata(contentRaw)) : null
 
   const mediaMatch  = item.match(/<media:(?:content|thumbnail)[^>]+url=["']([^"']+)["']/i)
   const enclosureUrl = item.match(/<enclosure[^>]+url=["']([^"']+)["']/i)?.[1] ?? null

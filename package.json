@@ -1,9 +1,9 @@
 {
   "name": "vlt-website",
-  "version": "0.1.0",
-  "build": "R250626",
+  "version": "0.1.1",
+  "build": "R260626",
   "ibuild": "R200626",
-  "updated": "25 Giugno 2026",
+  "updated": "26 Giugno 2026",
   "description": "Veronesi Lorenzo vlT Website",
   "author": "Veronesi Lorenzo © 2026 vlT - vl.TECH",
   "license": "MIT",
@@ -17,12 +17,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.5.0"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "^5.6.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.4.0",
-    "vite": "^6.3.5"
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.1.0"
   }
 }

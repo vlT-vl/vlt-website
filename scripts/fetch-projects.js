@@ -77,7 +77,6 @@ export const getGithubToken = () =>
   process.env.GITHUB_TOKEN || readGithubCliToken()
 
 export async function generateProjectsPayload({ user = getGithubUser(), token = getGithubToken() } = {}) {
-  if (!token) throw new Error('GITHUB_TOKEN non disponibile e gh auth token non configurato')
 
   let remaining = Number.POSITIVE_INFINITY
   const apiFetch = async (url, accept = 'application/vnd.github+json') => {
