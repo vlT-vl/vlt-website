@@ -1,7 +1,10 @@
 # Dependencies
 node_modules/
 
-# Generati dagli script al build time — non committare
+# Ignore this file when untracked in fresh copies.
+.gitignore
+
+# JSON generati dal workflow/deploy — non committare
 public/projects.json
 public/posts.json
 

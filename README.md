@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/versione-0.1.1--R260626-blue?style=flat-square" alt="versione"/>
+  <img src="https://img.shields.io/badge/versione-0.1.2--R290626-blue?style=flat-square" alt="versione"/>
   <img src="https://img.shields.io/badge/react-19-61DAFB?style=flat-square&logo=react&logoColor=white" alt="react"/>
   <img src="https://img.shields.io/badge/vite-8-646CFF?style=flat-square&logo=vite&logoColor=white" alt="vite"/>
   <img src="https://img.shields.io/badge/licenza-proprietaria-critical?style=flat-square" alt="licenza"/>
@@ -26,14 +26,15 @@
 Browser ──► GitHub Pages (lorenzoveronesi.it)
                │
                ├── projects.json → repository pubblici GitHub pre-generati
-               └── posts.json   → articoli blog (pre-generato al build time da Hashnode RSS)
+               └── posts.json   → articoli blog pre-generati da RSS Hashnode
 
-GitHub Actions (push/schedule/dispatch)
-               ├── fetch-projects.js → GitHub API pubblica → public/projects.json
-               └── fetch-posts.js    → RSS Hashnode → public/posts.json → vite build → deploy
+GitHub Actions
+  push                  → rigenera JSON + build + deploy
+  schedule ogni ora     → rigenera JSON + build + deploy
+  workflow_dispatch     → rigenera JSON + build + deploy
 ```
 
-Non richiede backend: i dati GitHub dei progetti e i post del blog vengono fetchati lato GitHub Actions e inclusi come JSON statici durante il deploy.
+Non richiede backend: i dati GitHub dei progetti e i post del blog vengono generati dentro GitHub Actions e inclusi come JSON statici nell'artifact GitHub Pages. I JSON generati non sono committati nel repository.
 
 ---
 
@@ -53,11 +54,12 @@ Non richiede backend: i dati GitHub dei progetti e i post del blog vengono fetch
 
 | Sorgente | Dati | Modalità |
 |---|---|---|
-| `projects.json` | Lista repo, README HTML, immagini, licenze, statistiche | Generato in CI ogni 15 min e in dev all'avvio |
-| `posts.json` | Articoli blog | Generato da RSS Hashnode al build time |
-| RSS Hashnode | Articoli in dev (proxy `/api/rss`) | Solo in dev via proxy Vite |
+| `public/projects.json` | Lista repo, README HTML, immagini, licenze, statistiche | Generato da CI a ogni deploy e ogni ora |
+| `public/posts.json` | Articoli blog | Generato da RSS Hashnode a ogni deploy e ogni ora; fallback Playwright se Vercel sfida il fetch HTTP |
 
-Il client non chiama `api.github.com` a runtime: usa solo asset statici per evitare rate-limit lato visitatore.
+Il client non chiama `api.github.com` o RSS esterni a runtime: usa solo asset statici per evitare rate-limit, CORS e blocchi WAF lato visitatore.
+
+Cache lato client (localStorage): repos 1 ora · posts 2 ore.
 
 ---
 
@@ -66,12 +68,12 @@ Il client non chiama `api.github.com` a runtime: usa solo asset statici per evit
 ```
 vlt-website/
 ├── index.html
-├── vite.config.js          # plugin dev auto-genera projects.json, proxy /api/rss, esbuild obfuscation
+├── vite.config.js          # React plugin, base path, build minificato oxc
 ├── package.json
 ├── .env                    # variabili VITE_* (valori pubblici, committato)
 │
 ├── scripts/
-│   ├── fetch-projects.js   # fetch GitHub API pubblica → public/projects.json
+│   ├── fetch-projects.js   # fetch GitHub API → public/projects.json
 │   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json
 │
 ├── .github/
@@ -79,14 +81,12 @@ vlt-website/
 │       └── deploy.yml      # build + deploy su GitHub Pages (push/schedule/dispatch)
 │
 ├── public/
-│   ├── projects.json       # generato da fetch-projects.js — NON committare
-│   ├── posts.json          # generato da fetch-posts.js — NON committare
-│   └── vltcube.svg
+│   └── vltcube.svg         # projects.json/posts.json sono generati in CI e ignorati da git
 │
 └── src/
     ├── main.jsx
     ├── context/
-    │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage, RSS parser dev
+    │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage
     ├── components/
     │   ├── App.jsx             # root: routing view a stato, navbar, footer
     │   ├── Navbar.jsx
@@ -116,7 +116,7 @@ Il file `.env` è committato nel repo (nessun dato sensibile):
 
 ```env
 VITE_GITHUB_USER=vlT-vl
-VITE_BLOG_URL=https://lorenzoveronesi.it
+VITE_BLOG_URL=https://vlt.hashnode.dev
 VITE_COMPANY_NAME=S2E | Business Technology Consultants
 VITE_COMPANY_URL=https://it.linkedin.com/company/s2e-solutions-to-enterprises
 VITE_BASE_URL=/
@@ -130,12 +130,20 @@ VITE_BASE_URL=/
 
 ```bash
 npm install
-npm run dev       # http://localhost:5173 — genera projects.json all'avvio, proxy RSS attivo
-npm run build     # build produzione in dist/ (bundle offuscato, no source map)
+npm run dev       # http://localhost:5173 — serve i JSON statici da public/
+npm run build     # build produzione in dist/ (bundle minificato oxc, no source map)
 npm run preview   # anteprima locale del build produzione
 ```
 
-All'avvio del dev server il plugin Vite controlla se `public/projects.json` esiste ed è fresco (< 5 minuti). Se assente o scaduto, lo genera automaticamente in background tramite la GitHub API pubblica (senza token). Il proxy `/api/rss` inoltra le richieste blog verso l'origine Hashnode per evitare problemi CORS in dev.
+In produzione GitHub Actions genera `public/projects.json` e `public/posts.json` prima della build. In locale, se servono dati freschi per lo sviluppo, genera i JSON ignorati da git prima di avviare Vite:
+
+```bash
+CI=true GITHUB_TOKEN="$(gh auth token)" node scripts/fetch-projects.js
+CI=true node scripts/fetch-posts.js
+npm run dev
+```
+
+`fetch-posts.js` prova prima l'RSS Hashnode con HTTP normale; se Vercel risponde con challenge/429 usa Playwright Chromium per leggere `https://vlt.hashnode.dev/rss.xml` come un browser e poi produce lo stesso schema JSON.
 
 ---
 
@@ -143,18 +151,21 @@ All'avvio del dev server il plugin Vite controlla se `public/projects.json` esis
 
 Il deploy è completamente automatizzato via **GitHub Actions**:
 
-**Trigger automatici:**
+**Trigger:**
 - Push su branch `sourcecode`
-- Schedule ogni 15 minuti
-- Dispatch manuale (`workflow_dispatch`)
+- Schedule ogni ora — aggiorna progetti e post e ridistribuisce l'artifact
+- Dispatch manuale (`workflow_dispatch`) — aggiorna progetti e post e ridistribuisce l'artifact
 
 **Pipeline:**
-1. Checkout + Node 24
+1. Checkout + Node 20
 2. `npm install`
-3. `node scripts/fetch-projects.js` — fetch GitHub API pubblica → `public/projects.json`
-4. `node scripts/fetch-posts.js` — fetch RSS Hashnode → `public/posts.json`
-5. `npm run build` — bundle ottimizzato ed offuscato in `dist/`
-6. Upload artifact + deploy su GitHub Pages
+3. `node scripts/fetch-projects.js` — GitHub API → `public/projects.json`
+4. `npx playwright install --with-deps chromium`
+5. `node scripts/fetch-posts.js` — RSS Hashnode → `public/posts.json`
+6. `npm run build` — bundle ottimizzato in `dist/`
+7. Upload artifact + deploy su GitHub Pages
+
+Il workflow non esegue commit automatici: i JSON restano dentro l'artifact pubblicato da GitHub Pages.
 
 **Setup GitHub Pages (una tantum):**
 - Settings → Pages → Source: **GitHub Actions**
@@ -165,9 +176,9 @@ Il deploy è completamente automatizzato via **GitHub Actions**:
 
 | Campo | Valore |
 |---|---|
-| Versione | 0.1.1 |
-| Build | R260626 |
-| Aggiornato | 26 Giugno 2026 |
+| Versione | 0.1.2 |
+| Build | R290626 |
+| Aggiornato | 29 Giugno 2026 |
 
 ---
 

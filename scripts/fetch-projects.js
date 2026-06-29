@@ -1,14 +1,21 @@
 // Eseguito da GitHub Actions prima di vite build.
 // Genera public/projects.json usando API GitHub lato CI/dev, mai dal browser.
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { tmpdir } from 'node:os'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const OUT_FILE  = join(__dirname, '..', 'public', 'projects.json')
 const RESERVE   = 25
+
+// In CI scrive in public/ (fresh checkout, incluso nel build).
+// In locale scrive in CACHE_DIR (mai nella cartella di progetto).
+const CACHE_DIR = join(tmpdir(), 'vlt-dev-cache')
+const OUT_FILE  = process.env.CI === 'true'
+  ? join(__dirname, '..', 'public', 'projects.json')
+  : join(CACHE_DIR, 'projects.json')
 
 const readEnvFile = key => {
   try {
@@ -144,9 +151,10 @@ const isCliRun = process.argv[1] === fileURLToPath(import.meta.url)
 
 if (isCliRun) {
   try {
+    if (process.env.CI !== 'true') mkdirSync(CACHE_DIR, { recursive: true })
     const { payload, remaining } = await generateProjectsPayload()
     writeFileSync(OUT_FILE, `${JSON.stringify(payload, null, 2)}\n`, 'utf8')
-    console.log(`[fetch-projects] scritti ${payload.repos.length} repository in ${OUT_FILE}; rate remaining: ${remaining}`)
+    console.log(`[fetch-projects] scritti ${payload.repos.length} repository → ${OUT_FILE}; rate remaining: ${remaining}`)
   } catch (e) {
     console.warn(`[fetch-projects] fetch fallita: ${e.message}`)
     if (existsSync(OUT_FILE)) {

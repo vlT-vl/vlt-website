@@ -1,9 +1,8 @@
 {
   "name": "vlt-website",
-  "version": "0.1.1",
-  "build": "R260626",
-  "ibuild": "R200626",
-  "updated": "26 Giugno 2026",
+  "version": "0.1.2",
+  "build": "R290626",
+  "updated": "29 Giugno 2026",
   "description": "Veronesi Lorenzo vlT Website",
   "author": "Veronesi Lorenzo © 2026 vlT - vl.TECH",
   "license": "MIT",
@@ -23,6 +22,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.3",
+    "playwright": "^1.61.1",
     "vite": "^8.1.0"
   }
 }
