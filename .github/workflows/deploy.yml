@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,8 +32,10 @@ jobs:
         run: npm install
 
       # ── Aggiornamento dati ───────────────────────────────────────────────────
-      # I JSON non sono committati: ogni deploy li rigenera nel runner e li
-      # include solo nell'artifact GitHub Pages.
+      # I JSON sono committati nel repo come ultimo stato noto buono: ogni run
+      # li rigenera e li ricommitta, così il sito ha sempre dati validi da
+      # servire anche se un run futuro non riesce a fare fetch (rate limit,
+      # API down, ecc.).
       - name: Fetch projects
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,6 +46,19 @@ jobs:
 
       - name: Fetch blog posts
         run: node scripts/fetch-posts.js
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/projects.json public/posts.json
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica ai dati, skip commit."
+          else
+            git commit -m "chore: aggiorna projects.json e posts.json [skip ci]"
+            git pull --rebase origin sourcecode
+            git push
+          fi
 
       # ── Build & Deploy ────────────────────────────────────────────────────────
       - name: Build

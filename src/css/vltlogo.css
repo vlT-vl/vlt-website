@@ -30,7 +30,7 @@
   font-size: calc(var(--cube-w) * 0.58);
   font-weight: 600;
   letter-spacing: 4px;
-  color: #ffffff;
+  color: var(--text);
   position: absolute;
   left: calc(var(--cube-w) * 1.22);
   opacity: 0;

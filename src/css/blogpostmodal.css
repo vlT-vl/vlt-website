@@ -26,8 +26,8 @@
 /* ── Card ─────────────────────────────────────────────────────────────────── */
 
 .bpm-card {
-  background: #161616;
-  border: 1px solid #272727;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   border-radius: 8px;
   width: 100%;
   max-width: 1080px;
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   scrollbar-width: thin;
-  scrollbar-color: #2e2e2e #161616;
+  scrollbar-color: var(--border-strong) var(--bg-elevated);
 }
 
 @keyframes bpmCardIn {
@@ -52,6 +52,8 @@
 }
 
 /* ── Hero (cover + gradiente + titolo sovrapposto) ───────────────────────── */
+/* Il gradiente scurisce sempre la cover per leggibilità: i colori qui restano
+   fissi (indipendenti dal tema) perché sovrastano una foto, non lo sfondo pagina. */
 
 .bpm-hero {
   position: relative;
@@ -92,6 +94,7 @@
 }
 
 .bpm-hero-meta .bpm-title {
+  color: #ffffff;
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.9);
 }
 
@@ -107,7 +110,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1.75rem 2rem 1.25rem;
-  border-bottom: 1px solid #1e1e1e;
+  border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
 
@@ -126,7 +129,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text);
   line-height: 1.35;
   margin-bottom: 0.6rem;
 }
@@ -138,7 +141,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.63rem;
   font-weight: 300;
-  color: #555555;
+  color: var(--text-dim);
   letter-spacing: 0.3px;
 }
 
@@ -147,9 +150,9 @@
 .bpm-close {
   flex-shrink: 0;
   background: none;
-  border: 1px solid #272727;
+  border: 1px solid var(--border);
   border-radius: 4px;
-  color: #666666;
+  color: var(--text-dim);
   font-size: 1.1rem;
   width: 2rem;
   height: 2rem;
@@ -161,12 +164,12 @@
 }
 
 .bpm-close:hover {
-  color: #ffffff;
-  border-color: #444444;
-  background: #222222;
+  color: var(--text);
+  border-color: var(--border-strong);
+  background: var(--bg-hover);
 }
 
-/* Close sovrapposto all'hero */
+/* Close sovrapposto all'hero — resta fisso, è sopra una foto scurita */
 .bpm-close--hero {
   position: absolute;
   top: 1rem;
@@ -201,8 +204,8 @@
 .bpm-spinner {
   width: 28px;
   height: 28px;
-  border: 2px solid #222222;
-  border-top-color: #8f080f;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
   border-radius: 50%;
   animation: bpmSpin 0.7s linear infinite;
 }
@@ -213,7 +216,7 @@
 .bpm-error {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.78rem;
-  color: #8f080f;
+  color: var(--accent);
   text-align: center;
   padding: 2rem 0;
 }
@@ -224,7 +227,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.8rem, 1.4vw, 0.9rem);
   font-weight: 300;
-  color: #c0c0c0;
+  color: var(--text-muted);
   line-height: 1.95;
 }
 
@@ -236,59 +239,59 @@
 .bpm-content h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text);
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   line-height: 1.3;
 }
 
 .bpm-content h1 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
-.bpm-content h2 { font-size: clamp(1.05rem, 2.2vw, 1.3rem); border-bottom: 1px solid #1e1e1e; padding-bottom: 0.4rem; }
+.bpm-content h2 { font-size: clamp(1.05rem, 2.2vw, 1.3rem); border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
 .bpm-content h3 { font-size: clamp(0.95rem, 1.8vw, 1.1rem); }
-.bpm-content h4 { font-size: 0.95rem; color: #e0e0e0; }
+.bpm-content h4 { font-size: 0.95rem; color: var(--text); }
 
 .bpm-content p { margin-bottom: 1.2rem; }
 
 .bpm-content a {
-  color: #c01010;
+  color: var(--accent-hover);
   text-decoration: underline;
-  text-decoration-color: rgba(192, 16, 16, 0.35);
+  text-decoration-color: color-mix(in srgb, var(--accent-hover) 35%, transparent);
   transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 .bpm-content a:hover {
-  color: #e02020;
-  text-decoration-color: rgba(224, 32, 32, 0.65);
+  color: color-mix(in srgb, var(--accent-hover) 80%, white);
+  text-decoration-color: color-mix(in srgb, var(--accent-hover) 65%, transparent);
 }
 
-.bpm-content strong { color: #e8e8e8; font-weight: 600; }
-.bpm-content em    { font-style: italic; color: #b0b0b0; }
+.bpm-content strong { color: var(--text); font-weight: 600; }
+.bpm-content em    { font-style: italic; color: var(--text-muted); }
 
 .bpm-content code {
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   font-size: 0.83em;
-  color: #e07070;
-  background: #1e1010;
+  color: var(--accent-hover);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
   padding: 0.1em 0.4em;
   border-radius: 3px;
-  border: 1px solid #2a1a1a;
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 .bpm-content pre {
-  background: #0e0e0e;
-  border: 1px solid #222222;
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
   border-radius: 5px;
   padding: 1.25rem 1.5rem;
   overflow-x: auto;
   margin: 1.5rem 0;
   scrollbar-width: thin;
-  scrollbar-color: #2e2e2e #0e0e0e;
+  scrollbar-color: var(--border-strong) var(--bg-elevated-2);
 }
 
 .bpm-content pre code {
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   font-size: 0.82rem;
-  color: #cccccc;
+  color: var(--text-muted);
   background: none;
   padding: 0;
   border: none;
@@ -296,12 +299,12 @@
 }
 
 .bpm-content blockquote {
-  border-left: 3px solid #8f080f;
+  border-left: 3px solid var(--accent);
   margin: 1.5rem 0;
   padding: 0.75rem 1.25rem;
-  background: #111111;
+  background: var(--bg-elevated-2);
   border-radius: 0 4px 4px 0;
-  color: #999999;
+  color: var(--text-muted);
   font-style: italic;
 }
 
@@ -335,21 +338,21 @@
 .bpm-content th,
 .bpm-content td {
   padding: 0.6rem 0.9rem;
-  border: 1px solid #222222;
+  border: 1px solid var(--border);
   text-align: left;
 }
 
 .bpm-content th {
-  background: #1e1e1e;
-  color: #e0e0e0;
+  background: var(--bg-elevated);
+  color: var(--text);
   font-weight: 600;
 }
 
-.bpm-content td { color: #aaaaaa; }
+.bpm-content td { color: var(--text-muted); }
 
 .bpm-content hr {
   border: none;
-  border-top: 1px solid #1e1e1e;
+  border-top: 1px solid var(--border);
   margin: 2rem 0;
 }
 
@@ -365,7 +368,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.8rem, 1.4vw, 0.9rem);
   font-weight: 300;
-  color: #aaaaaa;
+  color: var(--text-muted);
   line-height: 1.9;
 }
 
@@ -374,13 +377,13 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #8f080f;
+  color: var(--accent);
   text-decoration: none;
   letter-spacing: 0.3px;
   transition: color 0.2s, transform 0.2s;
 }
 
-.bpm-external-cta:hover { color: #c01010; transform: translateX(4px); }
+.bpm-external-cta:hover { color: var(--accent-hover); transform: translateX(4px); }
 
 /* ── Mobile ───────────────────────────────────────────────────────────────── */
 

@@ -17,14 +17,14 @@
 
 .projects-intro {
   padding: 3rem var(--pad) 2rem;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid var(--border);
 }
 
 .projects-title {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1.3rem, 3vw, 2rem);
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text);
   margin-top: 0.5rem;
   margin-bottom: 0.75rem;
 }
@@ -33,12 +33,12 @@
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.72rem, 1.3vw, 0.82rem);
   font-weight: 300;
-  color: #888888;
+  color: var(--text-muted);
   line-height: 1.9;
   max-width: 560px;
 }
 
-/* ── Hero repo card ───────────────────────────────────────────────────────── */
+/* ── Hero repo card (stile GitHub) ────────────────────────────────────────── */
 
 .hero-repo-wrap {
   padding: 2rem var(--pad) 0;
@@ -46,9 +46,9 @@
 
 .hero-repo-card {
   width: 100%;
-  background: #111111;
-  border: 1px solid #222222;
-  border-top: 3px solid var(--lang-color, #f47067);
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--lang-color, var(--accent-hover));
   border-radius: 12px;
   padding: 2rem;
   cursor: pointer;
@@ -65,7 +65,7 @@
 }
 
 .hero-repo-card:hover {
-  border-color: var(--lang-color, #f47067);
+  border-color: var(--lang-color, var(--accent-hover));
   box-shadow: 0 0 32px rgba(0,0,0,0.4);
 }
 
@@ -81,8 +81,8 @@
   height: 80px;
   min-width: 80px;
   border-radius: 10px;
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,7 +91,7 @@
 
 .hero-repo-img-icon {
   font-size: 1.8rem;
-  color: #30363d;
+  color: var(--gh-border);
 }
 
 .hero-repo-img-photo {
@@ -100,7 +100,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #0d1117;
+  background: var(--gh-bg);
   padding: 6px;
 }
 
@@ -121,7 +121,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text);
   line-height: 1.2;
 }
 
@@ -131,9 +131,9 @@
   gap: 0.3rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.62rem;
-  color: var(--lang-color, #8b949e);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--lang-color, var(--gh-text-muted));
+  background: color-mix(in srgb, var(--gh-text) 5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gh-text) 8%, transparent);
   padding: 0.15rem 0.55rem;
   border-radius: 20px;
 }
@@ -146,7 +146,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.78rem;
   font-weight: 300;
-  color: #888888;
+  color: var(--text-muted);
   line-height: 1.75;
   margin: 0;
 }
@@ -158,16 +158,16 @@
   justify-content: center;
   width: 2.1rem;
   height: 2.1rem;
-  border: 1px solid #30363d;
+  border: 1px solid var(--gh-border);
   border-radius: 6px;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   font-size: 1rem;
   text-decoration: none;
-  background: #161b22;
+  background: var(--gh-bg-elevated);
   transition: color 0.2s, border-color 0.2s;
 }
 
-.hero-repo-gh:hover { color: #e6edf3; border-color: #8b949e; }
+.hero-repo-gh:hover { color: var(--gh-text); border-color: var(--gh-text-muted); }
 
 .hero-repo-topics {
   display: flex;
@@ -190,7 +190,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 0.85rem;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--border);
 }
 
 .hero-repo-stats {
@@ -204,14 +204,14 @@
   gap: 0.28rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.63rem;
-  color: #555555;
+  color: var(--text-dim);
 }
 
 .hero-repo-cta {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--lang-color, #f47067);
+  color: var(--lang-color, var(--accent-hover));
   letter-spacing: 0.3px;
   transition: opacity 0.15s;
 }
@@ -250,7 +250,7 @@
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #555555;
+  color: var(--text-dim);
   font-size: 1rem;
   pointer-events: none;
   opacity: 0;
@@ -262,36 +262,36 @@
 }
 
 .view-search-wrap:focus-within .view-search-icon {
-  color: #888888;
+  color: var(--text-muted);
   opacity: 1;
   animation: none;
 }
 
 .view-search-input {
   width: 100%;
-  background: #141414;
-  border: 1px solid #2a2a2a;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
   border-radius: 8px;
   padding: 0.72rem 1rem 0.72rem 2.6rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.82rem;
   font-weight: 300;
-  color: #e8e8e8;
+  color: var(--text);
   outline: none;
   transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .view-search-input::placeholder {
-  color: #555555;
+  color: var(--text-dim);
   letter-spacing: 0.4px;
   font-style: italic;
 }
 
 .view-search-input:focus {
-  border-color: #444444;
-  background: #181818;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.45), 0 0 0 2px rgba(255,255,255,0.04);
+  border-color: var(--border-strong);
+  background: var(--bg-elevated-2);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.45), 0 0 0 2px color-mix(in srgb, var(--text) 4%, transparent);
 }
 
 .view-search-input::-webkit-search-cancel-button { -webkit-appearance: none; }
@@ -300,7 +300,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.62rem;
   font-weight: 400;
-  color: #555555;
+  color: var(--text-dim);
   letter-spacing: 0.3px;
   white-space: nowrap;
   flex-shrink: 0;
@@ -323,10 +323,10 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.63rem;
   font-weight: 400;
-  color: #555555;
+  color: var(--text-dim);
   padding: 0.28rem 0.7rem;
   background: transparent;
-  border: 1px solid #1e1e1e;
+  border: 1px solid var(--border);
   border-radius: 20px;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
@@ -334,15 +334,15 @@
 }
 
 .filter-btn:hover {
-  color: #bbbbbb;
-  border-color: #3a3a3a;
+  color: var(--text-muted);
+  border-color: var(--border-strong);
 }
 
 /* --tag-c non è settato nelle pills lingua → fallback brand red */
 .filter-btn--active {
-  color: var(--tag-c, #e0e0e0);
-  border-color: color-mix(in srgb, var(--tag-c, #8f080f) 45%, transparent);
-  background: color-mix(in srgb, var(--tag-c, #8f080f) 8%, transparent);
+  color: var(--tag-c, var(--text));
+  border-color: color-mix(in srgb, var(--tag-c, var(--accent)) 45%, transparent);
+  background: color-mix(in srgb, var(--tag-c, var(--accent)) 8%, transparent);
 }
 
 .filter-dot {
@@ -366,9 +366,9 @@
   display: flex;
   flex-direction: column;
   min-height: 200px;
-  background: #111111;
-  border: 1px solid #1e1e1e;
-  border-left: 3px solid var(--lang-color, #2a2a2a);
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--lang-color, var(--border-strong));
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -381,13 +381,13 @@
 }
 
 .repo-card:hover {
-  background: #161616;
-  border-color: #2e2e2e;
-  border-left-color: var(--lang-color, #555);
+  background: var(--bg-elevated);
+  border-color: var(--border-strong);
+  border-left-color: var(--lang-color, var(--text-dim));
   transform: translateY(-5px);
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(143, 8, 15, 0.07);
+    0 0 0 1px color-mix(in srgb, var(--accent) 7%, transparent);
 }
 
 @keyframes cardIn {
@@ -437,8 +437,8 @@
   width: 68px;
   height: 68px;
   border-radius: 11px;
-  background: #181818;
-  border: 1px solid #222;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -448,7 +448,7 @@
 
 .repo-card-img-icon {
   font-size: 1.8rem;
-  color: var(--lang-color, #333);
+  color: var(--lang-color, var(--border-strong));
   opacity: 0.55;
 }
 
@@ -458,7 +458,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #181818;
+  background: var(--bg-elevated);
   padding: 3px;
 }
 
@@ -466,13 +466,13 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #dddddd;
+  color: var(--text);
   line-height: 1.3;
   word-break: break-word;
   transition: color 0.2s;
 }
 
-.repo-card:hover .repo-name { color: #ffffff; }
+.repo-card:hover .repo-name { color: var(--text); }
 
 .repo-gh-link {
   display: flex;
@@ -481,7 +481,7 @@
   width: 1.55rem;
   height: 1.55rem;
   border-radius: 4px;
-  color: #2e2e2e;
+  color: var(--border-strong);
   font-size: 0.9rem;
   text-decoration: none;
   flex-shrink: 0;
@@ -489,15 +489,15 @@
 }
 
 .repo-gh-link:hover {
-  color: #aaaaaa;
-  background: #1e1e1e;
+  color: var(--text-muted);
+  background: var(--bg-hover);
 }
 
 .repo-desc {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.73rem;
   font-weight: 300;
-  color: #666666;
+  color: var(--text-dim);
   line-height: 1.75;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -521,7 +521,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.62rem;
   font-weight: 400;
-  color: #666666;
+  color: var(--text-dim);
 }
 
 .repo-lang-dot {
@@ -547,7 +547,7 @@
   gap: 0.25rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.62rem;
-  color: #484848;
+  color: var(--text-dim);
 }
 
 /* ── Topics ── */
@@ -577,7 +577,7 @@
   align-items: center;
   gap: 0.55rem;
   padding-top: 0.7rem;
-  border-top: 1px solid #181818;
+  border-top: 1px solid var(--border);
 }
 
 .repo-license-label {
@@ -587,24 +587,24 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.59rem;
   font-weight: 400;
-  color: #3e3e3e;
+  color: var(--text-dim);
   letter-spacing: 0.25px;
   flex-shrink: 0;
 }
 
 .repo-license-icon {
   font-size: 0.72rem;
-  color: #3e3e3e;
+  color: var(--text-dim);
 }
 
 .repo-license-pill {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.57rem;
   font-weight: 600;
-  color: #8f080f;
+  color: var(--accent);
   padding: 0.13rem 0.52rem;
-  background: rgba(143, 8, 15, 0.07);
-  border: 1px solid rgba(143, 8, 15, 0.22);
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
   border-radius: 20px;
   letter-spacing: 0.25px;
   cursor: pointer;
@@ -612,16 +612,16 @@
 }
 
 .repo-license-pill:hover {
-  background: rgba(143, 8, 15, 0.15);
-  border-color: rgba(143, 8, 15, 0.45);
-  color: #c01010;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--accent-hover);
   transform: scale(1.05);
 }
 
 .repo-license-none {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.57rem;
-  color: #2e2e2e;
+  color: var(--text-dim);
   font-style: italic;
 }
 
@@ -629,10 +629,10 @@
 
 .repo-card--skeleton {
   min-height: 155px;
-  border-color: #181818;
-  border-left-color: #222222;
+  border-color: var(--border);
+  border-left-color: var(--border);
   cursor: default;
-  background: linear-gradient(90deg, #111111 25%, #171717 50%, #111111 75%);
+  background: linear-gradient(90deg, var(--bg-elevated-2) 25%, var(--bg-elevated) 50%, var(--bg-elevated-2) 75%);
   background-size: 200% 100%;
   animation: repoShimmer 1.5s ease-in-out infinite;
   pointer-events: none;
@@ -650,11 +650,11 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.78rem;
   font-weight: 300;
-  color: #8f080f;
+  color: var(--accent);
   padding: 1.5rem;
-  border: 1px solid #2a1010;
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
   border-radius: 4px;
-  background: #110808;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
   text-align: center;
   margin: 2rem var(--pad);
 }
@@ -663,7 +663,7 @@
 
 .projects-cta {
   padding: 1.25rem var(--pad) 3rem;
-  border-top: 1px solid #1a1a1a;
+  border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -673,7 +673,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 300;
-  color: #555555;
+  color: var(--text-dim);
 }
 
 .projects-cta-link {
@@ -683,13 +683,13 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #8f080f;
+  color: var(--accent);
   text-decoration: none;
   letter-spacing: 0.4px;
   transition: color 0.2s;
 }
 
-.projects-cta-link:hover { color: #c01010; }
+.projects-cta-link:hover { color: var(--accent-hover); }
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 

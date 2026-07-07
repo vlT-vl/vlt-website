@@ -5,6 +5,53 @@
   /* Padding orizzontale responsive: centra il contenuto fino a max 1360px.
      Su schermi <1360px usa almeno 1.5rem. Su 21:9+ il contenuto resta centrato. */
   --pad: max(1.5rem, calc((100vw - 1360px) / 2));
+
+  /* ── Tema: dark (default) ── */
+  --bg:             #232325;
+  --bg-elevated:    #1a1a1a;
+  --bg-elevated-2:  #161616;
+  --bg-hover:       #2a2a2a;
+  --border:         #333333;
+  --border-strong:  #444444;
+  --text:           #ffffff;
+  --text-muted:     #aaaaaa;
+  --text-dim:       #666666;
+  --accent:         #b23b3f;
+  --accent-hover:   #cf5155;
+  --accent-soft:    rgba(178, 59, 63, 0.14);
+
+  /* Palette "GitHub-style" per elementi che imitano l'estetica GitHub
+     (repo card, README, licenza) — indipendente dalla palette generale. */
+  --gh-bg:            #0d1117;
+  --gh-bg-elevated:   #161b22;
+  --gh-border:        #30363d;
+  --gh-border-muted:  #21262d;
+  --gh-text:          #e6edf3;
+  --gh-text-muted:    #8b949e;
+  --gh-text-dim:      #484f58;
+}
+
+html[data-theme='light'] {
+  --bg:             #e9e9e6;
+  --bg-elevated:    #f3f3f1;
+  --bg-elevated-2:  #dedddb;
+  --bg-hover:       #d3d2cf;
+  --border:         rgba(15, 23, 42, 0.16);
+  --border-strong:  rgba(15, 23, 42, 0.28);
+  --text:           #17181a;
+  --text-muted:     #5b6270;
+  --text-dim:       #838b98;
+  --accent:         #b23b3f;
+  --accent-hover:   #cf5155;
+  --accent-soft:    rgba(178, 59, 63, 0.1);
+
+  --gh-bg:            #f2f2f0;
+  --gh-bg-elevated:   #e6e7e4;
+  --gh-border:        #c4cbd2;
+  --gh-border-muted:  #ced4da;
+  --gh-text:          #1f2328;
+  --gh-text-muted:    #656d76;
+  --gh-text-dim:      #7c8591;
 }
 
 *,
@@ -17,8 +64,9 @@
 
 body {
   font-size: 15px;
-  background-color: #232325;
-  color: #ffffff;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .disable-select {
@@ -27,17 +75,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #282828;
+  background-color: var(--bg-elevated);
   border-radius: 7px;
 }
 
 ::-webkit-scrollbar {
   width: 9px;
   height: 10px;
-  background-color: #282828;
+  background-color: var(--bg-elevated);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 7px;
-  background-color: #363636;
+  background-color: var(--border-strong);
 }

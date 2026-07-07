@@ -1,12 +1,11 @@
 # Dependencies
 node_modules/
 
+# Note di lavoro interne, non per la repo pubblica
+handoff.md
+
 # Ignore this file when untracked in fresh copies.
 .gitignore
-
-# JSON generati dal workflow/deploy — non committare
-public/projects.json
-public/posts.json
 
 # Build output
 dist/

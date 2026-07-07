@@ -24,8 +24,9 @@ main {
 
 /* ── Footer ── */
 .ftr {
-  background: #0d0d0d;
-  border-top: 1px solid #1e1e1e;
+  background: var(--bg-elevated-2);
+  border-top: 1px solid var(--border);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .ftr-body {
@@ -33,7 +34,7 @@ main {
   grid-template-columns: 1.6fr 1fr 1fr;
   gap: 2rem;
   padding: 1.75rem var(--pad) 1.5rem;
-  border-bottom: 1px solid #181818;
+  border-bottom: 1px solid var(--border);
 }
 
 /* brand col */
@@ -60,7 +61,7 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
-  color: #cccccc;
+  color: var(--text-muted);
   letter-spacing: 0.2px;
 }
 
@@ -68,7 +69,7 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.65rem;
   font-weight: 300;
-  color: #666666;
+  color: var(--text-dim);
   letter-spacing: 0.2px;
 }
 
@@ -76,7 +77,7 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6rem;
   font-weight: 300;
-  color: #444444;
+  color: var(--text-dim);
   margin-bottom: 0.5rem;
 }
 
@@ -92,18 +93,18 @@ main {
   justify-content: center;
   width: 1.8rem;
   height: 1.8rem;
-  border: 1px solid #252525;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  color: #555555;
+  color: var(--text-dim);
   font-size: 0.85rem;
   text-decoration: none;
-  background: #161616;
+  background: var(--bg-elevated);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 .ftr-social-btn:hover {
-  color: #cccccc;
-  border-color: #3a3a3a;
-  background: #1e1e1e;
+  color: var(--text-muted);
+  border-color: var(--border-strong);
+  background: var(--bg-hover);
 }
 
 /* nav + links cols */
@@ -118,7 +119,7 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.55rem;
   font-weight: 600;
-  color: #3a3a3a;
+  color: var(--text-dim);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.2rem;
@@ -131,24 +132,24 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
-  color: #666666;
+  color: var(--text-dim);
   cursor: pointer;
   text-align: left;
   transition: color 0.2s;
   letter-spacing: 0.2px;
 }
-.ftr-nav-link:hover { color: #cccccc; }
+.ftr-nav-link:hover { color: var(--text-muted); }
 
 .ftr-ext-link {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 300;
-  color: #666666;
+  color: var(--text-dim);
   text-decoration: none;
   letter-spacing: 0.2px;
   transition: color 0.2s;
 }
-.ftr-ext-link:hover { color: #cccccc; }
+.ftr-ext-link:hover { color: var(--text-muted); }
 
 /* bottom bar */
 .ftr-bottom {
@@ -162,7 +163,7 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6rem;
   font-weight: 300;
-  color: #333333;
+  color: var(--text-dim);
   letter-spacing: 0.3px;
 }
 
@@ -173,13 +174,21 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6rem;
   font-weight: 300;
-  color: #333333;
+  color: var(--text-dim);
   letter-spacing: 0.2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ftr-stack:hover {
+  color: var(--text-muted);
 }
 
 .ftr-stack-icon {
   font-size: 0.7rem;
-  color: #444444;
+  color: var(--text-dim);
   flex-shrink: 0;
 }
 
@@ -189,14 +198,21 @@ main {
   gap: 0.25rem;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  border: 1px solid #2a2a2a;
-  background: #111111;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 0.52rem;
   font-weight: 500;
-  color: #666666;
+  color: var(--text-dim);
   letter-spacing: 0.4px;
   user-select: none;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ftr-version:hover {
+  color: var(--text-muted);
+  border-color: var(--border-strong);
 }
 
 /* responsive */

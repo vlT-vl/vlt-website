@@ -9,6 +9,7 @@ import VltView from './VltView.jsx'
 import ProjectsView from './ProjectsView.jsx'
 import BlogView from './BlogView.jsx'
 import VltLogo from './VltLogo.jsx'
+import AboutModal from './AboutModal.jsx'
 import { SiGithub, SiReact, SiVite } from 'react-icons/si'
 import { FaLinkedinIn } from 'react-icons/fa'
 import pkg from '../../package.json'
@@ -19,6 +20,7 @@ const BLOG_URL     = import.meta.env.VITE_BLOG_URL
 
 const App = () => {
   const [view, setView] = useState('home')
+  const [aboutOpen, setAboutOpen] = useState(false)
 
   const nav = v => { setView(v); window.scrollTo({ top: 0, behavior: 'smooth' }) }
 
@@ -38,7 +40,7 @@ const App = () => {
         <div className="ftr-body">
 
           <div className="ftr-brand">
-            <button className="ftr-logo-btn" onClick={() => nav('home')} aria-label="Home">
+            <button className="ftr-logo-btn" onClick={() => setAboutOpen(true)} aria-label="Informazioni su vlT Website">
               <VltLogo size="1.6rem" />
             </button>
             <p className="ftr-name">Lorenzo Veronesi</p>
@@ -72,12 +74,16 @@ const App = () => {
 
         <div className="ftr-bottom">
           <span className="ftr-copy">© 2026 Lorenzo Veronesi · vlT</span>
-          <span className="ftr-stack">
+          <button className="ftr-stack" onClick={() => setAboutOpen(true)}>
             Built with <SiReact className="ftr-stack-icon" /> React &amp; <SiVite className="ftr-stack-icon" /> Vite
-          </span>
-          <span className="ftr-version">v{pkg.version}{pkg.build ? ` · ${pkg.build}` : ''}</span>
+          </button>
+          <button className="ftr-version" onClick={() => setAboutOpen(true)}>
+            v{pkg.version}{pkg.build ? ` · ${pkg.build}` : ''}
+          </button>
         </div>
       </footer>
+
+      {aboutOpen && <AboutModal onClose={() => setAboutOpen(false)} />}
     </div>
     </DataProvider>
   )

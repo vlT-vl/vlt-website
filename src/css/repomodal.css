@@ -23,11 +23,11 @@
   to   { opacity: 1; }
 }
 
-/* ── Card ─────────────────────────────────────────────────────────────────── */
+/* ── Card (stile GitHub) ──────────────────────────────────────────────────── */
 
 .rmo-card {
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border);
   border-radius: 10px;
   width: 100%;
   max-width: 1080px;
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   scrollbar-width: thin;
-  scrollbar-color: #30363d #0d1117;
+  scrollbar-color: var(--gh-border) var(--gh-bg);
 }
 
 @keyframes rmoCardIn {
@@ -59,9 +59,9 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1.4rem 1.75rem 1.2rem;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid var(--gh-border-muted);
   flex-shrink: 0;
-  background: #161b22;
+  background: var(--gh-bg-elevated);
   border-radius: 10px 10px 0 0;
 }
 
@@ -78,8 +78,8 @@
   width: 52px;
   height: 52px;
   border-radius: 10px;
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@
 
 .rmo-repo-img-icon {
   font-size: 1.4rem;
-  color: #30363d;
+  color: var(--gh-border);
 }
 
 .rmo-repo-img-photo {
@@ -98,7 +98,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: #0d1117;
+  background: var(--gh-bg);
   padding: 4px;
 }
 
@@ -116,7 +116,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 600;
-  color: #e6edf3;
+  color: var(--gh-text);
   line-height: 1.2;
 }
 
@@ -127,10 +127,10 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6rem;
   font-weight: 400;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   padding: 0.13rem 0.5rem;
-  background: #21262d;
-  border: 1px solid #30363d;
+  background: var(--gh-border-muted);
+  border: 1px solid var(--gh-border);
   border-radius: 20px;
 }
 
@@ -149,7 +149,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.72rem;
   font-weight: 300;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   line-height: 1.65;
 }
 
@@ -166,16 +166,16 @@
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  border: 1px solid #30363d;
+  border: 1px solid var(--gh-border);
   border-radius: 6px;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   font-size: 1rem;
   text-decoration: none;
-  background: #21262d;
+  background: var(--gh-border-muted);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.rmo-gh-btn:hover { color: #e6edf3; border-color: #8b949e; background: #30363d; }
+.rmo-gh-btn:hover { color: var(--gh-text); border-color: var(--gh-text-muted); background: var(--gh-border); }
 
 .rmo-close {
   display: flex;
@@ -183,16 +183,16 @@
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  background: #21262d;
-  border: 1px solid #30363d;
+  background: var(--gh-border-muted);
+  border: 1px solid var(--gh-border);
   border-radius: 6px;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   font-size: 1.1rem;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.rmo-close:hover { color: #e6edf3; border-color: #8b949e; background: #30363d; }
+.rmo-close:hover { color: var(--gh-text); border-color: var(--gh-text-muted); background: var(--gh-border); }
 
 /* ── Stats bar ────────────────────────────────────────────────────────────── */
 
@@ -202,7 +202,7 @@
   gap: 0.5rem;
   flex-wrap: wrap;
   padding: 0.65rem 1.75rem;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid var(--gh-border-muted);
   flex-shrink: 0;
 }
 
@@ -212,11 +212,11 @@
   gap: 0.25rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.63rem;
-  color: #8b949e;
+  color: var(--gh-text-muted);
 }
 
 .rmo-stat-sep {
-  color: #30363d;
+  color: var(--gh-border);
   font-size: 0.7rem;
   user-select: none;
 }
@@ -228,7 +228,7 @@
   flex-wrap: wrap;
   gap: 0.32rem;
   padding: 0.65rem 1.75rem;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid var(--gh-border-muted);
   flex-shrink: 0;
 }
 
@@ -250,7 +250,7 @@
   align-items: flex-end;
   gap: 0;
   padding: 0 1.75rem;
-  border-bottom: 1px solid #21262d;
+  border-bottom: 1px solid var(--gh-border-muted);
   flex-shrink: 0;
 }
 
@@ -258,7 +258,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   background: transparent;
   border: none;
   border-bottom: 2px solid transparent;
@@ -269,11 +269,11 @@
   letter-spacing: 0.25px;
 }
 
-.rmo-tab:hover { color: #e6edf3; }
+.rmo-tab:hover { color: var(--gh-text); }
 
 .rmo-tab--active {
-  color: #e6edf3;
-  border-bottom-color: #f47067;
+  color: var(--gh-text);
+  border-bottom-color: var(--accent-hover);
   font-weight: 600;
 }
 
@@ -297,7 +297,7 @@
 .rmo-spinner {
   width: 26px;
   height: 26px;
-  border: 2px solid #21262d;
+  border: 2px solid var(--gh-border-muted);
   border-top-color: #4493f8;
   border-radius: 50%;
   animation: rmoSpin 0.7s linear infinite;
@@ -317,7 +317,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.6rem;
   font-weight: 600;
-  color: #484f58;
+  color: var(--gh-text-dim);
   text-transform: uppercase;
   letter-spacing: 0.7px;
 }
@@ -330,7 +330,7 @@
   border-radius: 4px;
   overflow: hidden;
   gap: 1px;
-  background: #21262d;
+  background: var(--gh-border-muted);
 }
 
 .rmo-lang-seg {
@@ -353,11 +353,11 @@
   gap: 0.32rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.63rem;
-  color: #8b949e;
+  color: var(--gh-text-muted);
 }
 
 .rmo-lang-pct {
-  color: #484f58;
+  color: var(--gh-text-dim);
   font-size: 0.58rem;
 }
 
@@ -367,10 +367,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  border: 1px solid #21262d;
+  border: 1px solid var(--gh-border-muted);
   border-radius: 6px;
   overflow: hidden;
-  background: #21262d;
+  background: var(--gh-border-muted);
 }
 
 .rmo-file-row {
@@ -380,18 +380,18 @@
   padding: 0.42rem 0.7rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.67rem;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   text-decoration: none;
-  background: #0d1117;
+  background: var(--gh-bg);
   transition: color 0.15s, background 0.15s;
 }
 
-.rmo-file-row:hover { color: #4493f8; background: #161b22; }
+.rmo-file-row:hover { color: #4493f8; background: var(--gh-bg-elevated); }
 
 .rmo-file-icon {
   flex-shrink: 0;
   font-size: 0.75rem;
-  color: #484f58;
+  color: var(--gh-text-dim);
 }
 
 .rmo-file-dir { color: #4493f8 !important; }
@@ -407,7 +407,7 @@
 .rmo-commits {
   display: flex;
   flex-direction: column;
-  border: 1px solid #21262d;
+  border: 1px solid var(--gh-border-muted);
   border-radius: 6px;
   overflow: hidden;
 }
@@ -417,17 +417,17 @@
   align-items: flex-start;
   gap: 0.65rem;
   padding: 0.6rem 0.8rem;
-  background: #0d1117;
-  border-bottom: 1px solid #21262d;
+  background: var(--gh-bg);
+  border-bottom: 1px solid var(--gh-border-muted);
   text-decoration: none;
   transition: background 0.15s;
 }
 
 .rmo-commit-row:last-child { border-bottom: none; }
-.rmo-commit-row:hover { background: #161b22; }
+.rmo-commit-row:hover { background: var(--gh-bg-elevated); }
 
 .rmo-commit-icon {
-  color: #484f58;
+  color: var(--gh-text-dim);
   font-size: 0.85rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
@@ -444,7 +444,7 @@
 .rmo-commit-msg {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
-  color: #e6edf3;
+  color: var(--gh-text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -459,22 +459,22 @@
   gap: 0.35rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.58rem;
-  color: #484f58;
+  color: var(--gh-text-dim);
 }
 
-.rmo-commit-author { color: #768390; }
-.rmo-commit-dot    { color: #30363d; }
+.rmo-commit-author { color: var(--gh-text-muted); }
+.rmo-commit-dot    { color: var(--gh-border); }
 .rmo-commit-time   {}
 
 .rmo-commit-sha {
   margin-left: auto;
   font-family: ui-monospace, 'JetBrains Mono', monospace;
   font-size: 0.57rem;
-  color: #484f58;
-  background: #161b22;
+  color: var(--gh-text-dim);
+  background: var(--gh-bg-elevated);
   padding: 0.08rem 0.32rem;
   border-radius: 3px;
-  border: 1px solid #21262d;
+  border: 1px solid var(--gh-border-muted);
   flex-shrink: 0;
 }
 
@@ -485,14 +485,14 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.7rem 0.8rem;
-  background: #0d1117;
-  border: 1px solid #21262d;
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border-muted);
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.15s, border-color 0.15s;
 }
 
-.rmo-release:hover { background: #161b22; border-color: #30363d; }
+.rmo-release:hover { background: var(--gh-bg-elevated); border-color: var(--gh-border); }
 
 .rmo-release-icon {
   color: #4493f8;
@@ -503,7 +503,7 @@
 .rmo-release-tag {
   font-family: ui-monospace, 'JetBrains Mono', monospace;
   font-size: 0.7rem;
-  color: #e6edf3;
+  color: var(--gh-text);
   background: rgba(68, 147, 248, 0.09);
   border: 1px solid rgba(68, 147, 248, 0.18);
   padding: 0.08rem 0.42rem;
@@ -514,7 +514,7 @@
 .rmo-release-name {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.68rem;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -524,7 +524,7 @@
 .rmo-release-time {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.58rem;
-  color: #484f58;
+  color: var(--gh-text-dim);
   flex-shrink: 0;
   margin-left: auto;
 }
@@ -535,7 +535,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.82rem;
   font-weight: 300;
-  color: #c9d1d9;
+  color: var(--gh-text);
   line-height: 1.85;
   word-break: break-word;
 }
@@ -544,7 +544,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75rem;
   font-weight: 300;
-  color: #484f58;
+  color: var(--gh-text-dim);
   font-style: italic;
   padding: 2rem 0;
   text-align: center;
@@ -554,8 +554,8 @@
 .rmo-readme h1, .rmo-readme h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #e6edf3;
-  border-bottom: 1px solid #21262d;
+  color: var(--gh-text);
+  border-bottom: 1px solid var(--gh-border-muted);
   padding-bottom: 0.35rem;
   margin: 1.6rem 0 0.8rem;
   line-height: 1.3;
@@ -567,7 +567,7 @@
 .rmo-readme h3, .rmo-readme h4, .rmo-readme h5, .rmo-readme h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #e6edf3;
+  color: var(--gh-text);
   margin: 1.25rem 0 0.55rem;
   line-height: 1.3;
 }
@@ -588,23 +588,23 @@
 .rmo-readme code {
   font-family: ui-monospace, 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.78rem;
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: var(--gh-bg-elevated);
+  border: 1px solid var(--gh-border);
   border-radius: 4px;
   padding: 0.1rem 0.38rem;
-  color: #e6edf3;
+  color: var(--gh-text);
 }
 
 /* Code blocks */
 .rmo-readme pre {
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: var(--gh-bg-elevated);
+  border: 1px solid var(--gh-border);
   border-radius: 6px;
   padding: 1rem 1.1rem;
   overflow-x: auto;
   margin: 0.75rem 0 1rem;
   scrollbar-width: thin;
-  scrollbar-color: #30363d #161b22;
+  scrollbar-color: var(--gh-border) var(--gh-bg-elevated);
 }
 
 .rmo-readme pre code {
@@ -612,17 +612,17 @@
   border: none;
   padding: 0;
   font-size: 0.75rem;
-  color: #c9d1d9;
+  color: var(--gh-text);
   line-height: 1.7;
   white-space: pre;
 }
 
 /* Blockquote */
 .rmo-readme blockquote {
-  border-left: 3px solid #30363d;
+  border-left: 3px solid var(--gh-border);
   margin: 0 0 0.9rem;
   padding: 0.2rem 0.85rem;
-  color: #8b949e;
+  color: var(--gh-text-muted);
   font-style: italic;
 }
 
@@ -645,27 +645,27 @@
   margin: 0.75rem 0 1rem;
   overflow: hidden;
   border-radius: 6px;
-  border: 1px solid #30363d;
+  border: 1px solid var(--gh-border);
 }
 
-.rmo-readme thead { background: #161b22; }
+.rmo-readme thead { background: var(--gh-bg-elevated); }
 
 .rmo-readme th {
   font-weight: 600;
-  color: #e6edf3;
+  color: var(--gh-text);
   padding: 0.5rem 0.75rem;
   text-align: left;
-  border-bottom: 1px solid #30363d;
+  border-bottom: 1px solid var(--gh-border);
 }
 
 .rmo-readme td {
   padding: 0.42rem 0.75rem;
-  border-bottom: 1px solid #21262d;
-  color: #c9d1d9;
+  border-bottom: 1px solid var(--gh-border-muted);
+  color: var(--gh-text);
 }
 
 .rmo-readme tr:last-child td { border-bottom: none; }
-.rmo-readme tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+.rmo-readme tr:nth-child(even) td { background: color-mix(in srgb, var(--gh-text) 2%, transparent); }
 
 /* Images */
 .rmo-readme img {
@@ -678,18 +678,18 @@
 /* Horizontal rule */
 .rmo-readme hr {
   border: none;
-  border-top: 1px solid #21262d;
+  border-top: 1px solid var(--gh-border-muted);
   margin: 1.5rem 0;
 }
 
 /* Strong / em */
-.rmo-readme strong { font-weight: 600; color: #e6edf3; }
-.rmo-readme em     { font-style: italic; color: #c9d1d9; }
+.rmo-readme strong { font-weight: 600; color: var(--gh-text); }
+.rmo-readme em     { font-style: italic; color: var(--gh-text); }
 
 /* Details / summary (GitHub supports these) */
 .rmo-readme details {
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: var(--gh-bg-elevated);
+  border: 1px solid var(--gh-border);
   border-radius: 6px;
   padding: 0.6rem 0.9rem;
   margin: 0.5rem 0 0.9rem;
@@ -698,7 +698,7 @@
 .rmo-readme summary {
   cursor: pointer;
   font-weight: 600;
-  color: #e6edf3;
+  color: var(--gh-text);
   font-size: 0.78rem;
 }
 

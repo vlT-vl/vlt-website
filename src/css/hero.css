@@ -9,9 +9,10 @@
   justify-content: center;
   text-align: center;
   padding: 1.5rem 2rem 1.4rem;
-  background: #111111;
-  border-bottom: 3px solid #8f080f;
+  background: var(--bg-elevated-2);
+  border-bottom: 3px solid var(--accent);
   gap: 0.25rem;
+  transition: background-color 0.2s ease;
 }
 
 .hero-label {
@@ -19,7 +20,7 @@
   font-size: 0.58rem;
   font-weight: 400;
   letter-spacing: 4px;
-  color: #8f080f;
+  color: var(--accent);
   text-transform: uppercase;
 }
 
@@ -48,14 +49,14 @@
   font-size: clamp(1.1rem, 3vw, 1.6rem);
   font-weight: 600;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .hero-sub {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.6rem, 1.2vw, 0.7rem);
   font-weight: 300;
-  color: #909090;
+  color: var(--text-muted);
   max-width: 520px;
   line-height: 2;
   letter-spacing: 0.3px;

@@ -1,5 +1,6 @@
 import '../css/navbar.css'
 import VltLogo from './VltLogo.jsx'
+import Theme from './Theme.jsx'
 import { SiGithub } from 'react-icons/si'
 import { FaLinkedinIn } from 'react-icons/fa'
 
@@ -47,6 +48,7 @@ const Navbar = ({ view, onNav }) => (
       <a className="navbar-social-btn" href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <FaLinkedinIn />
       </a>
+      <Theme />
     </div>
   </nav>
 )

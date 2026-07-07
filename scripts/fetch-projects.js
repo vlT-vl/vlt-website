@@ -83,7 +83,23 @@ export const getGithubUser = () =>
 export const getGithubToken = () =>
   process.env.GITHUB_TOKEN || readGithubCliToken()
 
+const readPrevPayload = () => {
+  try {
+    return JSON.parse(readFileSync(OUT_FILE, 'utf8'))
+  } catch {
+    return null
+  }
+}
+
 export async function generateProjectsPayload({ user = getGithubUser(), token = getGithubToken() } = {}) {
+
+  // Merge campo-per-campo con l'ultimo JSON committato: se una singola chiamata
+  // fallisce o viene saltata per rate-limit, il repo mantiene il dato precedente
+  // invece di perderlo — evita che un run parziale sostituisca in blocco dati
+  // già buoni con campi vuoti.
+  const prevByFullName = new Map(
+    (readPrevPayload()?.repos ?? []).map(r => [r.full_name, r])
+  )
 
   let remaining = Number.POSITIVE_INFINITY
   const apiFetch = async (url, accept = 'application/vnd.github+json') => {
@@ -105,13 +121,13 @@ export async function generateProjectsPayload({ user = getGithubUser(), token = 
   if (!Array.isArray(repos)) throw new Error('risposta GitHub non valida')
 
   const payload = {
-    generatedAt: new Date().toISOString(),
     source,
     repos: [],
   }
 
   for (const repo of repos) {
     const data = compactRepo(repo)
+    const prev = prevByFullName.get(repo.full_name)
 
     try {
       const readmeRes = await apiFetch(
@@ -122,9 +138,17 @@ export async function generateProjectsPayload({ user = getGithubUser(), token = 
         const html = await readmeRes.text()
         data.readmeHtml = normalizeGithubHtml(html, repo.full_name)
         data.readmeImage = extractReadmeImage(html, repo.full_name)
+      } else if (readmeRes && readmeRes.status === 404) {
+        data.readmeHtml = null
+        data.readmeImage = null
+      } else {
+        data.readmeHtml = prev?.readmeHtml ?? null
+        data.readmeImage = prev?.readmeImage ?? null
       }
     } catch (e) {
       console.warn(`[fetch-projects] README ${repo.full_name}: ${e.message}`)
+      data.readmeHtml = prev?.readmeHtml ?? null
+      data.readmeImage = prev?.readmeImage ?? null
     }
 
     if (repo.license) {
@@ -132,13 +156,75 @@ export async function generateProjectsPayload({ user = getGithubUser(), token = 
         const licenseRes = await apiFetch(`https://api.github.com/repos/${repo.full_name}/license`)
         if (licenseRes?.ok) {
           const license = await licenseRes.json()
-          if (license?.content) {
-            data.licenseText = Buffer.from(license.content.replace(/\n/g, ''), 'base64').toString('utf8')
-          }
+          data.licenseText = license?.content
+            ? Buffer.from(license.content.replace(/\n/g, ''), 'base64').toString('utf8')
+            : (prev?.licenseText ?? null)
+        } else if (licenseRes && licenseRes.status === 404) {
+          data.licenseText = null
+        } else {
+          data.licenseText = prev?.licenseText ?? null
         }
       } catch (e) {
         console.warn(`[fetch-projects] license ${repo.full_name}: ${e.message}`)
+        data.licenseText = prev?.licenseText ?? null
       }
+    }
+
+    try {
+      const langRes = await apiFetch(`https://api.github.com/repos/${repo.full_name}/languages`)
+      const languages = langRes?.ok
+        ? await langRes.json()
+        : (prev?.dash?.languages ?? {})
+
+      const contentsRes = await apiFetch(`https://api.github.com/repos/${repo.full_name}/contents`)
+      let contents
+      if (contentsRes?.ok) {
+        const contentsRaw = await contentsRes.json()
+        contents = Array.isArray(contentsRaw)
+          ? contentsRaw.map(f => ({ sha: f.sha, name: f.name, type: f.type, html_url: f.html_url }))
+          : []
+      } else if (contentsRes && contentsRes.status === 404) {
+        contents = [] // repo vuoto — risposta autoritativa, non un fallimento
+      } else {
+        contents = prev?.dash?.contents ?? []
+      }
+
+      const commitsRes = await apiFetch(`https://api.github.com/repos/${repo.full_name}/commits?per_page=5`)
+      let commits
+      if (commitsRes?.ok) {
+        const commitsRaw = await commitsRes.json()
+        commits = Array.isArray(commitsRaw)
+          ? commitsRaw.map(c => ({
+              sha:      c.sha,
+              html_url: c.html_url,
+              commit: {
+                message:   c.commit?.message ?? '',
+                author:    c.commit?.author,
+                committer: c.commit?.committer,
+              },
+            }))
+          : []
+      } else if (commitsRes && [404, 409].includes(commitsRes.status)) {
+        commits = [] // repo vuoto — risposta autoritativa
+      } else {
+        commits = prev?.dash?.commits ?? []
+      }
+
+      const releaseRes = await apiFetch(`https://api.github.com/repos/${repo.full_name}/releases/latest`)
+      let release
+      if (releaseRes?.ok) {
+        const r = await releaseRes.json()
+        release = { html_url: r.html_url, tag_name: r.tag_name, name: r.name, published_at: r.published_at }
+      } else if (releaseRes && releaseRes.status === 404) {
+        release = null // confermato: nessuna release pubblicata
+      } else {
+        release = prev?.dash?.release ?? null
+      }
+
+      data.dash = { languages, contents, commits, release }
+    } catch (e) {
+      console.warn(`[fetch-projects] dash ${repo.full_name}: ${e.message}`)
+      data.dash = prev?.dash ?? { languages: {}, contents: [], commits: [], release: null }
     }
 
     payload.repos.push(data)

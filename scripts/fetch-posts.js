@@ -2,7 +2,7 @@
 // Prima prova HTTP normale; se Vercel risponde con challenge, usa Playwright
 // per leggere rss.xml come farebbe un browser.
 
-import { writeFileSync, existsSync, mkdirSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { tmpdir } from 'node:os'
@@ -14,7 +14,7 @@ const CACHE_DIR = join(tmpdir(), 'vlt-dev-cache')
 const OUT_FILE  = process.env.CI === 'true'
   ? join(__dirname, '..', 'public', 'posts.json')
   : join(CACHE_DIR, 'posts.json')
-const USER_AGENT = 'Mozilla/5.0 (compatible; vlt-website/0.1.2; +https://lorenzoveronesi.it)'
+const USER_AGENT = 'Mozilla/5.0 (compatible; vlt-website/0.1.3; +https://lorenzoveronesi.it)'
 
 // ── RSS parser (regex — no DOMParser in Node.js) ──────────────────────────
 
@@ -102,6 +102,15 @@ const fetchRssBrowser = async () => {
   }
 }
 
+const readPrevPosts = () => {
+  try {
+    const data = JSON.parse(readFileSync(OUT_FILE, 'utf8'))
+    return Array.isArray(data) ? data : (data.posts ?? [])
+  } catch {
+    return []
+  }
+}
+
 export async function generatePostsPayload() {
   let text
   try {
@@ -113,8 +122,18 @@ export async function generatePostsPayload() {
     console.log('[fetch-posts] RSS via Playwright')
   }
 
-  const posts = parseXml(text)
-  if (!posts.length) throw new Error('nessun articolo nel feed')
+  const freshPosts = parseXml(text)
+  if (!freshPosts.length) throw new Error('nessun articolo nel feed')
+
+  // Il feed RSS espone solo gli articoli più recenti: senza merge, quelli più
+  // vecchi "scorrerebbero fuori" dalla finestra del feed e sparirebbero dal
+  // sito. Uniamo i fresh (autoritativi) con quelli precedenti non più presenti.
+  const prevPosts = readPrevPosts()
+  const freshIds  = new Set(freshPosts.map(p => p.id))
+  const carriedOver = prevPosts.filter(p => !freshIds.has(p.id))
+  const posts = [...freshPosts, ...carriedOver]
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
+
   return { posts }
 }
 
