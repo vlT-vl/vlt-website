@@ -20,7 +20,7 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-07-07T16:22:06Z",
+      "pushed_at": "2026-07-07T16:25:17Z",
       "updated_at": "2026-07-07T16:22:08Z",
       "archived": false,
       "fork": false,
@@ -77,13 +77,13 @@
             "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/package.json"
           },
           {
-            "sha": "d28d9a68e2665dcd31977e7e985004e0fb6ffc00",
+            "sha": "7ab7c7298a2612767cb5b478b82c9d54ba0deaa6",
             "name": "public",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/public"
           },
           {
-            "sha": "15de94e0b04d759e7e5571b09841876e2ba93eac",
+            "sha": "2c9ef49e6909384ceabda0afc341f782174bd1fb",
             "name": "scripts",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/scripts"
@@ -103,25 +103,8 @@
         ],
         "commits": [
           {
-            "sha": "5f03440c5e99374a3fc3dce2ab48b1300e716c81",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/5f03440c5e99374a3fc3dce2ab48b1300e716c81",
-            "commit": {
-              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-07-07T16:22:05Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-07-07T16:22:05Z"
-              }
-            }
-          },
-          {
-            "sha": "cc5767cf3bb063e2b761f834c043ba29e30030ba",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/cc5767cf3bb063e2b761f834c043ba29e30030ba",
+            "sha": "d06004f9cc658c0b68bc3ac30dc4f5aa5159da71",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/d06004f9cc658c0b68bc3ac30dc4f5aa5159da71",
             "commit": {
               "message": "vlt-website 0.1.3 R070726",
               "author": {
@@ -132,7 +115,7 @@
               "committer": {
                 "name": "Lorenzo Veronesi",
                 "email": "vlt.vltech@gmail.com",
-                "date": "2026-07-07T16:22:02Z"
+                "date": "2026-07-07T16:25:16Z"
               }
             }
           },
