@@ -2,6 +2,316 @@
   "source": "https://api.github.com/users/vlT-vl/repos?type=public&sort=pushed&per_page=100",
   "repos": [
     {
+      "id": 1392375234,
+      "name": "examgrid",
+      "full_name": "vlT-vl/examgrid",
+      "html_url": "https://github.com/vlT-vl/examgrid",
+      "description": "Timed professional exam simulator — frontend React, backend-free",
+      "language": null,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "watchers_count": 0,
+      "size": 0,
+      "topics": [],
+      "license": null,
+      "pushed_at": "2026-09-28T10:02:24Z",
+      "updated_at": "2026-09-28T10:02:24Z",
+      "archived": false,
+      "fork": false,
+      "readmeHtml": null,
+      "readmeImage": null,
+      "dash": {
+        "languages": {},
+        "contents": [],
+        "commits": [],
+        "release": null
+      }
+    },
+    {
+      "id": 1392331801,
+      "name": "examgrid.exams",
+      "full_name": "vlT-vl/examgrid.exams",
+      "html_url": "https://github.com/vlT-vl/examgrid.exams",
+      "description": "Static, encrypted registry of exam content and user access data for examgrid",
+      "language": null,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "watchers_count": 0,
+      "size": 0,
+      "topics": [],
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "pushed_at": "2026-09-28T09:46:28Z",
+      "updated_at": "2026-09-28T09:46:32Z",
+      "archived": false,
+      "fork": false,
+      "readmeHtml": "<div id=\"readme\" class=\"md\" data-path=\"readme.md\"><article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><p align=\"center\" dir=\"auto\">\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/vlT-vl/examgrid.exams/blob/HEAD/res/examgrid-exams-dark.svg#gh-dark-mode-only\"><img src=\"https://raw.githubusercontent.com/vlT-vl/examgrid.exams/HEAD/res/examgrid-exams-dark.svg#gh-dark-mode-only\" alt=\"examgrid.exams\" width=\"420\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/vlT-vl/examgrid.exams/blob/HEAD/res/examgrid-exams-light.svg#gh-light-mode-only\"><img src=\"https://raw.githubusercontent.com/vlT-vl/examgrid.exams/HEAD/res/examgrid-exams-light.svg#gh-light-mode-only\" alt=\"examgrid.exams\" width=\"420\" style=\"max-width: 100%;\"></a>\n</p>\n<p align=\"center\" dir=\"auto\">\n  Static, encrypted registry of exam content and user access data for examgrid<br>\n  <sub>Plain files · No backend · No auth required to fetch, encrypted at rest</sub>\n</p>\n<p align=\"center\" dir=\"auto\">\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/cbd80c34692cdcb066a39d92c5a4176555a424e29da164fa7a7403aba7cd9b93/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e2d302e312e302d626c75653f7374796c653d666c61742d737175617265\"><img src=\"https://camo.githubusercontent.com/cbd80c34692cdcb066a39d92c5a4176555a424e29da164fa7a7403aba7cd9b93/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e2d302e312e302d626c75653f7374796c653d666c61742d737175617265\" alt=\"version\" data-canonical-src=\"https://img.shields.io/badge/version-0.1.0-blue?style=flat-square\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/f78a3c4501ad8b56a171f652da3afd019cecb90e0eba97308ba99ca51f9b825e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f666f726d61742d4a534f4e2d6f72616e67653f7374796c653d666c61742d737175617265\"><img src=\"https://camo.githubusercontent.com/f78a3c4501ad8b56a171f652da3afd019cecb90e0eba97308ba99ca51f9b825e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f666f726d61742d4a534f4e2d6f72616e67653f7374796c653d666c61742d737175617265\" alt=\"format\" data-canonical-src=\"https://img.shields.io/badge/format-JSON-orange?style=flat-square\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/dc2e14de570b7d2e04318c7a8b616be2a501967629fb018e16994c21fec61753/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d70726f70726965746172792d637269746963616c3f7374796c653d666c61742d737175617265\"><img src=\"https://camo.githubusercontent.com/dc2e14de570b7d2e04318c7a8b616be2a501967629fb018e16994c21fec61753/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d70726f70726965746172792d637269746963616c3f7374796c653d666c61742d737175617265\" alt=\"license\" data-canonical-src=\"https://img.shields.io/badge/license-proprietary-critical?style=flat-square\" style=\"max-width: 100%;\"></a>\n</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Overview</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-overview\" class=\"anchor\" aria-label=\"Permalink: Overview\" href=\"https://github.com/vlT-vl/examgrid.exams#overview\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\"><strong>examgrid.exams</strong> is the static registry that <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/vlT-vl/examgrid.exams/blob/HEAD/../examgrid\">examgrid</a> reads its real exam content and user/access data from — the same role that <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/vlT-vl/examgrid.exams/blob/HEAD/../nxget.packages\">nxget.packages</a> plays for <code>nxget-app-portal</code>: a plain, hand-maintained repository of files, no server, no API beyond raw file access.</p>\n<p dir=\"auto\">This repository holds <strong>no application backend and no plaintext exam content</strong>. Every file it publishes under <code>exams/</code> and <code>users.enc.json</code> is an encrypted envelope, produced offline by a local script that never runs as part of any build or deploy. The plaintext originals and the encryption keys live only on the maintainer's machine, in folders that are never committed (see Architecture).</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Content model</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-content-model\" class=\"anchor\" aria-label=\"Permalink: Content model\" href=\"https://github.com/vlT-vl/examgrid.exams#content-model\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Each exam belongs to one macro-category folder under <code>exams/</code>. Categories map to broad technology domains (e.g. Linux/Red Hat, VMware vSphere) and grow over time as new exams are added — there is no fixed list.</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"exams/\n├── linux-redhat/\n│   └── &lt;exam-id&gt;.enc.json\n└── vmware-vsphere/\n    └── &lt;exam-id&gt;.enc.json\nusers.enc.json\"><pre class=\"notranslate\"><code>exams/\n├── linux-redhat/\n│   └── &lt;exam-id&gt;.enc.json\n└── vmware-vsphere/\n    └── &lt;exam-id&gt;.enc.json\nusers.enc.json\n</code></pre></div>\n<p dir=\"auto\"><code>users.enc.json</code> sits outside <code>exams/</code>: it carries the list of authorized users and their access type, encrypted with the same scheme as the exam files below.</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Encrypted envelope format</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-encrypted-envelope-format\" class=\"anchor\" aria-label=\"Permalink: Encrypted envelope format\" href=\"https://github.com/vlT-vl/examgrid.exams#encrypted-envelope-format\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<div class=\"highlight highlight-source-json notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"{\n  &quot;keyId&quot;: &quot;first 8 characters of the Ed25519 public key&quot;,\n  &quot;category&quot;: &quot;linux-redhat&quot;,\n  &quot;iv&quot;: &quot;base64, 12-byte AES-GCM nonce&quot;,\n  &quot;ciphertext&quot;: &quot;base64, AES-256-GCM of the plaintext JSON&quot;,\n  &quot;signature&quot;: &quot;base32, 103-character Ed25519 signature over iv + ciphertext&quot;\n}\"><pre>{\n  <span class=\"pl-ent\">\"keyId\"</span>: <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>first 8 characters of the Ed25519 public key<span class=\"pl-pds\">\"</span></span>,\n  <span class=\"pl-ent\">\"category\"</span>: <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>linux-redhat<span class=\"pl-pds\">\"</span></span>,\n  <span class=\"pl-ent\">\"iv\"</span>: <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>base64, 12-byte AES-GCM nonce<span class=\"pl-pds\">\"</span></span>,\n  <span class=\"pl-ent\">\"ciphertext\"</span>: <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>base64, AES-256-GCM of the plaintext JSON<span class=\"pl-pds\">\"</span></span>,\n  <span class=\"pl-ent\">\"signature\"</span>: <span class=\"pl-s\"><span class=\"pl-pds\">\"</span>base32, 103-character Ed25519 signature over iv + ciphertext<span class=\"pl-pds\">\"</span></span>\n}</pre></div>\n<p dir=\"auto\">Two independent cryptographic mechanisms, kept deliberately separate:</p>\n<ul dir=\"auto\">\n<li><strong>Ed25519 signature</strong> — proves a file was published by the maintainer and has not been altered. Verifiable by anyone: the public key ships in examgrid's own <code>.env</code> (<code>VITE_EXAMS_PUBLIC_KEY</code>), exactly like the voucher system already used by <code>nxget-app-portal</code>.</li>\n<li><strong>AES-256-GCM encryption</strong> — the actual confidentiality layer. The symmetric key never appears in this repository, in examgrid's <code>.env</code>, or in any committed file anywhere: it is generated and held only on the maintainer's machine and distributed to authorized users out of band.</li>\n</ul>\n<p dir=\"auto\">This means a signature alone never grants the ability to read a file's content, and reading a file's content never grants the ability to forge a new one — the two keys serve opposite, non-overlapping purposes.</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Architecture</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-architecture\" class=\"anchor\" aria-label=\"Permalink: Architecture\" href=\"https://github.com/vlT-vl/examgrid.exams#architecture\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">The registry is produced by a local-only toolchain that is intentionally <strong>not part of this repository</strong>:</p>\n<ul dir=\"auto\">\n<li>Plaintext exam files and the plaintext user list live in a maintainer-only <code>originals/</code> folder, organized by the same macro-categories as <code>exams/</code>.</li>\n<li>A Node.js script reads <code>originals/</code>, encrypts and signs each file, and writes the result into <code>exams/</code> (and <code>users.enc.json</code>).</li>\n<li>Both the script and <code>originals/</code> are excluded from version control at every level (the repository's own <code>.gitignore</code>, plus a self-excluding <code>.gitignore</code> inside each of those folders) and the script itself refuses to run if git ever tracks them.</li>\n</ul>\n<p dir=\"auto\">None of this — the plaintext content, the signing key, or the encryption key — is ever pushed to this repository. Only the encrypted, signed output is.</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Consuming this registry</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-consuming-this-registry\" class=\"anchor\" aria-label=\"Permalink: Consuming this registry\" href=\"https://github.com/vlT-vl/examgrid.exams#consuming-this-registry\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\"><code>examgrid</code> fetches files from this repository's raw GitHub content, verifies each file's Ed25519 signature against <code>VITE_EXAMS_PUBLIC_KEY</code>, and decrypts it with the AES-256 key it has been given out of band. A file that fails signature verification is rejected outright, regardless of whether a valid decryption key is available.</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">License</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-license\" class=\"anchor\" aria-label=\"Permalink: License\" href=\"https://github.com/vlT-vl/examgrid.exams#license\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">See <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/vlT-vl/examgrid.exams/blob/HEAD/LICENSE\">LICENSE</a>.</p>\n</article></div>",
+      "readmeImage": "https://raw.githubusercontent.com/vlT-vl/examgrid.exams/HEAD/res/examgrid-exams-dark.svg#gh-dark-mode-only",
+      "licenseText": "Proprietary Closed-Source License\nCopyright (c) 2026 Veronesi Lorenzo (vlT)\nAll rights reserved.\n\n────────────────────────────────────────────────────────────\n\nSCOPE\n\nThis license governs the content and code of examgrid.exams (\"the\nRepository\"): the static registry of exam manifests, encrypted exam\nfiles and access data consumed by examgrid. It does not grant, and is\nnot required for, ordinary access to the examgrid web application at\nits official deployment: the web app itself is freely accessible to the\npublic, without any license, account, or fee, simply as an end user\nbrowsing the site.\n\n────────────────────────────────────────────────────────────\n\nCLOSED SOURCE — NO PUBLIC ACCESS GRANTED\n\nThe Repository is closed source. It is not source-available, is not\npublished for review or study, and no license to access, inspect, or\nuse its content is granted to the public under any circumstance. The\nfact that the Repository, or any file within it, may be technically\nreachable at a public URL (including but not limited to GitHub or any\nraw-content mirror of it) does not constitute publication, disclosure\ninto the public domain, or a license grant of any kind. Any access\nobtained outside an explicit, individually granted written permission\nfrom the copyright holder is unauthorized, regardless of how it was\nobtained.\n\n────────────────────────────────────────────────────────────\n\nRESTRICTIONS\n\nRegardless of how access to the Repository was obtained — including\nunauthorized access — the following are strictly prohibited without the\nprior written permission of the copyright holder:\n\n1. NO MODIFICATION — The content and code may not be modified, adapted,\n   translated, or used as the basis for derivative works, in whole or in\n   part.\n\n2. NO REPLICATION OR REDISTRIBUTION — The Repository, whether in source\n   or binary form, may NOT be copied, cloned, mirrored, forked,\n   replicated, republished, sublicensed, or repackaged, in whole or in\n   part, under any circumstance. Creating or hosting a copy of this\n   Repository — including a private copy, a fork, or a redistribution of\n   its content elsewhere — is a violation of this license regardless of\n   intent or purpose.\n\n3. NO REVERSE ENGINEERING — Reverse engineering, decompilation,\n   disassembly, or any attempt to reconstruct the encrypted content from\n   the published files is strictly prohibited, except as required by\n   applicable mandatory law.\n\n4. NO COMMERCIAL EXPLOITATION — The Repository may NOT be sold,\n   commercialized, incorporated into a commercial product or service, or\n   used to provide a paid service to third parties.\n\n────────────────────────────────────────────────────────────\n\nINTELLECTUAL PROPERTY\n\nAll intellectual property rights — including but not limited to\ncopyright, trade secrets, know-how, and any applicable patents — remain\nexclusively with Veronesi Lorenzo (vlT). Public access to the web app\ngrants no ownership rights of any kind over the Repository. The name,\nlogos, and any associated trade dress of this software are the\nexclusive property of Veronesi Lorenzo (vlT) and may not be used without\nprior written consent.\n\n────────────────────────────────────────────────────────────\n\nDISCLAIMER OF WARRANTIES\n\nTHE REPOSITORY IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.\nIN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES,\nOR OTHER LIABILITY — WHETHER IN CONTRACT, TORT, OR OTHERWISE — ARISING\nFROM OR IN CONNECTION WITH THE REPOSITORY OR THE USE OR OTHER DEALINGS\nIN THE REPOSITORY.\n\n────────────────────────────────────────────────────────────\n\nGOVERNING LAW\n\nThis license is governed by the laws of Italy. Any dispute arising from\nor relating to this license shall be subject to the exclusive\njurisdiction of the courts of Milan (MI), Italy.\n\n────────────────────────────────────────────────────────────\n\nFor licensing inquiries or permission requests: veronesilorenzo@outlook.com\n",
+      "dash": {
+        "languages": {},
+        "contents": [
+          {
+            "sha": "5f091e157b7ba84e46b916e08bf84be75ec0a075",
+            "name": ".gitignore",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/blob/main/.gitignore"
+          },
+          {
+            "sha": "5b23202913a16d1fc0fa6be46c2ed2f650f27f38",
+            "name": "CHANGELOG.md",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/blob/main/CHANGELOG.md"
+          },
+          {
+            "sha": "8b88efdc9adc2d628215e7913318d53933c8cad2",
+            "name": "LICENSE",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/blob/main/LICENSE"
+          },
+          {
+            "sha": "a6d2f25aa014bec274bd40153f0bfb39514054f0",
+            "name": "exams",
+            "type": "dir",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/tree/main/exams"
+          },
+          {
+            "sha": "0cdee120fa5ad8a4668fe2346a86f54134f46b4d",
+            "name": "readme.md",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/blob/main/readme.md"
+          },
+          {
+            "sha": "9f953ff9c94674d6b438dbbf5b0da86881e3ef4f",
+            "name": "res",
+            "type": "dir",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/tree/main/res"
+          },
+          {
+            "sha": "cc1eed2758fbdca1afcc62c8c43a7305d20600f8",
+            "name": "users.enc.json",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/blob/main/users.enc.json"
+          }
+        ],
+        "commits": [
+          {
+            "sha": "becf2995d24d3728d81bac83d67f521e780043e3",
+            "html_url": "https://github.com/vlT-vl/examgrid.exams/commit/becf2995d24d3728d81bac83d67f521e780043e3",
+            "commit": {
+              "message": "feat: initial examgrid.exams registry",
+              "author": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "vlt.vltech@gmail.com",
+                "date": "2026-09-28T09:32:50Z"
+              },
+              "committer": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "vlt.vltech@gmail.com",
+                "date": "2026-09-28T09:46:26Z"
+              }
+            }
+          }
+        ],
+        "release": null
+      }
+    },
+    {
+      "id": 1280406286,
+      "name": "vlt-website",
+      "full_name": "vlT-vl/vlt-website",
+      "html_url": "https://github.com/vlT-vl/vlt-website",
+      "description": "Sito web e portfolio di Lorenzo Veronesi · Virtualization Architect · Developer · Designer",
+      "language": "CSS",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "watchers_count": 0,
+      "size": 1462,
+      "topics": [],
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "pushed_at": "2026-09-28T03:15:03Z",
+      "updated_at": "2026-09-28T03:15:07Z",
+      "archived": false,
+      "fork": false,
+      "readmeHtml": "<div id=\"readme\" class=\"md\" data-path=\"README.md\"><article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><p align=\"center\" dir=\"auto\">\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/vlT-vl/vlt-website/blob/HEAD/src/res/vltcube.svg\"><img src=\"https://raw.githubusercontent.com/vlT-vl/vlt-website/HEAD/src/res/vltcube.svg\" alt=\"vlT Website\" width=\"80\" style=\"max-width: 100%;\"></a>\n</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h1 align=\"center\" class=\"heading-element\" dir=\"auto\">vlT Website — Portfolio Personale</h1><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-vlt-website--portfolio-personale\" class=\"anchor\" aria-label=\"Permalink: vlT Website — Portfolio Personale\" href=\"https://github.com/vlT-vl/vlt-website#vlt-website--portfolio-personale\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p align=\"center\" dir=\"auto\">\n  Sito web e portfolio di Lorenzo Veronesi · Virtualization Architect · Developer · Designer<br>\n  <sub>Frontend React · Vite · Deploy automatico su GitHub Pages</sub>\n</p>\n<p align=\"center\" dir=\"auto\">\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/cea58d4d5fc9758925bea1f02d0a8f4015da589f88626e2459a67170c60ef0be/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e652d302e312e332d2d523037303732362d626c75653f7374796c653d666c61742d737175617265\"><img src=\"https://camo.githubusercontent.com/cea58d4d5fc9758925bea1f02d0a8f4015da589f88626e2459a67170c60ef0be/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e652d302e312e332d2d523037303732362d626c75653f7374796c653d666c61742d737175617265\" alt=\"versione\" data-canonical-src=\"https://img.shields.io/badge/versione-0.1.3--R070726-blue?style=flat-square\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/ee0825d5541c1172e49e0ed581cb79b6e88133f8f4371dd5ae221f975ca0072c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d31392d3631444146423f7374796c653d666c61742d737175617265266c6f676f3d7265616374266c6f676f436f6c6f723d7768697465\"><img src=\"https://camo.githubusercontent.com/ee0825d5541c1172e49e0ed581cb79b6e88133f8f4371dd5ae221f975ca0072c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d31392d3631444146423f7374796c653d666c61742d737175617265266c6f676f3d7265616374266c6f676f436f6c6f723d7768697465\" alt=\"react\" data-canonical-src=\"https://img.shields.io/badge/react-19-61DAFB?style=flat-square&amp;logo=react&amp;logoColor=white\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/4824372ebe9c0a0118cdd0f2700a5370002aeb6ed87251822d711147cd2407e9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f766974652d382d3634364346463f7374796c653d666c61742d737175617265266c6f676f3d76697465266c6f676f436f6c6f723d7768697465\"><img src=\"https://camo.githubusercontent.com/4824372ebe9c0a0118cdd0f2700a5370002aeb6ed87251822d711147cd2407e9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f766974652d382d3634364346463f7374796c653d666c61742d737175617265266c6f676f3d76697465266c6f676f436f6c6f723d7768697465\" alt=\"vite\" data-canonical-src=\"https://img.shields.io/badge/vite-8-646CFF?style=flat-square&amp;logo=vite&amp;logoColor=white\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/04be1d6b13e6e2e3f350646a61a417eac0da39f3cce31ea81a4e8387b0128bcf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e7a612d70726f7072696574617269612d637269746963616c3f7374796c653d666c61742d737175617265\"><img src=\"https://camo.githubusercontent.com/04be1d6b13e6e2e3f350646a61a417eac0da39f3cce31ea81a4e8387b0128bcf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e7a612d70726f7072696574617269612d637269746963616c3f7374796c653d666c61742d737175617265\" alt=\"licenza\" data-canonical-src=\"https://img.shields.io/badge/licenza-proprietaria-critical?style=flat-square\" style=\"max-width: 100%;\"></a>\n</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Panoramica</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-panoramica\" class=\"anchor\" aria-label=\"Permalink: Panoramica\" href=\"https://github.com/vlT-vl/vlt-website#panoramica\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\"><strong>vlT Website</strong> è il portfolio personale e sito web di Lorenzo Veronesi (vlT). La SPA React integra profilo professionale, progetti open source pre-generati in <code>projects.json</code> e articoli del blog, il tutto servito come sito statico su GitHub Pages.</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"Browser ──► GitHub Pages (lorenzoveronesi.it)\n               │\n               ├── projects.json → repository pubblici GitHub pre-generati\n               └── posts.json   → articoli blog pre-generati da RSS Hashnode\n\nGitHub Actions\n  push                  → rigenera JSON + build + deploy\n  schedule ogni ora     → rigenera JSON + build + deploy\n  workflow_dispatch     → rigenera JSON + build + deploy\"><pre class=\"notranslate\"><code>Browser ──► GitHub Pages (lorenzoveronesi.it)\n               │\n               ├── projects.json → repository pubblici GitHub pre-generati\n               └── posts.json   → articoli blog pre-generati da RSS Hashnode\n\nGitHub Actions\n  push                  → rigenera JSON + build + deploy\n  schedule ogni ora     → rigenera JSON + build + deploy\n  workflow_dispatch     → rigenera JSON + build + deploy\n</code></pre></div>\n<p dir=\"auto\">Non richiede backend: i dati GitHub dei progetti e i post del blog vengono generati dentro GitHub Actions e inclusi come JSON statici nell'artifact GitHub Pages. I JSON generati sono committati nel repository come ultimo stato noto buono: ogni run (push/schedule/dispatch) li rigenera e li ricommitta, così il sito ha sempre dati validi da servire anche se un run futuro non riesce a fare fetch.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Sezioni del sito</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-sezioni-del-sito\" class=\"anchor\" aria-label=\"Permalink: Sezioni del sito\" href=\"https://github.com/vlT-vl/vlt-website#sezioni-del-sito\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<markdown-accessiblity-table><table>\n<thead>\n<tr>\n<th>Sezione</th>\n<th>Descrizione</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Home</strong></td>\n<td>Hero animato, 3 card competenze con modale di dettaglio, dashboard ultimo progetto + ultimo articolo + 4 mini card riepilogative</td>\n</tr>\n<tr>\n<td><strong>About Me</strong></td>\n<td>Profilo personale, background professionale, certificazioni</td>\n</tr>\n<tr>\n<td><strong>About vlT</strong></td>\n<td>Storia e filosofia del brand vlT, skills infrastruttura e sviluppo</td>\n</tr>\n<tr>\n<td><strong>Progetti</strong></td>\n<td>Browser repository GitHub con ricerca e filtro lingua, modale con README renderizzato, statistiche e licenza</td>\n</tr>\n<tr>\n<td><strong>Blog</strong></td>\n<td>Articoli con hero card, filtri per tag, ricerca full-text, lettura inline con cover image</td>\n</tr>\n</tbody>\n</table></markdown-accessiblity-table>\n<p dir=\"auto\">Tema chiaro/scuro selezionabile dal pulsante in navbar (persistito in localStorage, default sul tema di sistema). Il logo in footer e le label \"Built with React &amp; Vite\" / versione aprono il modale <strong>About vlT Website</strong> con versione, build, data aggiornamento e elenco dipendenze.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Integrazione dati</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-integrazione-dati\" class=\"anchor\" aria-label=\"Permalink: Integrazione dati\" href=\"https://github.com/vlT-vl/vlt-website#integrazione-dati\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<markdown-accessiblity-table><table>\n<thead>\n<tr>\n<th>Sorgente</th>\n<th>Dati</th>\n<th>Modalità</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>public/projects.json</code></td>\n<td>Lista repo, README HTML, immagini, licenze, statistiche, dashboard per-repo (<code>dash</code>: linguaggi, file root, ultimi 5 commit, ultima release)</td>\n<td>Generato e <strong>committato</strong> da CI a ogni deploy e ogni ora</td>\n</tr>\n<tr>\n<td><code>public/posts.json</code></td>\n<td>Articoli blog</td>\n<td>Generato da RSS Hashnode e <strong>committato</strong> da CI a ogni deploy e ogni ora; fallback Playwright se Vercel sfida il fetch HTTP</td>\n</tr>\n</tbody>\n</table></markdown-accessiblity-table>\n<p dir=\"auto\">Entrambi i file sono tracciati in git (non più in <code>.gitignore</code>): rappresentano l'ultimo stato noto buono, sempre disponibile per il deploy anche se un run CI futuro fallisce il fetch.</p>\n<p dir=\"auto\">Gli script fanno <strong>merge</strong>, non sostituzione in blocco, con l'ultimo JSON committato: se una singola chiamata API fallisce (rate limit, errore di rete) il dato precedente viene mantenuto invece di sparire; per i post, quelli usciti dalla finestra del feed RSS (che espone solo i più recenti) restano comunque nel JSON finché non vengono sostituiti da una versione più recente dello stesso articolo.</p>\n<p dir=\"auto\">Il client non chiama <code>api.github.com</code> o RSS esterni a runtime: usa solo asset statici per evitare rate-limit, CORS e blocchi WAF lato visitatore.</p>\n<p dir=\"auto\">Cache lato client (localStorage): repos 1 ora · posts 2 ore.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Architettura</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-architettura\" class=\"anchor\" aria-label=\"Permalink: Architettura\" href=\"https://github.com/vlT-vl/vlt-website#architettura\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"vlt-website/\n├── index.html\n├── vite.config.js          # React plugin, base path, build minificato oxc\n├── package.json\n├── .env                    # variabili VITE_* (valori pubblici, committato)\n│\n├── scripts/\n│   ├── fetch-projects.js   # fetch GitHub API → public/projects.json\n│   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json\n│\n├── .github/\n│   └── workflows/\n│       └── deploy.yml      # build + deploy su GitHub Pages (push/schedule/dispatch)\n│\n├── public/\n│   ├── vltcube.svg\n│   ├── projects.json       # generato e committato da CI (fallback sempre disponibile)\n│   └── posts.json          # generato e committato da CI (fallback sempre disponibile)\n│\n└── src/\n    ├── main.jsx\n    ├── lib/\n    │   └── theme.js            # preferenza tema (system/light/dark), applica data-theme su &lt;html&gt;\n    ├── context/\n    │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage\n    ├── components/\n    │   ├── App.jsx             # root: routing view a stato, navbar, footer\n    │   ├── Navbar.jsx\n    │   ├── Theme.jsx           # pulsante toggle tema chiaro/scuro\n    │   ├── Hero.jsx\n    │   ├── Landing.jsx         # home: skill cards + dashboard 2 big card + 4 mini card\n    │   ├── AboutMe.jsx\n    │   ├── VltView.jsx\n    │   ├── ProjectsView.jsx    # browser repository con search e filtro lingua\n    │   ├── BlogView.jsx        # articoli con hero card, tag filter e search\n    │   ├── VltLogo.jsx         # logo animato cubo SVG + testo vlT\n    │   ├── Modal.jsx           # modale skill card (home)\n    │   ├── RepoModal.jsx       # modale repo: README + dettagli + licenza\n    │   ├── BlogPostModal.jsx   # modale articolo: hero cover + contenuto completo\n    │   ├── LicenseModal.jsx    # modale testo licenza (riusato anche da AboutModal)\n    │   └── AboutModal.jsx      # modale info sito: logo esteso, versione/build, dipendenze\n    ├── css/                    # variabili tema (index.css) + un file per componente/vista\n    └── res/\n        ├── vltcube.svg\n        ├── vltportrait.jpg\n        └── landinglogo.webp\"><pre class=\"notranslate\"><code>vlt-website/\n├── index.html\n├── vite.config.js          # React plugin, base path, build minificato oxc\n├── package.json\n├── .env                    # variabili VITE_* (valori pubblici, committato)\n│\n├── scripts/\n│   ├── fetch-projects.js   # fetch GitHub API → public/projects.json\n│   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json\n│\n├── .github/\n│   └── workflows/\n│       └── deploy.yml      # build + deploy su GitHub Pages (push/schedule/dispatch)\n│\n├── public/\n│   ├── vltcube.svg\n│   ├── projects.json       # generato e committato da CI (fallback sempre disponibile)\n│   └── posts.json          # generato e committato da CI (fallback sempre disponibile)\n│\n└── src/\n    ├── main.jsx\n    ├── lib/\n    │   └── theme.js            # preferenza tema (system/light/dark), applica data-theme su &lt;html&gt;\n    ├── context/\n    │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage\n    ├── components/\n    │   ├── App.jsx             # root: routing view a stato, navbar, footer\n    │   ├── Navbar.jsx\n    │   ├── Theme.jsx           # pulsante toggle tema chiaro/scuro\n    │   ├── Hero.jsx\n    │   ├── Landing.jsx         # home: skill cards + dashboard 2 big card + 4 mini card\n    │   ├── AboutMe.jsx\n    │   ├── VltView.jsx\n    │   ├── ProjectsView.jsx    # browser repository con search e filtro lingua\n    │   ├── BlogView.jsx        # articoli con hero card, tag filter e search\n    │   ├── VltLogo.jsx         # logo animato cubo SVG + testo vlT\n    │   ├── Modal.jsx           # modale skill card (home)\n    │   ├── RepoModal.jsx       # modale repo: README + dettagli + licenza\n    │   ├── BlogPostModal.jsx   # modale articolo: hero cover + contenuto completo\n    │   ├── LicenseModal.jsx    # modale testo licenza (riusato anche da AboutModal)\n    │   └── AboutModal.jsx      # modale info sito: logo esteso, versione/build, dipendenze\n    ├── css/                    # variabili tema (index.css) + un file per componente/vista\n    └── res/\n        ├── vltcube.svg\n        ├── vltportrait.jpg\n        └── landinglogo.webp\n</code></pre></div>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Tema chiaro/scuro</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-tema-chiaroscuro\" class=\"anchor\" aria-label=\"Permalink: Tema chiaro/scuro\" href=\"https://github.com/vlT-vl/vlt-website#tema-chiaroscuro\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Tutto il sito usa variabili CSS custom properties definite in <code>src/css/index.css</code>:</p>\n<ul dir=\"auto\">\n<li><code>--bg</code>, <code>--bg-elevated</code>, <code>--bg-elevated-2</code>, <code>--bg-hover</code>, <code>--border</code>, <code>--border-strong</code>, <code>--text</code>, <code>--text-muted</code>, <code>--text-dim</code>, <code>--accent</code>, <code>--accent-hover</code> — palette generale (navbar, footer, card, modali).</li>\n<li><code>--gh-*</code> — palette separata \"stile GitHub\" per gli elementi che imitano l'estetica GitHub (repo card, README renderizzato, licenza), con equivalenti dark/light propri (GitHub dark/light reali).</li>\n</ul>\n<p dir=\"auto\">Il tema attivo è impostato come <code>data-theme=\"dark\"|\"light\"</code> su <code>&lt;html&gt;</code> da <code>src/lib/theme.js</code>, letto da <code>html[data-theme='light'] { ... }</code> in <code>index.css</code> che sovrascrive le variabili. Preferenza persistita in <code>localStorage</code> (<code>vlt-theme</code>); default <code>system</code> (segue <code>prefers-color-scheme</code>, con listener per aggiornamenti live). Toggle in navbar (<code>Theme.jsx</code>).</p>\n<p dir=\"auto\">Colori intenzionalmente non tematizzati (restano fissi in entrambi i temi): badge LinkedIn, colori linguaggio repo (<code>LANG_COLORS</code> in <code>RepoModal.jsx</code>), link blu stile GitHub, overlay scuro sulle cover foto in <code>BlogPostModal</code>.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Configurazione</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-configurazione\" class=\"anchor\" aria-label=\"Permalink: Configurazione\" href=\"https://github.com/vlT-vl/vlt-website#configurazione\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Il file <code>.env</code> è committato nel repo (nessun dato sensibile):</p>\n<div class=\"highlight highlight-source-dotenv notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"VITE_GITHUB_USER=vlT-vl\nVITE_BLOG_URL=https://vlt.hashnode.dev\nVITE_COMPANY_NAME=S2E | Business Technology Consultants\nVITE_COMPANY_URL=https://it.linkedin.com/company/s2e-solutions-to-enterprises\nVITE_BASE_URL=/\"><pre><span class=\"pl-v\">VITE_GITHUB_USER</span><span class=\"pl-k\">=</span><span class=\"pl-s\">vlT-vl</span>\n<span class=\"pl-v\">VITE_BLOG_URL</span><span class=\"pl-k\">=</span><span class=\"pl-s\">https://vlt.hashnode.dev</span>\n<span class=\"pl-v\">VITE_COMPANY_NAME</span><span class=\"pl-k\">=</span><span class=\"pl-s\">S2E | Business Technology Consultants</span>\n<span class=\"pl-v\">VITE_COMPANY_URL</span><span class=\"pl-k\">=</span><span class=\"pl-s\">https://it.linkedin.com/company/s2e-solutions-to-enterprises</span>\n<span class=\"pl-v\">VITE_BASE_URL</span><span class=\"pl-k\">=</span><span class=\"pl-s\">/</span></pre></div>\n<p dir=\"auto\"><code>VITE_BASE_URL</code> deve corrispondere al path GitHub Pages. Con dominio custom impostare <code>/</code>; con path repo impostare <code>/nome-repo/</code>.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Sviluppo locale</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-sviluppo-locale\" class=\"anchor\" aria-label=\"Permalink: Sviluppo locale\" href=\"https://github.com/vlT-vl/vlt-website#sviluppo-locale\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"npm install\nnpm run dev       # rigenera projects.json/posts.json (hook predev) poi avvia Vite su :5173\nnpm run build     # build produzione in dist/ (bundle minificato oxc, no source map)\nnpm run preview   # anteprima locale del build produzione\"><pre>npm install\nnpm run dev       <span class=\"pl-c\"><span class=\"pl-c\">#</span> rigenera projects.json/posts.json (hook predev) poi avvia Vite su :5173</span>\nnpm run build     <span class=\"pl-c\"><span class=\"pl-c\">#</span> build produzione in dist/ (bundle minificato oxc, no source map)</span>\nnpm run preview   <span class=\"pl-c\"><span class=\"pl-c\">#</span> anteprima locale del build produzione</span></pre></div>\n<p dir=\"auto\"><code>npm run dev</code> esegue automaticamente lo script <code>predev</code> (<code>CI=true node scripts/fetch-projects.js &amp;&amp; CI=true node scripts/fetch-posts.js</code>) prima di avviare Vite, così <code>public/projects.json</code>/<code>public/posts.json</code> sono sempre freschi in locale. <code>GITHUB_TOKEN</code> non è richiesto esplicitamente: <code>fetch-projects.js</code> usa <code>gh auth token</code> in automatico se disponibile.</p>\n<p dir=\"auto\">Per rigenerare solo uno dei due JSON senza avviare Vite:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"npm run fetch:projects\nnpm run fetch:posts\"><pre>npm run fetch:projects\nnpm run fetch:posts</pre></div>\n<p dir=\"auto\"><code>fetch-posts.js</code> prova prima l'RSS Hashnode con HTTP normale; se Vercel risponde con challenge/429 usa Playwright Chromium per leggere <code>https://vlt.hashnode.dev/rss.xml</code> come un browser e poi produce lo stesso schema JSON.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Deploy</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-deploy\" class=\"anchor\" aria-label=\"Permalink: Deploy\" href=\"https://github.com/vlT-vl/vlt-website#deploy\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Il deploy è completamente automatizzato via <strong>GitHub Actions</strong>:</p>\n<p dir=\"auto\"><strong>Trigger:</strong></p>\n<ul dir=\"auto\">\n<li>Push su branch <code>sourcecode</code></li>\n<li>Schedule ogni ora — aggiorna progetti e post e ridistribuisce l'artifact</li>\n<li>Dispatch manuale (<code>workflow_dispatch</code>) — aggiorna progetti e post e ridistribuisce l'artifact</li>\n</ul>\n<p dir=\"auto\"><strong>Pipeline:</strong></p>\n<ol dir=\"auto\">\n<li>Checkout + Node 20</li>\n<li><code>npm install</code></li>\n<li><code>node scripts/fetch-projects.js</code> — GitHub API → <code>public/projects.json</code></li>\n<li><code>npx playwright install --with-deps chromium</code></li>\n<li><code>node scripts/fetch-posts.js</code> — RSS Hashnode → <code>public/posts.json</code></li>\n<li><strong>Commit</strong> dei JSON aggiornati su <code>sourcecode</code> (solo se cambiati; messaggio con <code>[skip ci]</code> per non ritriggerare il workflow via push)</li>\n<li><code>npm run build</code> — bundle ottimizzato in <code>dist/</code></li>\n<li>Upload artifact + deploy su GitHub Pages</li>\n</ol>\n<p dir=\"auto\">Il workflow committa i JSON rigenerati (<code>permissions: contents: write</code>) così restano sempre disponibili nel repo come fallback, oltre a finire nell'artifact pubblicato da GitHub Pages.</p>\n<p dir=\"auto\"><strong>Setup GitHub Pages (una tantum):</strong></p>\n<ul dir=\"auto\">\n<li>Settings → Pages → Source: <strong>GitHub Actions</strong></li>\n</ul>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Versione e Build</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-versione-e-build\" class=\"anchor\" aria-label=\"Permalink: Versione e Build\" href=\"https://github.com/vlT-vl/vlt-website#versione-e-build\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<markdown-accessiblity-table><table>\n<thead>\n<tr>\n<th>Campo</th>\n<th>Valore</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Versione</td>\n<td>0.1.3</td>\n</tr>\n<tr>\n<td>Build</td>\n<td>R070726</td>\n</tr>\n<tr>\n<td>Aggiornato</td>\n<td>7 Luglio 2026</td>\n</tr>\n</tbody>\n</table></markdown-accessiblity-table>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Licenza</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-licenza\" class=\"anchor\" aria-label=\"Permalink: Licenza\" href=\"https://github.com/vlT-vl/vlt-website#licenza\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">vlT Website è distribuito con <strong>Proprietary Source-Available License</strong> — Copyright © 2025–2026 Veronesi Lorenzo (vlT).</p>\n<p dir=\"auto\">Il codice sorgente è reso pubblicamente consultabile a scopo di studio, ma rimangono espressamente vietati, senza previo consenso scritto del titolare:</p>\n<ul dir=\"auto\">\n<li><strong>Modifica</strong> — adattamento, traduzione o creazione di opere derivate</li>\n<li><strong>Ridistribuzione</strong> — copia, fork, ripubblicazione, sublicenza o repackaging</li>\n<li><strong>Reverse engineering</strong> — decompilazione, disassemblaggio o ricostruzione del codice da binario</li>\n<li><strong>Sfruttamento commerciale</strong> — vendita, incorporazione in prodotti/servizi commerciali</li>\n</ul>\n<p dir=\"auto\">Tutti i diritti di proprietà intellettuale restano esclusivamente di Veronesi Lorenzo (vlT). Per richieste di licenza: <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:veronesilorenzo@outlook.com\">veronesilorenzo@outlook.com</a></p>\n<hr>\n<p dir=\"auto\"><strong>Copyright © 2026 vlT di Veronesi Lorenzo. Tutti i diritti riservati.</strong></p>\n</article></div>",
+      "readmeImage": "https://raw.githubusercontent.com/vlT-vl/vlt-website/HEAD/src/res/vltcube.svg",
+      "licenseText": "Proprietary Source-Available License\nCopyright (c) 2025–2026 Veronesi Lorenzo (vlT)\nAll rights reserved.\n\n────────────────────────────────────────────────────────────\n\nGRANT OF USE\n\nPermission is granted, free of charge, to any person obtaining a copy of\nthis software to use it for personal or professional purposes, subject to\nthe conditions and restrictions set out below.\n\n────────────────────────────────────────────────────────────\n\nRESTRICTIONS\n\n1. NO MODIFICATION — The source code may be read and studied, but may NOT\n   be modified, adapted, translated, or used as the basis for derivative\n   works, in whole or in part, without the prior written permission of the\n   copyright holder.\n\n2. NO REDISTRIBUTION — The software, whether in source or binary form, may\n   NOT be copied, forked, republished, sublicensed, or repackaged without\n   the prior written permission of the copyright holder.\n\n3. NO REVERSE ENGINEERING — Reverse engineering, decompilation, disassembly,\n   or any attempt to reconstruct the source code from a compiled binary is\n   strictly prohibited, except as required by applicable mandatory law.\n\n4. NO COMMERCIAL EXPLOITATION — The software may NOT be sold, commercialized,\n   incorporated into a commercial product or service, or used to provide a\n   paid service to third parties without the prior written permission of the\n   copyright holder.\n\n────────────────────────────────────────────────────────────\n\nINTELLECTUAL PROPERTY\n\nAll intellectual property rights — including but not limited to copyright,\ntrade secrets, know-how, and any applicable patents — remain exclusively\nwith Veronesi Lorenzo (vlT). This license grants no ownership rights of\nany kind. The name, logos, and any associated trade dress of this software\nare the exclusive property of Veronesi Lorenzo (vlT) and may not be used\nwithout prior written consent.\n\n────────────────────────────────────────────────────────────\n\nDISCLAIMER OF WARRANTIES\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO EVENT SHALL THE\nCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY —\nWHETHER IN CONTRACT, TORT, OR OTHERWISE — ARISING FROM OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n────────────────────────────────────────────────────────────\n\nGOVERNING LAW\n\nThis license is governed by the laws of Italy. Any dispute arising from or\nrelating to this license shall be subject to the exclusive jurisdiction of\nthe courts of Milan (MI), Italy.\n\n────────────────────────────────────────────────────────────\n\nFor licensing inquiries or permission requests: veronesilorenzo@outlook.com\n",
+      "dash": {
+        "languages": {
+          "CSS": 109888,
+          "JavaScript": 98325,
+          "HTML": 377
+        },
+        "contents": [
+          {
+            "sha": "d37c745016b9385167f243d93425ecac6b5c0b2f",
+            "name": ".env",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/.env"
+          },
+          {
+            "sha": "17288958d527cfc83277abb008ab42e2ef0ded25",
+            "name": ".github",
+            "type": "dir",
+            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/.github"
+          },
+          {
+            "sha": "1356ff57a86f1d308783b0bc4567285906eb0e9b",
+            "name": ".gitignore",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/.gitignore"
+          },
+          {
+            "sha": "694b669f18cf17e993c2767f429120a039116d07",
+            "name": "LICENSE",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/LICENSE"
+          },
+          {
+            "sha": "b54ac3c294c53924a7a422c74cf0e60898a6ebf1",
+            "name": "README.md",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/README.md"
+          },
+          {
+            "sha": "130dffb62e8a0c41b0d9bc49ada752aaaa1d11dd",
+            "name": "index.html",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/index.html"
+          },
+          {
+            "sha": "5382d0126aa22ed99ad67f41435a76c317b5ae30",
+            "name": "package.json",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/package.json"
+          },
+          {
+            "sha": "3192c89f74345da86b8451033297df6a415088b5",
+            "name": "public",
+            "type": "dir",
+            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/public"
+          },
+          {
+            "sha": "2c9ef49e6909384ceabda0afc341f782174bd1fb",
+            "name": "scripts",
+            "type": "dir",
+            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/scripts"
+          },
+          {
+            "sha": "c3d8a55a9df4a3bb3fc79a14400eba66b84f70db",
+            "name": "src",
+            "type": "dir",
+            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/src"
+          },
+          {
+            "sha": "1b92bd269d108de667ffc9c73fe5a542ff7dec6f",
+            "name": "vite.config.js",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/vite.config.js"
+          }
+        ],
+        "commits": [
+          {
+            "sha": "b18ae4245a51533927ccb817027b343c1480b5f0",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/b18ae4245a51533927ccb817027b343c1480b5f0",
+            "commit": {
+              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-28T03:15:02Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-28T03:15:02Z"
+              }
+            }
+          },
+          {
+            "sha": "0b69b8dd70bbb9f45d6d18ba6e2e8dc302c54030",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/0b69b8dd70bbb9f45d6d18ba6e2e8dc302c54030",
+            "commit": {
+              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T23:34:36Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T23:34:36Z"
+              }
+            }
+          },
+          {
+            "sha": "ffaa0a86edfc0d38eec30fb398baa20015a2c777",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/ffaa0a86edfc0d38eec30fb398baa20015a2c777",
+            "commit": {
+              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T20:45:50Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T20:45:50Z"
+              }
+            }
+          },
+          {
+            "sha": "ca3f55371828756f4db3f1f3566ccbcc3071b236",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/ca3f55371828756f4db3f1f3566ccbcc3071b236",
+            "commit": {
+              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T17:25:28Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T17:25:28Z"
+              }
+            }
+          },
+          {
+            "sha": "ec14af9e794c1e92c98c55ce2bfdca128becb638",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/ec14af9e794c1e92c98c55ce2bfdca128becb638",
+            "commit": {
+              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T12:40:42Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-09-27T12:40:42Z"
+              }
+            }
+          }
+        ],
+        "release": null
+      }
+    },
+    {
       "id": 1302828865,
       "name": "nex-tech-hub",
       "full_name": "vlT-vl/nex-tech-hub",
@@ -11,7 +321,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 25273,
+      "size": 25277,
       "topics": [],
       "license": {
         "key": "other",
@@ -196,196 +506,6 @@
                 "name": "github-actions[bot]",
                 "email": "github-actions[bot]@users.noreply.github.com",
                 "date": "2026-09-27T02:37:35Z"
-              }
-            }
-          }
-        ],
-        "release": null
-      }
-    },
-    {
-      "id": 1280406286,
-      "name": "vlt-website",
-      "full_name": "vlT-vl/vlt-website",
-      "html_url": "https://github.com/vlT-vl/vlt-website",
-      "description": "Sito web e portfolio di Lorenzo Veronesi · Virtualization Architect · Developer · Designer",
-      "language": "CSS",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "watchers_count": 0,
-      "size": 1461,
-      "topics": [],
-      "license": {
-        "key": "other",
-        "name": "Other",
-        "spdx_id": "NOASSERTION",
-        "url": null,
-        "node_id": "MDc6TGljZW5zZTA="
-      },
-      "pushed_at": "2026-09-27T23:34:37Z",
-      "updated_at": "2026-09-27T23:34:41Z",
-      "archived": false,
-      "fork": false,
-      "readmeHtml": "<div id=\"readme\" class=\"md\" data-path=\"README.md\"><article class=\"markdown-body entry-content container-lg\" itemprop=\"text\"><p align=\"center\" dir=\"auto\">\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/vlT-vl/vlt-website/blob/HEAD/src/res/vltcube.svg\"><img src=\"https://raw.githubusercontent.com/vlT-vl/vlt-website/HEAD/src/res/vltcube.svg\" alt=\"vlT Website\" width=\"80\" style=\"max-width: 100%;\"></a>\n</p>\n<div class=\"markdown-heading\" dir=\"auto\"><h1 align=\"center\" class=\"heading-element\" dir=\"auto\">vlT Website — Portfolio Personale</h1><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-vlt-website--portfolio-personale\" class=\"anchor\" aria-label=\"Permalink: vlT Website — Portfolio Personale\" href=\"https://github.com/vlT-vl/vlt-website#vlt-website--portfolio-personale\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p align=\"center\" dir=\"auto\">\n  Sito web e portfolio di Lorenzo Veronesi · Virtualization Architect · Developer · Designer<br>\n  <sub>Frontend React · Vite · Deploy automatico su GitHub Pages</sub>\n</p>\n<p align=\"center\" dir=\"auto\">\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/cea58d4d5fc9758925bea1f02d0a8f4015da589f88626e2459a67170c60ef0be/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e652d302e312e332d2d523037303732362d626c75653f7374796c653d666c61742d737175617265\"><img src=\"https://camo.githubusercontent.com/cea58d4d5fc9758925bea1f02d0a8f4015da589f88626e2459a67170c60ef0be/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e652d302e312e332d2d523037303732362d626c75653f7374796c653d666c61742d737175617265\" alt=\"versione\" data-canonical-src=\"https://img.shields.io/badge/versione-0.1.3--R070726-blue?style=flat-square\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/ee0825d5541c1172e49e0ed581cb79b6e88133f8f4371dd5ae221f975ca0072c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d31392d3631444146423f7374796c653d666c61742d737175617265266c6f676f3d7265616374266c6f676f436f6c6f723d7768697465\"><img src=\"https://camo.githubusercontent.com/ee0825d5541c1172e49e0ed581cb79b6e88133f8f4371dd5ae221f975ca0072c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d31392d3631444146423f7374796c653d666c61742d737175617265266c6f676f3d7265616374266c6f676f436f6c6f723d7768697465\" alt=\"react\" data-canonical-src=\"https://img.shields.io/badge/react-19-61DAFB?style=flat-square&amp;logo=react&amp;logoColor=white\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/4824372ebe9c0a0118cdd0f2700a5370002aeb6ed87251822d711147cd2407e9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f766974652d382d3634364346463f7374796c653d666c61742d737175617265266c6f676f3d76697465266c6f676f436f6c6f723d7768697465\"><img src=\"https://camo.githubusercontent.com/4824372ebe9c0a0118cdd0f2700a5370002aeb6ed87251822d711147cd2407e9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f766974652d382d3634364346463f7374796c653d666c61742d737175617265266c6f676f3d76697465266c6f676f436f6c6f723d7768697465\" alt=\"vite\" data-canonical-src=\"https://img.shields.io/badge/vite-8-646CFF?style=flat-square&amp;logo=vite&amp;logoColor=white\" style=\"max-width: 100%;\"></a>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://camo.githubusercontent.com/04be1d6b13e6e2e3f350646a61a417eac0da39f3cce31ea81a4e8387b0128bcf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e7a612d70726f7072696574617269612d637269746963616c3f7374796c653d666c61742d737175617265\"><img src=\"https://camo.githubusercontent.com/04be1d6b13e6e2e3f350646a61a417eac0da39f3cce31ea81a4e8387b0128bcf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e7a612d70726f7072696574617269612d637269746963616c3f7374796c653d666c61742d737175617265\" alt=\"licenza\" data-canonical-src=\"https://img.shields.io/badge/licenza-proprietaria-critical?style=flat-square\" style=\"max-width: 100%;\"></a>\n</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Panoramica</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-panoramica\" class=\"anchor\" aria-label=\"Permalink: Panoramica\" href=\"https://github.com/vlT-vl/vlt-website#panoramica\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\"><strong>vlT Website</strong> è il portfolio personale e sito web di Lorenzo Veronesi (vlT). La SPA React integra profilo professionale, progetti open source pre-generati in <code>projects.json</code> e articoli del blog, il tutto servito come sito statico su GitHub Pages.</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"Browser ──► GitHub Pages (lorenzoveronesi.it)\n               │\n               ├── projects.json → repository pubblici GitHub pre-generati\n               └── posts.json   → articoli blog pre-generati da RSS Hashnode\n\nGitHub Actions\n  push                  → rigenera JSON + build + deploy\n  schedule ogni ora     → rigenera JSON + build + deploy\n  workflow_dispatch     → rigenera JSON + build + deploy\"><pre class=\"notranslate\"><code>Browser ──► GitHub Pages (lorenzoveronesi.it)\n               │\n               ├── projects.json → repository pubblici GitHub pre-generati\n               └── posts.json   → articoli blog pre-generati da RSS Hashnode\n\nGitHub Actions\n  push                  → rigenera JSON + build + deploy\n  schedule ogni ora     → rigenera JSON + build + deploy\n  workflow_dispatch     → rigenera JSON + build + deploy\n</code></pre></div>\n<p dir=\"auto\">Non richiede backend: i dati GitHub dei progetti e i post del blog vengono generati dentro GitHub Actions e inclusi come JSON statici nell'artifact GitHub Pages. I JSON generati sono committati nel repository come ultimo stato noto buono: ogni run (push/schedule/dispatch) li rigenera e li ricommitta, così il sito ha sempre dati validi da servire anche se un run futuro non riesce a fare fetch.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Sezioni del sito</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-sezioni-del-sito\" class=\"anchor\" aria-label=\"Permalink: Sezioni del sito\" href=\"https://github.com/vlT-vl/vlt-website#sezioni-del-sito\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<markdown-accessiblity-table><table>\n<thead>\n<tr>\n<th>Sezione</th>\n<th>Descrizione</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Home</strong></td>\n<td>Hero animato, 3 card competenze con modale di dettaglio, dashboard ultimo progetto + ultimo articolo + 4 mini card riepilogative</td>\n</tr>\n<tr>\n<td><strong>About Me</strong></td>\n<td>Profilo personale, background professionale, certificazioni</td>\n</tr>\n<tr>\n<td><strong>About vlT</strong></td>\n<td>Storia e filosofia del brand vlT, skills infrastruttura e sviluppo</td>\n</tr>\n<tr>\n<td><strong>Progetti</strong></td>\n<td>Browser repository GitHub con ricerca e filtro lingua, modale con README renderizzato, statistiche e licenza</td>\n</tr>\n<tr>\n<td><strong>Blog</strong></td>\n<td>Articoli con hero card, filtri per tag, ricerca full-text, lettura inline con cover image</td>\n</tr>\n</tbody>\n</table></markdown-accessiblity-table>\n<p dir=\"auto\">Tema chiaro/scuro selezionabile dal pulsante in navbar (persistito in localStorage, default sul tema di sistema). Il logo in footer e le label \"Built with React &amp; Vite\" / versione aprono il modale <strong>About vlT Website</strong> con versione, build, data aggiornamento e elenco dipendenze.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Integrazione dati</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-integrazione-dati\" class=\"anchor\" aria-label=\"Permalink: Integrazione dati\" href=\"https://github.com/vlT-vl/vlt-website#integrazione-dati\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<markdown-accessiblity-table><table>\n<thead>\n<tr>\n<th>Sorgente</th>\n<th>Dati</th>\n<th>Modalità</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>public/projects.json</code></td>\n<td>Lista repo, README HTML, immagini, licenze, statistiche, dashboard per-repo (<code>dash</code>: linguaggi, file root, ultimi 5 commit, ultima release)</td>\n<td>Generato e <strong>committato</strong> da CI a ogni deploy e ogni ora</td>\n</tr>\n<tr>\n<td><code>public/posts.json</code></td>\n<td>Articoli blog</td>\n<td>Generato da RSS Hashnode e <strong>committato</strong> da CI a ogni deploy e ogni ora; fallback Playwright se Vercel sfida il fetch HTTP</td>\n</tr>\n</tbody>\n</table></markdown-accessiblity-table>\n<p dir=\"auto\">Entrambi i file sono tracciati in git (non più in <code>.gitignore</code>): rappresentano l'ultimo stato noto buono, sempre disponibile per il deploy anche se un run CI futuro fallisce il fetch.</p>\n<p dir=\"auto\">Gli script fanno <strong>merge</strong>, non sostituzione in blocco, con l'ultimo JSON committato: se una singola chiamata API fallisce (rate limit, errore di rete) il dato precedente viene mantenuto invece di sparire; per i post, quelli usciti dalla finestra del feed RSS (che espone solo i più recenti) restano comunque nel JSON finché non vengono sostituiti da una versione più recente dello stesso articolo.</p>\n<p dir=\"auto\">Il client non chiama <code>api.github.com</code> o RSS esterni a runtime: usa solo asset statici per evitare rate-limit, CORS e blocchi WAF lato visitatore.</p>\n<p dir=\"auto\">Cache lato client (localStorage): repos 1 ora · posts 2 ore.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Architettura</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-architettura\" class=\"anchor\" aria-label=\"Permalink: Architettura\" href=\"https://github.com/vlT-vl/vlt-website#architettura\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"vlt-website/\n├── index.html\n├── vite.config.js          # React plugin, base path, build minificato oxc\n├── package.json\n├── .env                    # variabili VITE_* (valori pubblici, committato)\n│\n├── scripts/\n│   ├── fetch-projects.js   # fetch GitHub API → public/projects.json\n│   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json\n│\n├── .github/\n│   └── workflows/\n│       └── deploy.yml      # build + deploy su GitHub Pages (push/schedule/dispatch)\n│\n├── public/\n│   ├── vltcube.svg\n│   ├── projects.json       # generato e committato da CI (fallback sempre disponibile)\n│   └── posts.json          # generato e committato da CI (fallback sempre disponibile)\n│\n└── src/\n    ├── main.jsx\n    ├── lib/\n    │   └── theme.js            # preferenza tema (system/light/dark), applica data-theme su &lt;html&gt;\n    ├── context/\n    │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage\n    ├── components/\n    │   ├── App.jsx             # root: routing view a stato, navbar, footer\n    │   ├── Navbar.jsx\n    │   ├── Theme.jsx           # pulsante toggle tema chiaro/scuro\n    │   ├── Hero.jsx\n    │   ├── Landing.jsx         # home: skill cards + dashboard 2 big card + 4 mini card\n    │   ├── AboutMe.jsx\n    │   ├── VltView.jsx\n    │   ├── ProjectsView.jsx    # browser repository con search e filtro lingua\n    │   ├── BlogView.jsx        # articoli con hero card, tag filter e search\n    │   ├── VltLogo.jsx         # logo animato cubo SVG + testo vlT\n    │   ├── Modal.jsx           # modale skill card (home)\n    │   ├── RepoModal.jsx       # modale repo: README + dettagli + licenza\n    │   ├── BlogPostModal.jsx   # modale articolo: hero cover + contenuto completo\n    │   ├── LicenseModal.jsx    # modale testo licenza (riusato anche da AboutModal)\n    │   └── AboutModal.jsx      # modale info sito: logo esteso, versione/build, dipendenze\n    ├── css/                    # variabili tema (index.css) + un file per componente/vista\n    └── res/\n        ├── vltcube.svg\n        ├── vltportrait.jpg\n        └── landinglogo.webp\"><pre class=\"notranslate\"><code>vlt-website/\n├── index.html\n├── vite.config.js          # React plugin, base path, build minificato oxc\n├── package.json\n├── .env                    # variabili VITE_* (valori pubblici, committato)\n│\n├── scripts/\n│   ├── fetch-projects.js   # fetch GitHub API → public/projects.json\n│   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json\n│\n├── .github/\n│   └── workflows/\n│       └── deploy.yml      # build + deploy su GitHub Pages (push/schedule/dispatch)\n│\n├── public/\n│   ├── vltcube.svg\n│   ├── projects.json       # generato e committato da CI (fallback sempre disponibile)\n│   └── posts.json          # generato e committato da CI (fallback sempre disponibile)\n│\n└── src/\n    ├── main.jsx\n    ├── lib/\n    │   └── theme.js            # preferenza tema (system/light/dark), applica data-theme su &lt;html&gt;\n    ├── context/\n    │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage\n    ├── components/\n    │   ├── App.jsx             # root: routing view a stato, navbar, footer\n    │   ├── Navbar.jsx\n    │   ├── Theme.jsx           # pulsante toggle tema chiaro/scuro\n    │   ├── Hero.jsx\n    │   ├── Landing.jsx         # home: skill cards + dashboard 2 big card + 4 mini card\n    │   ├── AboutMe.jsx\n    │   ├── VltView.jsx\n    │   ├── ProjectsView.jsx    # browser repository con search e filtro lingua\n    │   ├── BlogView.jsx        # articoli con hero card, tag filter e search\n    │   ├── VltLogo.jsx         # logo animato cubo SVG + testo vlT\n    │   ├── Modal.jsx           # modale skill card (home)\n    │   ├── RepoModal.jsx       # modale repo: README + dettagli + licenza\n    │   ├── BlogPostModal.jsx   # modale articolo: hero cover + contenuto completo\n    │   ├── LicenseModal.jsx    # modale testo licenza (riusato anche da AboutModal)\n    │   └── AboutModal.jsx      # modale info sito: logo esteso, versione/build, dipendenze\n    ├── css/                    # variabili tema (index.css) + un file per componente/vista\n    └── res/\n        ├── vltcube.svg\n        ├── vltportrait.jpg\n        └── landinglogo.webp\n</code></pre></div>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Tema chiaro/scuro</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-tema-chiaroscuro\" class=\"anchor\" aria-label=\"Permalink: Tema chiaro/scuro\" href=\"https://github.com/vlT-vl/vlt-website#tema-chiaroscuro\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Tutto il sito usa variabili CSS custom properties definite in <code>src/css/index.css</code>:</p>\n<ul dir=\"auto\">\n<li><code>--bg</code>, <code>--bg-elevated</code>, <code>--bg-elevated-2</code>, <code>--bg-hover</code>, <code>--border</code>, <code>--border-strong</code>, <code>--text</code>, <code>--text-muted</code>, <code>--text-dim</code>, <code>--accent</code>, <code>--accent-hover</code> — palette generale (navbar, footer, card, modali).</li>\n<li><code>--gh-*</code> — palette separata \"stile GitHub\" per gli elementi che imitano l'estetica GitHub (repo card, README renderizzato, licenza), con equivalenti dark/light propri (GitHub dark/light reali).</li>\n</ul>\n<p dir=\"auto\">Il tema attivo è impostato come <code>data-theme=\"dark\"|\"light\"</code> su <code>&lt;html&gt;</code> da <code>src/lib/theme.js</code>, letto da <code>html[data-theme='light'] { ... }</code> in <code>index.css</code> che sovrascrive le variabili. Preferenza persistita in <code>localStorage</code> (<code>vlt-theme</code>); default <code>system</code> (segue <code>prefers-color-scheme</code>, con listener per aggiornamenti live). Toggle in navbar (<code>Theme.jsx</code>).</p>\n<p dir=\"auto\">Colori intenzionalmente non tematizzati (restano fissi in entrambi i temi): badge LinkedIn, colori linguaggio repo (<code>LANG_COLORS</code> in <code>RepoModal.jsx</code>), link blu stile GitHub, overlay scuro sulle cover foto in <code>BlogPostModal</code>.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Configurazione</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-configurazione\" class=\"anchor\" aria-label=\"Permalink: Configurazione\" href=\"https://github.com/vlT-vl/vlt-website#configurazione\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Il file <code>.env</code> è committato nel repo (nessun dato sensibile):</p>\n<div class=\"highlight highlight-source-dotenv notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"VITE_GITHUB_USER=vlT-vl\nVITE_BLOG_URL=https://vlt.hashnode.dev\nVITE_COMPANY_NAME=S2E | Business Technology Consultants\nVITE_COMPANY_URL=https://it.linkedin.com/company/s2e-solutions-to-enterprises\nVITE_BASE_URL=/\"><pre><span class=\"pl-v\">VITE_GITHUB_USER</span><span class=\"pl-k\">=</span><span class=\"pl-s\">vlT-vl</span>\n<span class=\"pl-v\">VITE_BLOG_URL</span><span class=\"pl-k\">=</span><span class=\"pl-s\">https://vlt.hashnode.dev</span>\n<span class=\"pl-v\">VITE_COMPANY_NAME</span><span class=\"pl-k\">=</span><span class=\"pl-s\">S2E | Business Technology Consultants</span>\n<span class=\"pl-v\">VITE_COMPANY_URL</span><span class=\"pl-k\">=</span><span class=\"pl-s\">https://it.linkedin.com/company/s2e-solutions-to-enterprises</span>\n<span class=\"pl-v\">VITE_BASE_URL</span><span class=\"pl-k\">=</span><span class=\"pl-s\">/</span></pre></div>\n<p dir=\"auto\"><code>VITE_BASE_URL</code> deve corrispondere al path GitHub Pages. Con dominio custom impostare <code>/</code>; con path repo impostare <code>/nome-repo/</code>.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Sviluppo locale</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-sviluppo-locale\" class=\"anchor\" aria-label=\"Permalink: Sviluppo locale\" href=\"https://github.com/vlT-vl/vlt-website#sviluppo-locale\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"npm install\nnpm run dev       # rigenera projects.json/posts.json (hook predev) poi avvia Vite su :5173\nnpm run build     # build produzione in dist/ (bundle minificato oxc, no source map)\nnpm run preview   # anteprima locale del build produzione\"><pre>npm install\nnpm run dev       <span class=\"pl-c\"><span class=\"pl-c\">#</span> rigenera projects.json/posts.json (hook predev) poi avvia Vite su :5173</span>\nnpm run build     <span class=\"pl-c\"><span class=\"pl-c\">#</span> build produzione in dist/ (bundle minificato oxc, no source map)</span>\nnpm run preview   <span class=\"pl-c\"><span class=\"pl-c\">#</span> anteprima locale del build produzione</span></pre></div>\n<p dir=\"auto\"><code>npm run dev</code> esegue automaticamente lo script <code>predev</code> (<code>CI=true node scripts/fetch-projects.js &amp;&amp; CI=true node scripts/fetch-posts.js</code>) prima di avviare Vite, così <code>public/projects.json</code>/<code>public/posts.json</code> sono sempre freschi in locale. <code>GITHUB_TOKEN</code> non è richiesto esplicitamente: <code>fetch-projects.js</code> usa <code>gh auth token</code> in automatico se disponibile.</p>\n<p dir=\"auto\">Per rigenerare solo uno dei due JSON senza avviare Vite:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"npm run fetch:projects\nnpm run fetch:posts\"><pre>npm run fetch:projects\nnpm run fetch:posts</pre></div>\n<p dir=\"auto\"><code>fetch-posts.js</code> prova prima l'RSS Hashnode con HTTP normale; se Vercel risponde con challenge/429 usa Playwright Chromium per leggere <code>https://vlt.hashnode.dev/rss.xml</code> come un browser e poi produce lo stesso schema JSON.</p>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Deploy</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-deploy\" class=\"anchor\" aria-label=\"Permalink: Deploy\" href=\"https://github.com/vlT-vl/vlt-website#deploy\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">Il deploy è completamente automatizzato via <strong>GitHub Actions</strong>:</p>\n<p dir=\"auto\"><strong>Trigger:</strong></p>\n<ul dir=\"auto\">\n<li>Push su branch <code>sourcecode</code></li>\n<li>Schedule ogni ora — aggiorna progetti e post e ridistribuisce l'artifact</li>\n<li>Dispatch manuale (<code>workflow_dispatch</code>) — aggiorna progetti e post e ridistribuisce l'artifact</li>\n</ul>\n<p dir=\"auto\"><strong>Pipeline:</strong></p>\n<ol dir=\"auto\">\n<li>Checkout + Node 20</li>\n<li><code>npm install</code></li>\n<li><code>node scripts/fetch-projects.js</code> — GitHub API → <code>public/projects.json</code></li>\n<li><code>npx playwright install --with-deps chromium</code></li>\n<li><code>node scripts/fetch-posts.js</code> — RSS Hashnode → <code>public/posts.json</code></li>\n<li><strong>Commit</strong> dei JSON aggiornati su <code>sourcecode</code> (solo se cambiati; messaggio con <code>[skip ci]</code> per non ritriggerare il workflow via push)</li>\n<li><code>npm run build</code> — bundle ottimizzato in <code>dist/</code></li>\n<li>Upload artifact + deploy su GitHub Pages</li>\n</ol>\n<p dir=\"auto\">Il workflow committa i JSON rigenerati (<code>permissions: contents: write</code>) così restano sempre disponibili nel repo come fallback, oltre a finire nell'artifact pubblicato da GitHub Pages.</p>\n<p dir=\"auto\"><strong>Setup GitHub Pages (una tantum):</strong></p>\n<ul dir=\"auto\">\n<li>Settings → Pages → Source: <strong>GitHub Actions</strong></li>\n</ul>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Versione e Build</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-versione-e-build\" class=\"anchor\" aria-label=\"Permalink: Versione e Build\" href=\"https://github.com/vlT-vl/vlt-website#versione-e-build\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<markdown-accessiblity-table><table>\n<thead>\n<tr>\n<th>Campo</th>\n<th>Valore</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Versione</td>\n<td>0.1.3</td>\n</tr>\n<tr>\n<td>Build</td>\n<td>R070726</td>\n</tr>\n<tr>\n<td>Aggiornato</td>\n<td>7 Luglio 2026</td>\n</tr>\n</tbody>\n</table></markdown-accessiblity-table>\n<hr>\n<div class=\"markdown-heading\" dir=\"auto\"><h2 class=\"heading-element\" dir=\"auto\">Licenza</h2><a target=\"_blank\" rel=\"noopener noreferrer\" id=\"user-content-licenza\" class=\"anchor\" aria-label=\"Permalink: Licenza\" href=\"https://github.com/vlT-vl/vlt-website#licenza\"><svg data-component=\"Octicon\" class=\"octicon octicon-link\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z\"></path></svg></a></div>\n<p dir=\"auto\">vlT Website è distribuito con <strong>Proprietary Source-Available License</strong> — Copyright © 2025–2026 Veronesi Lorenzo (vlT).</p>\n<p dir=\"auto\">Il codice sorgente è reso pubblicamente consultabile a scopo di studio, ma rimangono espressamente vietati, senza previo consenso scritto del titolare:</p>\n<ul dir=\"auto\">\n<li><strong>Modifica</strong> — adattamento, traduzione o creazione di opere derivate</li>\n<li><strong>Ridistribuzione</strong> — copia, fork, ripubblicazione, sublicenza o repackaging</li>\n<li><strong>Reverse engineering</strong> — decompilazione, disassemblaggio o ricostruzione del codice da binario</li>\n<li><strong>Sfruttamento commerciale</strong> — vendita, incorporazione in prodotti/servizi commerciali</li>\n</ul>\n<p dir=\"auto\">Tutti i diritti di proprietà intellettuale restano esclusivamente di Veronesi Lorenzo (vlT). Per richieste di licenza: <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"mailto:veronesilorenzo@outlook.com\">veronesilorenzo@outlook.com</a></p>\n<hr>\n<p dir=\"auto\"><strong>Copyright © 2026 vlT di Veronesi Lorenzo. Tutti i diritti riservati.</strong></p>\n</article></div>",
-      "readmeImage": "https://raw.githubusercontent.com/vlT-vl/vlt-website/HEAD/src/res/vltcube.svg",
-      "licenseText": "Proprietary Source-Available License\nCopyright (c) 2025–2026 Veronesi Lorenzo (vlT)\nAll rights reserved.\n\n────────────────────────────────────────────────────────────\n\nGRANT OF USE\n\nPermission is granted, free of charge, to any person obtaining a copy of\nthis software to use it for personal or professional purposes, subject to\nthe conditions and restrictions set out below.\n\n────────────────────────────────────────────────────────────\n\nRESTRICTIONS\n\n1. NO MODIFICATION — The source code may be read and studied, but may NOT\n   be modified, adapted, translated, or used as the basis for derivative\n   works, in whole or in part, without the prior written permission of the\n   copyright holder.\n\n2. NO REDISTRIBUTION — The software, whether in source or binary form, may\n   NOT be copied, forked, republished, sublicensed, or repackaged without\n   the prior written permission of the copyright holder.\n\n3. NO REVERSE ENGINEERING — Reverse engineering, decompilation, disassembly,\n   or any attempt to reconstruct the source code from a compiled binary is\n   strictly prohibited, except as required by applicable mandatory law.\n\n4. NO COMMERCIAL EXPLOITATION — The software may NOT be sold, commercialized,\n   incorporated into a commercial product or service, or used to provide a\n   paid service to third parties without the prior written permission of the\n   copyright holder.\n\n────────────────────────────────────────────────────────────\n\nINTELLECTUAL PROPERTY\n\nAll intellectual property rights — including but not limited to copyright,\ntrade secrets, know-how, and any applicable patents — remain exclusively\nwith Veronesi Lorenzo (vlT). This license grants no ownership rights of\nany kind. The name, logos, and any associated trade dress of this software\nare the exclusive property of Veronesi Lorenzo (vlT) and may not be used\nwithout prior written consent.\n\n────────────────────────────────────────────────────────────\n\nDISCLAIMER OF WARRANTIES\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO EVENT SHALL THE\nCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY —\nWHETHER IN CONTRACT, TORT, OR OTHERWISE — ARISING FROM OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n────────────────────────────────────────────────────────────\n\nGOVERNING LAW\n\nThis license is governed by the laws of Italy. Any dispute arising from or\nrelating to this license shall be subject to the exclusive jurisdiction of\nthe courts of Milan (MI), Italy.\n\n────────────────────────────────────────────────────────────\n\nFor licensing inquiries or permission requests: veronesilorenzo@outlook.com\n",
-      "dash": {
-        "languages": {
-          "CSS": 109888,
-          "JavaScript": 98325,
-          "HTML": 377
-        },
-        "contents": [
-          {
-            "sha": "d37c745016b9385167f243d93425ecac6b5c0b2f",
-            "name": ".env",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/.env"
-          },
-          {
-            "sha": "17288958d527cfc83277abb008ab42e2ef0ded25",
-            "name": ".github",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/.github"
-          },
-          {
-            "sha": "1356ff57a86f1d308783b0bc4567285906eb0e9b",
-            "name": ".gitignore",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/.gitignore"
-          },
-          {
-            "sha": "694b669f18cf17e993c2767f429120a039116d07",
-            "name": "LICENSE",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/LICENSE"
-          },
-          {
-            "sha": "b54ac3c294c53924a7a422c74cf0e60898a6ebf1",
-            "name": "README.md",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/README.md"
-          },
-          {
-            "sha": "130dffb62e8a0c41b0d9bc49ada752aaaa1d11dd",
-            "name": "index.html",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/index.html"
-          },
-          {
-            "sha": "5382d0126aa22ed99ad67f41435a76c317b5ae30",
-            "name": "package.json",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/package.json"
-          },
-          {
-            "sha": "4216945f194705b25858a849d3a27b3aaf53961d",
-            "name": "public",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/public"
-          },
-          {
-            "sha": "2c9ef49e6909384ceabda0afc341f782174bd1fb",
-            "name": "scripts",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/scripts"
-          },
-          {
-            "sha": "c3d8a55a9df4a3bb3fc79a14400eba66b84f70db",
-            "name": "src",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/src"
-          },
-          {
-            "sha": "1b92bd269d108de667ffc9c73fe5a542ff7dec6f",
-            "name": "vite.config.js",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/vite.config.js"
-          }
-        ],
-        "commits": [
-          {
-            "sha": "0b69b8dd70bbb9f45d6d18ba6e2e8dc302c54030",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/0b69b8dd70bbb9f45d6d18ba6e2e8dc302c54030",
-            "commit": {
-              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T23:34:36Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T23:34:36Z"
-              }
-            }
-          },
-          {
-            "sha": "ffaa0a86edfc0d38eec30fb398baa20015a2c777",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/ffaa0a86edfc0d38eec30fb398baa20015a2c777",
-            "commit": {
-              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T20:45:50Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T20:45:50Z"
-              }
-            }
-          },
-          {
-            "sha": "ca3f55371828756f4db3f1f3566ccbcc3071b236",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/ca3f55371828756f4db3f1f3566ccbcc3071b236",
-            "commit": {
-              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T17:25:28Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T17:25:28Z"
-              }
-            }
-          },
-          {
-            "sha": "ec14af9e794c1e92c98c55ce2bfdca128becb638",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/ec14af9e794c1e92c98c55ce2bfdca128becb638",
-            "commit": {
-              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T12:40:42Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T12:40:42Z"
-              }
-            }
-          },
-          {
-            "sha": "88cb99501bb8807ff307c4736e04bc7b01991269",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/88cb99501bb8807ff307c4736e04bc7b01991269",
-            "commit": {
-              "message": "chore: aggiorna projects.json e posts.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T06:07:12Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-09-27T06:07:12Z"
               }
             }
           }
@@ -1716,148 +1836,6 @@
                 "name": "vlT",
                 "email": "vlt.vltech@gmail.com",
                 "date": "2026-03-11T09:51:08Z"
-              }
-            }
-          }
-        ],
-        "release": null
-      }
-    },
-    {
-      "id": 959906564,
-      "name": "examgrid",
-      "full_name": "vlT-vl/examgrid",
-      "html_url": "https://github.com/vlT-vl/examgrid",
-      "description": "examgrid source code repository ",
-      "language": "JavaScript",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "watchers_count": 0,
-      "size": 792,
-      "topics": [],
-      "license": null,
-      "pushed_at": "2025-04-04T15:13:21Z",
-      "updated_at": "2025-05-14T12:56:49Z",
-      "archived": false,
-      "fork": false,
-      "readmeHtml": null,
-      "readmeImage": null,
-      "dash": {
-        "languages": {
-          "JavaScript": 16142,
-          "CSS": 8814,
-          "HTML": 339
-        },
-        "contents": [
-          {
-            "sha": "3bbd84e4c0760ebb2c19bf91b002460e99f4a69d",
-            "name": ".gitignore",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/examgrid/blob/sourcecode/.gitignore"
-          },
-          {
-            "sha": "3c56bb331c75cf9c1f2b6eda9d60b4acf4900f56",
-            "name": "index.html",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/examgrid/blob/sourcecode/index.html"
-          },
-          {
-            "sha": "1862704d7acbe77da02bf09a02e5abebc6fcb74c",
-            "name": "module",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/examgrid/tree/sourcecode/module"
-          },
-          {
-            "sha": "4746d27321db61cf222824f079efc2f8e7187f11",
-            "name": "package.json",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/examgrid/blob/sourcecode/package.json"
-          },
-          {
-            "sha": "6ef9e48f10a00b3564f572006e51b6b050813c34",
-            "name": "res",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/examgrid/tree/sourcecode/res"
-          },
-          {
-            "sha": "562034272a719a803292f5f6e207e8423503d9e2",
-            "name": "src",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/examgrid/tree/sourcecode/src"
-          },
-          {
-            "sha": "f1aedb269209c0b67c4753881b77da5ebe0c228c",
-            "name": "vite.config.js",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/examgrid/blob/sourcecode/vite.config.js"
-          }
-        ],
-        "commits": [
-          {
-            "sha": "c66e6854d36aa3ee688c0de729811de25e6a4429",
-            "html_url": "https://github.com/vlT-vl/examgrid/commit/c66e6854d36aa3ee688c0de729811de25e6a4429",
-            "commit": {
-              "message": "R002-04042025",
-              "author": {
-                "name": "unknown",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-04T15:11:13Z"
-              },
-              "committer": {
-                "name": "unknown",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-04T15:11:13Z"
-              }
-            }
-          },
-          {
-            "sha": "2230bf199455e95460eaac01341661bcfc99904f",
-            "html_url": "https://github.com/vlT-vl/examgrid/commit/2230bf199455e95460eaac01341661bcfc99904f",
-            "commit": {
-              "message": "updated structure",
-              "author": {
-                "name": "Lorenzo Veronesi",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-03T16:46:01Z"
-              },
-              "committer": {
-                "name": "Lorenzo Veronesi",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-03T16:46:01Z"
-              }
-            }
-          },
-          {
-            "sha": "277f4b194e7ddd9d06e8b5d510ff23261ff97eff",
-            "html_url": "https://github.com/vlT-vl/examgrid/commit/277f4b194e7ddd9d06e8b5d510ff23261ff97eff",
-            "commit": {
-              "message": "updated structure",
-              "author": {
-                "name": "Lorenzo Veronesi",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-03T16:17:58Z"
-              },
-              "committer": {
-                "name": "Lorenzo Veronesi",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-03T16:17:58Z"
-              }
-            }
-          },
-          {
-            "sha": "174cd7391303534ad3ba0ebd0b3a1bad0977f3db",
-            "html_url": "https://github.com/vlT-vl/examgrid/commit/174cd7391303534ad3ba0ebd0b3a1bad0977f3db",
-            "commit": {
-              "message": "Repository init",
-              "author": {
-                "name": "Lorenzo Veronesi",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-03T15:00:29Z"
-              },
-              "committer": {
-                "name": "Lorenzo Veronesi",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2025-04-03T15:00:29Z"
               }
             }
           }
