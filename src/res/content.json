@@ -1,0 +1,69 @@
+{
+  "en": {
+    "repos": {
+      "vlt-website": "Website and portfolio of Lorenzo Veronesi · Virtualization Architect · Developer · Designer",
+      "CoreDNS-WebUI": "WebUI for the CoreDNS stack with the corednsctl backend",
+      "winget-remote": "Development repository of the PowerShell module \"winget remote\", an extension for winget"
+    },
+    "posts": {
+      "pmxtools-un-pannello-di-controllo-per-la-mia-infrastruttura-proxmox": {
+        "title": "pmxtools: a control panel for my Proxmox infrastructure",
+        "brief": "In recent weeks I have been working on pmxtools, a desktop application designed to keep under control, on a single screen, the state of…"
+      },
+      "nxget-un-hub-personale-per-il-software-multipiattaforma": {
+        "title": "nxget: a personal hub for cross-platform software",
+        "brief": "A few days ago nxget went online, a portal where you can find software for Windows, macOS and Linux in one place, with a download link that always leads…"
+      },
+      "vcp-vcf-administrator-un-nuovo-obiettivo-raggiunto": {
+        "title": "VCP-VCF Administrator: a new goal achieved",
+        "brief": "Today, September 15, 2026, I completed a new step in my professional journey by earning the VMware Certified Professional – VMware…"
+      },
+      "rundeck-su-fedora-39": {
+        "title": "Rundeck on Fedora 39",
+        "brief": "Rundeck is an open source IT automation platform that lets you run automated tasks on various nodes (remote PCs / virtual machines). It is…"
+      },
+      "docker-su-fedora-38": {
+        "title": "Docker on Fedora 38",
+        "brief": "Docker is an open-source container engine that allows the development, distribution and execution of applications confined in a container. An…"
+      },
+      "cockpit-una-webui-per-i-nostri-server-linux": {
+        "title": "Cockpit - A WebUI for our Linux servers",
+        "brief": "Cockpit is a web-based graphical interface for Linux servers. This tool lets you access your server through a web browser and thus be able to…"
+      },
+      "ansible-automation-tool-su-fedora-38": {
+        "title": "Ansible (automation tool) on Fedora 38",
+        "brief": "In this article, we will see how to install Ansible on Fedora 38 step by step and, once completed, we will have a small working environment with…"
+      },
+      "vmware-vcp-dcv-2023-2v0-2120-exam": {
+        "title": "VMware VCP-DCV 2023 - 2V0-21.20 Exam",
+        "brief": "First of all, let's start with the acronym: VCP-DCV stands for VMware Certified Professional - Data Center Virtualization, in this article in fact we will go into…"
+      },
+      "gestire-come-template-le-vm-in-vsphere": {
+        "title": "Managing VMs as Templates in vSphere",
+        "brief": "In this article we will see how to manage VMs (virtual machines) on vCenter so they can be used as templates for deploying a set of machines…"
+      },
+      "vcp-dcv-un-grande-obbiettivo": {
+        "title": "VCP-DCV: a great goal!"
+      },
+      "benvenuti-sul-mio-blog": {
+        "title": "Welcome to my blog!"
+      }
+    }
+  },
+  "it": {
+    "repos": {
+      "nex-web-framework": "Framework web a singolo binario: frontend React/Vite + backend Go",
+      "nex-framework": "Framework desktop multipiattaforma: frontend React/Vite + backend Go",
+      "rest-api-vlt": "rest-api-vlt è un progetto di API REST statica in sola lettura, pensato per esporre metadati strutturati di release e ciclo di vita delle piattaforme infrastrutturali.",
+      "cdn-vlt": "CDN per servire file statici dei progetti vlT",
+      "vltOS": "vltOS — un'esperienza desktop GNOME su Debian 13 curata nei dettagli",
+      "auth-cdn": "Auth CDN per i progetti vlT",
+      "examgrid": "Simulatore professionale di esami a tempo — frontend React, senza backend",
+      "examgrid.exams": "Registro statico e cifrato dei contenuti d'esame e dei dati di accesso utente per examgrid",
+      "nex-tech-hub": "Hub web per tecnici e sistemisti — VMware · Proxmox · Kubernetes · Linux",
+      "nxget.packages": "Registro statico e pubblico dei manifest per il catalogo nxget",
+      "SVG-Desiger-Studio": "Editor SVG desktop nativo — modifica, anteprima, ottimizzazione ed esportazione in React / React Native / PNG / Data URI",
+      "stadia-unlock": "StadiaUnlock - porta uno Stadia Controller in modalità Bluetooth dal browser"
+    }
+  }
+}

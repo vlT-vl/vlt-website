@@ -1,0 +1,77 @@
+{
+  "profile": "https://www.credly.com/users/lorenzo-veronesi",
+  "badges": [
+    {
+      "id": "13617d35-0dff-4a0c-81ec-3f7224e8531c",
+      "name": "VMware Certified Professional - VMware Cloud Foundation Administrator",
+      "issuer": "Broadcom",
+      "image": "https://images.credly.com/images/081374d2-721a-4d32-bff8-cc737818a3fc/blob",
+      "issued": "2026-09-15",
+      "expires": "2029-09-15",
+      "url": "https://www.credly.com/badges/13617d35-0dff-4a0c-81ec-3f7224e8531c/public_url"
+    },
+    {
+      "id": "640a8b1d-48ab-4b5f-8680-5695f6274c50",
+      "name": "Broadcom Partner Certification - Proven Professional - VMware vSphere - Pre-Sales",
+      "issuer": "Broadcom",
+      "image": "https://images.credly.com/images/25340397-a819-4e6c-865b-56d7f9f84550/blob",
+      "issued": "2024-03-01",
+      "expires": "2026-03-01",
+      "url": "https://www.credly.com/badges/640a8b1d-48ab-4b5f-8680-5695f6274c50/public_url"
+    },
+    {
+      "id": "7f70435c-0584-4570-ac0e-a8152d4738cb",
+      "name": "Broadcom Partner Certification - Certified Expert - VMware vSphere - Pre-Sales",
+      "issuer": "Broadcom",
+      "image": "https://images.credly.com/images/066b8c3d-b4c8-4573-88a3-8ef4427be99a/blob",
+      "issued": "2023-03-22",
+      "expires": "2027-01-08",
+      "url": "https://www.credly.com/badges/7f70435c-0584-4570-ac0e-a8152d4738cb/public_url"
+    },
+    {
+      "id": "13c81adb-b31d-4e7f-9fda-70b4b3f00eef",
+      "name": "Broadcom Partner Certification - Proven Professional - VMware vSphere - Architecture",
+      "issuer": "Broadcom",
+      "image": "https://images.credly.com/images/a32a36b6-882e-4d17-9b21-77efa6f06e14/blob",
+      "issued": "2023-03-22",
+      "expires": "2027-01-08",
+      "url": "https://www.credly.com/badges/13c81adb-b31d-4e7f-9fda-70b4b3f00eef/public_url"
+    },
+    {
+      "id": "9bcdbf19-b513-4ec5-9816-35ba8e2bfb41",
+      "name": "Broadcom Partner Certification - Proven Professional - VMware vSphere - Implementation",
+      "issuer": "Broadcom",
+      "image": "https://images.credly.com/images/4dadc99d-6011-4869-9809-8d355d31342e/blob",
+      "issued": "2023-03-22",
+      "expires": "2027-01-08",
+      "url": "https://www.credly.com/badges/9bcdbf19-b513-4ec5-9816-35ba8e2bfb41/public_url"
+    },
+    {
+      "id": "6a977b4b-512d-4c14-819c-77c8e32c3cef",
+      "name": "Broadcom Partner Certification - Proven Professional - VMware vSphere - Support",
+      "issuer": "Broadcom",
+      "image": "https://images.credly.com/images/6499ae1b-0434-41be-8196-48faf30c1b63/blob",
+      "issued": "2023-03-22",
+      "expires": "2027-01-08",
+      "url": "https://www.credly.com/badges/6a977b4b-512d-4c14-819c-77c8e32c3cef/public_url"
+    },
+    {
+      "id": "fe1cdf72-3399-4989-888d-6dae85567f4d",
+      "name": "VMware Certified Professional - Data Center Virtualization 2023",
+      "issuer": "Broadcom",
+      "image": "https://images.credly.com/images/76cf3a86-92be-433d-bd37-85575d4995e2/image.png",
+      "issued": "2023-03-22",
+      "expires": "2026-06-30",
+      "url": "https://www.credly.com/badges/fe1cdf72-3399-4989-888d-6dae85567f4d/public_url"
+    },
+    {
+      "id": "4b13a584-d5ec-4221-9d3b-206c4678d9ca",
+      "name": "Parallels Device Management Certified Professional",
+      "issuer": "Parallels",
+      "image": "https://images.credly.com/images/aee1ce72-9231-4996-a4ab-a8e07e204258/dm-tp-badge.png",
+      "issued": "2020-02-21",
+      "expires": null,
+      "url": "https://www.credly.com/badges/4b13a584-d5ec-4221-9d3b-206c4678d9ca/public_url"
+    }
+  ]
+}

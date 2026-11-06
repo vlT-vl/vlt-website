@@ -1,0 +1,81 @@
+/* repomark.css — filigrana icona repo a destra delle card                   */
+/*****************************************************************************/
+
+.hero-repo-card,
+.repo-card,
+.ds-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-repo-card > :not(.repo-mark),
+.repo-card > :not(.repo-mark),
+.ds-slide > :not(.repo-mark) {
+  position: relative;
+  z-index: 1;
+}
+
+.repo-mark {
+  position: absolute;
+  right: -0.7rem;
+  bottom: -0.8rem;
+  z-index: 0;
+  font-size: 5.2rem;
+  color: var(--text);
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.repo-mark--image {
+  width: auto;
+  height: 3.4rem;
+  max-width: 10rem;
+  right: 1rem;
+  bottom: 0.9rem;
+  object-fit: contain;
+  object-position: right bottom;
+  border-radius: 8px;
+  filter: grayscale(1) contrast(0.3);
+  opacity: 0.16;
+}
+
+.ds-slide .repo-mark {
+  right: 0;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  font-size: 7.5rem;
+  opacity: 0.2;
+  -webkit-mask-image: linear-gradient(to left, #000 30%, transparent);
+  mask-image: linear-gradient(to left, #000 30%, transparent);
+}
+
+.ds-slide .repo-mark--image {
+  width: 42%;
+  max-width: none;
+  height: 130%;
+  object-position: right center;
+  border-radius: 0;
+  opacity: 0.34;
+  -webkit-mask-image: linear-gradient(to left, #000 25%, transparent 95%);
+  mask-image: linear-gradient(to left, #000 25%, transparent 95%);
+}
+
+html[data-theme='light'] .ds-slide .repo-mark--image { opacity: 0.4; }
+html[data-theme='light'] .ds-slide .repo-mark { opacity: 0.16; }
+
+.repo-card .repo-mark,
+.hero-repo-card .repo-mark {
+  right: 1rem;
+  bottom: 3.5rem;
+}
+
+.repo-card .repo-mark:not(.repo-mark--image),
+.hero-repo-card .repo-mark:not(.repo-mark--image) {
+  font-size: 3.6rem;
+}
+
+.hero-repo-card .repo-mark {
+  right: 2rem;
+  bottom: 4.5rem;
+}

@@ -15,24 +15,9 @@
 }
 
 .vlt-brand-logo-wrap {
-  min-width: calc(4rem + 5rem);
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
-  animation: brandLogoExpand 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
-}
-
-@keyframes brandLogoExpand {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(var(--cube-w) * -0.62)); }
-}
-
-/* Cubo non trasla da solo: è il wrapper a gestire il centraggio */
-.vlt-brand-logo-wrap .vlt-logo--static .vlt-cube,
-.vlt-brand-logo-wrap .vlt-logo--static:hover .vlt-cube {
-  animation: none;
-  transform: translateX(0);
-  transition: none;
+  margin-bottom: 1.4rem;
 }
 
 .vlt-brand-slogan {
@@ -138,4 +123,113 @@
   .vlt-brand-text {
     max-width: 100%;
   }
+}
+
+/* ── Ingresso in motion design (logo escluso) ── */
+
+.vlt-brand {
+  --vv-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --vv-io: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.vlt-brand-slogan {
+  animation: vvSweep 0.85s var(--vv-ease) 0.7s backwards;
+}
+
+.vlt-brand .section-eyebrow {
+  animation: vvTrack 0.8s var(--vv-ease) 0.9s backwards;
+}
+
+.vlt-brand-text {
+  animation: vvText 0.7s var(--vv-ease) backwards;
+}
+
+.vlt-brand-text:nth-of-type(2) { animation-delay: 1.05s; }
+.vlt-brand-text:nth-of-type(3) { animation-delay: 1.2s; }
+
+@keyframes vvSweep {
+  from { opacity: 0; transform: translateX(-1.6em); clip-path: inset(0 100% 0 0); filter: blur(6px); }
+  to   { opacity: 1; transform: translateX(0); clip-path: inset(0 0 0 0); filter: blur(0); }
+}
+
+@keyframes vvTrack {
+  from { opacity: 0; letter-spacing: 0.9em; }
+}
+
+@keyframes vvText {
+  from { opacity: 0; transform: translateY(26px); filter: blur(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vlt-brand-slogan,
+  .vlt-brand .section-eyebrow,
+  .vlt-brand-text {
+    animation: none !important;
+  }
+}
+
+/* ── Linee divisorie in motion design ── */
+
+.vlt-brand,
+.vlt-brand-text,
+.skills,
+.blog-teaser {
+  position: relative;
+}
+
+.vlt-brand {
+  border-bottom: none;
+}
+
+.vlt-brand-text {
+  border-bottom: none;
+}
+
+.vlt-brand::after,
+.vlt-brand-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+.vlt-brand::after {
+  transform-origin: center;
+  animation: ruleDraw 0.9s var(--vv-io) 0.6s backwards;
+}
+
+.vlt-brand-text::after {
+  transform-origin: left center;
+  animation: ruleDraw 0.7s var(--vv-io) 1.25s backwards;
+}
+
+.vlt-brand-text:last-of-type::after {
+  display: none;
+}
+
+.skills {
+  border-bottom: none;
+}
+
+.blog-teaser {
+  border-top: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vlt-brand::after,
+  .vlt-brand-text::after {
+    animation: none !important;
+  }
+}
+
+.landing .rv-armed.is-in:not(.rv-rule) {
+  animation-duration: 0.65s;
+  animation-delay: calc(var(--rv-wait, 0s) + var(--i, 0) * 0.05s);
+}
+
+.landing .rv-armed.is-in.rv-rule {
+  animation-duration: 0.8s;
 }

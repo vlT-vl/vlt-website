@@ -5,6 +5,7 @@ const GITHUB_USER = import.meta.env.VITE_GITHUB_USER
 const TTL = {
   REPOS: 60 * 60 * 1000,         // 1h
   BLOG:  2  * 60 * 60 * 1000,    // 2h
+  CREDLY: 60 * 60 * 1000,        // 1h
 }
 
 const cacheGet = (key, ttl) => {
@@ -30,6 +31,14 @@ const loadPostsJson = async () => {
   return res.json()
 }
 
+const loadCredlyJson = async () => {
+  const res = await fetch(`${import.meta.env.BASE_URL}credly.json`, { cache: 'no-store' })
+  if (!res.ok) throw new Error(`credly.json HTTP ${res.status}`)
+  const payload = await res.json()
+  if (!Array.isArray(payload.badges)) throw new Error('credly.json non valido')
+  return payload
+}
+
 const normalizeStaticRepo = repo => ({
   id:               repo.id ?? repo.name,
   name:             repo.name,
@@ -51,6 +60,7 @@ const normalizeStaticRepo = repo => ({
   updated_at:       repo.updated_at ?? '',
   archived:         repo.archived ?? false,
   fork:             repo.fork ?? false,
+  pagesUrl:         repo.pagesUrl ?? null,
 })
 
 const fetchStaticRepos = async () => {
@@ -76,6 +86,8 @@ export const DataProvider = ({ children }) => {
   const [postsLoading, setPostsLoading] = useState(false)
   const [postsError,   setPostsError]   = useState(null)
 
+  const [credly,       setCredly]       = useState(null)
+
   /* ── Repos list da projects.json generato in CI ── */
   useEffect(() => {
     const cached  = cacheGet('gh_repos',         TTL.REPOS)
@@ -98,7 +110,7 @@ export const DataProvider = ({ children }) => {
         cacheSet('gh_repos', staticRepos)
       } catch {
         if (!cancelled && !cached) {
-          setReposError('Impossibile caricare i repository. Riprova più tardi.')
+          setReposError('projects.error')
         }
       } finally {
         if (!cancelled && !cached) setReposLoading(false)
@@ -133,17 +145,32 @@ export const DataProvider = ({ children }) => {
       setPosts(list)
       cacheSet(key, list)
     } catch (e) {
-      setPostsError(e.message ?? 'Impossibile caricare gli articoli.')
+      setPostsError('blog.error')
     } finally {
       setPostsLoading(false)
     }
   }, [posts.length])
+
+  const fetchCredly = useCallback(async () => {
+    if (credly) return
+    const key    = 'credly_badges'
+    const cached = cacheGet(key, TTL.CREDLY)
+    if (cached) { setCredly(cached); return }
+    try {
+      const data = await loadCredlyJson()
+      setCredly(data)
+      cacheSet(key, data)
+    } catch {
+      setCredly({ profile: null, badges: [] })
+    }
+  }, [credly])
 
   return (
     <DataContext.Provider value={{
       repos, repoImages, reposLoading, reposError,
       fetchRepoDash, fetchReadme,
       posts, postsLoading, postsError, fetchPosts,
+      credly, fetchCredly,
     }}>
       {children}
     </DataContext.Provider>

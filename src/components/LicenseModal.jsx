@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import '../css/licensemodal.css'
+import '../css/modalmotion.css'
 import { HiXMark } from 'react-icons/hi2'
 import { FaScaleBalanced } from 'react-icons/fa6'
+import { useText } from '../lib/uiText.js'
 
 const LicenseModal = ({ repo, onClose }) => {
+  const { t } = useText()
   const [text, setText]       = useState(null)
   const [loading, setLoading] = useState(true)
   const [notFound, setNotFound] = useState(false)
@@ -27,7 +30,7 @@ const LicenseModal = ({ repo, onClose }) => {
     }
   }, [onClose, repo.name])
 
-  const licName = repo.license?.name ?? 'Licenza'
+  const licName = repo.license?.name ?? t('license.default')
   const spdxId  = repo.license?.spdx_id
 
   return createPortal(
@@ -38,14 +41,14 @@ const LicenseModal = ({ repo, onClose }) => {
           <div className="lmo-header-left">
             <FaScaleBalanced className="lmo-header-icon" />
             <div>
-              <span className="lmo-eyebrow">Licenza</span>
+              <span className="lmo-eyebrow">{t('license.eyebrow')}</span>
               <h2 className="lmo-title">{licName}</h2>
               {spdxId && spdxId !== licName && (
                 <span className="lmo-spdx">{spdxId}</span>
               )}
             </div>
           </div>
-          <button className="lmo-close" onClick={onClose} aria-label="Chiudi">
+          <button className="lmo-close" onClick={onClose} aria-label={t('common.close')}>
             <HiXMark />
           </button>
         </div>
@@ -56,7 +59,7 @@ const LicenseModal = ({ repo, onClose }) => {
           )}
           {!loading && notFound && (
             <p className="lmo-empty">
-              Nessun file di licenza trovato nel repository.
+              {t('license.empty')}
             </p>
           )}
           {!loading && text && <pre className="lmo-text">{text}</pre>}

@@ -26,7 +26,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   width: 100%;
-  max-width: 480px;
+  max-width: 720px;
   max-height: 88vh;
   overflow-y: auto;
   display: flex;
@@ -126,22 +126,51 @@
 
 .amo-logo-wrap {
   display: flex;
+  align-items: center;
   justify-content: center;
-  min-width: calc(2.4rem * 3.12);
+  gap: 0.6rem;
   align-self: center;
-  animation: amoLogoExpand 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
 }
 
-@keyframes amoLogoExpand {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(2.4rem * -0.62)); }
+.amo-logo-wrap .vlt-logo--static {
+  width: calc(var(--cube-w) * 2.35);
 }
 
-.amo-logo-wrap .vlt-logo--static .vlt-cube,
-.amo-logo-wrap .vlt-logo--static:hover .vlt-cube {
-  animation: none;
-  transform: translateX(0);
-  transition: none;
+.amo-web {
+  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: none;
+  color: var(--text);
+}
+
+.amo-web-mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.amo-web-letter {
+  display: inline-block;
+  animation: amoWebRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--d) backwards;
+}
+
+.amo-web-letter--accent {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+@keyframes amoWebRise {
+  from { transform: translateY(110%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amo-web-letter {
+    animation: none;
+  }
 }
 
 .amo-grid {
@@ -253,4 +282,8 @@
 @media (max-width: 480px) {
   .amo-grid { grid-template-columns: 1fr 1fr; }
   .amo-header, .amo-body { padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+
+.amo-card > * {
+  flex-shrink: 0;
 }

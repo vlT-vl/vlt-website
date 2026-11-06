@@ -14,8 +14,13 @@ main {
 }
 
 .view-content {
-  animation: viewFadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: viewFadeIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
+
+.view-content--home {
+  animation: none;
+}
+
 
 @keyframes viewFadeIn {
   from { opacity: 0; transform: translateY(10px); }

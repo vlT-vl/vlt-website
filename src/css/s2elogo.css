@@ -1,0 +1,66 @@
+/* s2elogo.css                                                               */
+/*****************************************************************************/
+
+.s2e-logo {
+  display: block;
+  overflow: visible;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.s2e-cyan { fill: var(--logo-cyan); transition: fill 0.2s ease; }
+.s2e-navy { fill: var(--logo-navy); transition: fill 0.2s ease; }
+
+.s2e-part {
+  animation-duration: 1s;
+  animation-timing-function: var(--ease-out);
+  animation-fill-mode: both;
+  animation-delay: var(--d, 0s);
+}
+
+.s2e-ring-t,
+.s2e-ring-b,
+.s2e-arc-l,
+.s2e-arc-r {
+  transform-box: view-box;
+  transform-origin: 34.62px 50.32px;
+}
+
+.s2e-ring-t { animation-name: s2eRingT; animation-duration: 1.2s; }
+.s2e-ring-b { animation-name: s2eRingB; animation-duration: 1.2s; }
+.s2e-arc-l,
+.s2e-arc-r  { animation-name: s2eArc; animation-duration: 1s; }
+
+.s2e-s,
+.s2e-two,
+.s2e-e {
+  animation-name: s2eLetter;
+  animation-duration: 1s;
+}
+
+@keyframes s2eRingT {
+  0%   { opacity: 0; transform: rotate(-110deg) scale(0.55); }
+  35%  { opacity: 1; }
+  100% { opacity: 1; transform: rotate(0) scale(1); }
+}
+
+@keyframes s2eRingB {
+  0%   { opacity: 0; transform: rotate(110deg) scale(0.55); }
+  35%  { opacity: 1; }
+  100% { opacity: 1; transform: rotate(0) scale(1); }
+}
+
+@keyframes s2eArc {
+  0%   { opacity: 0; transform: scale(0.2); }
+  40%  { opacity: 1; }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes s2eLetter {
+  from { transform: translateY(112px); }
+  to   { transform: translateY(0); }
+}
+
+.rv-armed:not(.is-in) .s2e-part {
+  animation-play-state: paused;
+}

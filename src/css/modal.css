@@ -203,3 +203,7 @@
     padding-right: 1.25rem;
   }
 }
+
+.modal-card > * {
+  flex-shrink: 0;
+}

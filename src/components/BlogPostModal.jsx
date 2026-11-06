@@ -1,14 +1,17 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import '../css/blogpostmodal.css'
+import '../css/modalmotion.css'
 import { HiXMark } from 'react-icons/hi2'
+import { useText } from '../lib/uiText.js'
 
 const BLOG_BASE = import.meta.env.VITE_BLOG_URL ?? ''
 
-const fmtDate = iso =>
-  new Date(iso).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' })
+const fmtDate = (iso, locale) =>
+  new Date(iso).toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
 
 const BlogPostModal = ({ post, onClose }) => {
+  const { t, locale, postTitle, postBrief } = useText()
   useEffect(() => {
     const onKey = e => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', onKey)
@@ -26,16 +29,16 @@ const BlogPostModal = ({ post, onClose }) => {
     <>
       {post.tags?.length > 0 && (
         <div className="bpm-tags">
-          {post.tags.map(t => (
-            <span key={t.name} className="post-tag">{t.name}</span>
+          {post.tags.map(tag => (
+            <span key={tag.name} className="post-tag">{tag.name}</span>
           ))}
         </div>
       )}
-      <h2 className="bpm-title">{post.title}</h2>
+      <h2 className="bpm-title">{postTitle(post)}</h2>
       <div className="bpm-info">
-        <span>{fmtDate(post.publishedAt)}</span>
+        <span>{fmtDate(post.publishedAt, locale)}</span>
         <span>·</span>
-        <span>{post.readTimeInMinutes} min di lettura</span>
+        <span>{t('post.readTime', { n: post.readTimeInMinutes })}</span>
       </div>
     </>
   )
@@ -48,9 +51,9 @@ const BlogPostModal = ({ post, onClose }) => {
         {hasCover ? (
           /* ── Hero con immagine + gradiente + titolo sovrapposto ── */
           <div className="bpm-hero">
-            <img className="bpm-hero-img" src={post.coverImage.url} alt={post.title} />
+            <img className="bpm-hero-img" src={post.coverImage.url} alt={postTitle(post)} />
             <div className="bpm-hero-gradient" />
-            <button className="bpm-close bpm-close--hero" onClick={onClose} aria-label="Chiudi">
+            <button className="bpm-close bpm-close--hero" onClick={onClose} aria-label={t('common.close')}>
               <HiXMark />
             </button>
             <div className="bpm-hero-meta">
@@ -61,7 +64,7 @@ const BlogPostModal = ({ post, onClose }) => {
           /* ── Header testuale senza cover ── */
           <div className="bpm-header">
             <div className="bpm-header-meta">{tagsMeta}</div>
-            <button className="bpm-close" onClick={onClose} aria-label="Chiudi">
+            <button className="bpm-close" onClick={onClose} aria-label={t('common.close')}>
               <HiXMark />
             </button>
           </div>
@@ -72,14 +75,14 @@ const BlogPostModal = ({ post, onClose }) => {
             ? <div className="bpm-content" dangerouslySetInnerHTML={{ __html: post.content }} />
             : (
               <div className="bpm-no-content">
-                <p className="bpm-brief">{post.brief}</p>
+                <p className="bpm-brief">{postBrief(post)}</p>
                 <a
                   className="bpm-external-cta"
                   href={postUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Leggi l'articolo completo →
+                  {t('post.readFull')}
                 </a>
               </div>
             )

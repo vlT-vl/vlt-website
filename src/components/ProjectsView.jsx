@@ -1,13 +1,14 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import '../css/projects.css'
 import RepoModal from './RepoModal.jsx'
-import LicenseModal from './LicenseModal.jsx'
-import { GoStar, GoRepoForked, GoRepo } from 'react-icons/go'
-import { FaScaleBalanced } from 'react-icons/fa6'
-import { HiMagnifyingGlass } from 'react-icons/hi2'
+import { HiMagnifyingGlass, HiXMark } from 'react-icons/hi2'
 import { SiGithub, SiGo, SiJavascript, SiTypescript, SiPython, SiGnubash, SiCss, SiHtml5, SiVuedotjs, SiRust, SiCplusplus } from 'react-icons/si'
 import { TbBrandPowershell } from 'react-icons/tb'
 import { useData } from '../context/DataContext.jsx'
+import { useReveal } from '../lib/useReveal.js'
+import { RepoShowCard } from './ShowCards.jsx'
+import { themed } from '../lib/themed.js'
+import { useText } from '../lib/uiText.js'
 
 const GITHUB_USER = import.meta.env.VITE_GITHUB_USER
 
@@ -31,9 +32,9 @@ const ACCENT_PALETTE = [
 ]
 
 const langAccent = (lang, name = '') => {
-  if (lang && LANG_COLORS[lang]) return LANG_COLORS[lang]
+  if (lang && LANG_COLORS[lang]) return themed(LANG_COLORS[lang])
   const hash = [...name].reduce((a, c) => a + c.charCodeAt(0), 0)
-  return ACCENT_PALETTE[hash % ACCENT_PALETTE.length]
+  return themed(ACCENT_PALETTE[hash % ACCENT_PALETTE.length])
 }
 
 const LANG_ICONS = {
@@ -45,194 +46,52 @@ const LANG_ICONS = {
 
 const LangIcon = ({ lang, cls }) => {
   const Icon = LANG_ICONS[lang]
-  const color = LANG_COLORS[lang] ?? '#888'
+  const color = themed(LANG_COLORS[lang] ?? '#888')
   return Icon ? <Icon className={cls} style={{ color }} /> : null
 }
 
-const HeroRepoCard = ({ repo, image, onOpen }) => (
-  <article
-    className="hero-repo-card"
-    style={{ '--lang-color': langAccent(repo.language, repo.name) }}
-    onClick={() => onOpen(repo)}
-    role="button"
-    tabIndex={0}
-    onKeyDown={e => e.key === 'Enter' && onOpen(repo)}
-  >
-    <div className="hero-repo-top">
-      <div className="hero-repo-img">
-        <GoRepo className="hero-repo-img-icon" />
-        {image && (
-          <img
-            className="hero-repo-img-photo"
-            src={image}
-            alt=""
-            loading="lazy"
-            onError={e => { e.currentTarget.style.display = 'none' }}
-          />
-        )}
-      </div>
-      <div className="hero-repo-info">
-        <div className="hero-repo-name-row">
-          <span className="hero-repo-name">{repo.name}</span>
-          {repo.language && (
-            <span className="hero-repo-lang">
-              <LangIcon lang={repo.language} cls="hero-repo-lang-icon" />
-              {repo.language}
-            </span>
-          )}
-        </div>
-        {repo.description && <p className="hero-repo-desc">{repo.description}</p>}
-      </div>
-      <a
-        className="hero-repo-gh"
-        href={repo.html_url}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={e => e.stopPropagation()}
-        aria-label={`Apri ${repo.name} su GitHub`}
-      >
-        <SiGithub />
-      </a>
-    </div>
-
-    {repo.topics?.length > 0 && (
-      <div className="hero-repo-topics">
-        {repo.topics.slice(0, 6).map(t => (
-          <span key={t} className="hero-repo-topic">{t}</span>
-        ))}
-      </div>
-    )}
-
-    <div className="hero-repo-footer">
-      <div className="hero-repo-stats">
-        <span className="hero-repo-stat"><GoStar /> {repo.stargazers_count}</span>
-        <span className="hero-repo-stat"><GoRepoForked /> {repo.forks_count}</span>
-      </div>
-      <span className="hero-repo-cta">Dettagli progetto →</span>
-    </div>
-  </article>
-)
-
-const RepoCard = ({ repo, onOpen, onLicense, image }) => (
-  <article
-    className="repo-card"
-    style={{ '--lang-color': langAccent(repo.language, repo.name) }}
-    onClick={() => onOpen(repo)}
-    role="button"
-    tabIndex={0}
-    onKeyDown={e => e.key === 'Enter' && onOpen(repo)}
-  >
-    <div className="repo-card-body">
-      <div className="repo-card-top">
-
-        <div className="repo-card-title-row">
-          <div className="repo-card-name-group">
-            <div className="repo-card-img">
-              <GoRepo className="repo-card-img-icon" />
-              {image && (
-                <img
-                  className="repo-card-img-photo"
-                  src={image}
-                  alt=""
-                  loading="lazy"
-                  onError={e => { e.currentTarget.style.display = 'none' }}
-                />
-              )}
-            </div>
-            <span className="repo-name">{repo.name}</span>
-          </div>
-          <a
-            className="repo-gh-link"
-            href={repo.html_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={e => e.stopPropagation()}
-            aria-label={`Apri ${repo.name} su GitHub`}
-          >
-            <SiGithub />
-          </a>
-        </div>
-
-        {repo.description && (
-          <p className="repo-desc">{repo.description}</p>
-        )}
-
-        <div className="repo-meta">
-          {repo.language && (
-            <span className="repo-lang">
-              <LangIcon lang={repo.language} cls="repo-lang-icon" />
-              {repo.language}
-            </span>
-          )}
-          <span className="repo-stat"><GoStar /> {repo.stargazers_count}</span>
-          <span className="repo-stat"><GoRepoForked /> {repo.forks_count}</span>
-        </div>
-
-        {repo.topics?.length > 0 && (
-          <div className="repo-topics">
-            {repo.topics.slice(0, 4).map(t => (
-              <span key={t} className="repo-topic">{t}</span>
-            ))}
-          </div>
-        )}
-      </div>
-
-      <div className="repo-license-row">
-        <span className="repo-license-label">
-          <FaScaleBalanced className="repo-license-icon" />
-          License
-        </span>
-        {repo.license
-          ? <button
-              className="repo-license-pill"
-              onClick={e => { e.stopPropagation(); onLicense(repo) }}
-            >
-              {repo.license.spdx_id === 'NOASSERTION' ? 'Proprietary License' : (repo.license.spdx_id || repo.license.name)}
-            </button>
-          : <span className="repo-license-none">Non specificata</span>
-        }
-      </div>
-    </div>
-  </article>
-)
-
 const ProjectsView = () => {
+  const { t, repoDesc } = useText()
   const { repos, repoImages, reposLoading: loading, reposError: error } = useData()
   const [activeRepo,    setActiveRepo]    = useState(null)
-  const [activeLicense, setActiveLicense] = useState(null)
   const [langFilter,    setLangFilter]    = useState('all')
   const [query,         setQuery]         = useState('')
 
+  const q = query.trim().toLowerCase()
+
+  const byQuery = useMemo(() => repos.filter(r => !q || (
+    r.name.toLowerCase().includes(q) ||
+    (repoDesc(r) ?? '').toLowerCase().includes(q) ||
+    r.topics?.some(t => t.toLowerCase().includes(q))
+  )), [repos, q, repoDesc])
+
   const languages = useMemo(() => [
     'all',
-    ...Array.from(new Set(repos.map(r => r.language).filter(Boolean))),
-  ], [repos])
+    ...Array.from(new Set(byQuery.map(r => r.language).filter(Boolean))),
+  ], [byQuery])
 
-  const heroRepo = repos[0] ?? null
+  useEffect(() => {
+    if (langFilter !== 'all' && !languages.includes(langFilter)) setLangFilter('all')
+  }, [languages, langFilter])
 
-  const filtered = useMemo(() => {
-    const byLang = langFilter === 'all'
-      ? repos
-      : repos.filter(r => r.language === langFilter)
-    const q = query.trim().toLowerCase()
-    const withoutHero = byLang.filter(r => !heroRepo || r.id !== heroRepo.id)
-    if (!q) return withoutHero
-    return withoutHero.filter(r =>
-      r.name.toLowerCase().includes(q) ||
-      (r.description ?? '').toLowerCase().includes(q) ||
-      r.topics?.some(t => t.toLowerCase().includes(q))
-    )
-  }, [repos, langFilter, query, heroRepo])
+  const filtering = langFilter !== 'all' || q !== ''
+  const heroRepo = !filtering ? (repos[0] ?? null) : null
+
+  const filtered = useMemo(() => byQuery.filter(r => {
+    if (heroRepo && r.id === heroRepo.id) return false
+    return langFilter === 'all' || r.language === langFilter
+  }), [byQuery, langFilter, heroRepo])
+
+  const rootRef = useReveal(`${loading}${filtered.map(r => r.id).join()}`, 0.4)
 
   return (
-    <div className="projects">
+    <div className="projects" ref={rootRef}>
 
       <section className="projects-intro">
-        <span className="section-eyebrow">progetti</span>
-        <h2 className="projects-title">Progetti & Repository</h2>
+        <span className="section-eyebrow">{t('projects.eyebrow')}</span>
+        <h2 className="projects-title">{t('projects.title')}</h2>
         <p className="projects-sub">
-          Ogni progetto nasce da un problema concreto — CLI, API, desktop app e tool
-          scritti per automatizzare, semplificare e durare nel tempo.
+          {t('projects.sub')}
         </p>
       </section>
 
@@ -244,13 +103,18 @@ const ProjectsView = () => {
               <input
                 className="view-search-input"
                 type="search"
-                placeholder="Cerca repo, descrizione, topic…"
+                placeholder={t('projects.search')}
                 value={query}
                 onChange={e => setQuery(e.target.value)}
               />
+              {query && (
+                <button type="button" className="view-search-clear" aria-label={t('common.clear')} onClick={() => setQuery('')}>
+                  <HiXMark />
+                </button>
+              )}
             </div>
             {query && (
-              <span className="view-filter-count">{filtered.length} risultati</span>
+              <span className="view-filter-count">{t('common.results', { n: filtered.length })}</span>
             )}
           </div>
 
@@ -263,7 +127,7 @@ const ProjectsView = () => {
                   onClick={() => setLangFilter(lang)}
                 >
                   {lang !== 'all' && <LangIcon lang={lang} cls="filter-lang-icon" />}
-                  {lang === 'all' ? 'Tutti' : lang}
+                  {lang === 'all' ? t('common.all') : lang}
                 </button>
               ))}
             </div>
@@ -272,47 +136,46 @@ const ProjectsView = () => {
       )}
 
       {!loading && !error && heroRepo && (
-        <div className="hero-repo-wrap">
-          <HeroRepoCard
-            repo={heroRepo}
-            image={repoImages[heroRepo.name]}
-            onOpen={setActiveRepo}
-          />
-        </div>
-      )}
-
-      {loading && (
-        <div className="projects-grid">
-          {[0, 1, 2, 3].map(i => (
-            <div key={i} className="repo-card repo-card--skeleton"
-              style={{ animationDelay: `${i * 0.1}s` }} />
-          ))}
+        <div className="ds ds--embed">
+          <div className="ds-grid ds-grid--one">
+            <RepoShowCard
+              repo={heroRepo}
+              image={repoImages[heroRepo.name]}
+              onOpen={setActiveRepo}
+              accent={langAccent(heroRepo.language, heroRepo.name)}
+              lazy
+            />
+          </div>
         </div>
       )}
 
       {!loading && !error && (
-        <div className="projects-grid">
-          {filtered.map(repo => (
-            <RepoCard
-              key={repo.id}
-              repo={repo}
-              image={repoImages[repo.name]}
-              onOpen={setActiveRepo}
-              onLicense={setActiveLicense}
-            />
-          ))}
+        <div className="ds ds--embed">
+          <div className="ds-grid">
+            {filtered.map((repo, i) => (
+              <RepoShowCard
+                key={repo.id}
+                repo={repo}
+                image={repoImages[repo.name]}
+                onOpen={setActiveRepo}
+                dd={`${(i % 2) * 0.12}s`}
+                accent={langAccent(repo.language, repo.name)}
+                lazy
+              />
+            ))}
+          </div>
           {filtered.length === 0 && repos.length > 0 && (
             <p className="projects-error" style={{ margin: 0 }}>
-              Nessun risultato per "{query || langFilter}".
+              {t('common.noResults', { q: query || langFilter })}
             </p>
           )}
         </div>
       )}
 
-      {!loading && error && <p className="projects-error">{error}</p>}
+      {!loading && error && <p className="projects-error">{t(error)}</p>}
 
       <section className="projects-cta">
-        <p className="projects-cta-text">Tutti i repository pubblici su</p>
+        <p className="projects-cta-text">{t('projects.cta')}</p>
         <a className="projects-cta-link"
           href={`https://github.com/${GITHUB_USER}`}
           target="_blank" rel="noopener noreferrer">
@@ -321,7 +184,6 @@ const ProjectsView = () => {
       </section>
 
       {activeRepo    && <RepoModal     repo={activeRepo}    image={repoImages[activeRepo.name]} onClose={() => setActiveRepo(null)} />}
-      {activeLicense && <LicenseModal  repo={activeLicense} onClose={() => setActiveLicense(null)} />}
 
     </div>
   )

@@ -165,3 +165,7 @@
   .lmo-header  { padding: 1.25rem; border-radius: 12px 12px 0 0; }
   .lmo-body    { padding: 1.25rem; }
 }
+
+.lmo-card > .lmo-header {
+  flex-shrink: 0;
+}

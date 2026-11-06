@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/versione-0.1.3--R070726-blue?style=flat-square" alt="versione"/>
+  <img src="https://img.shields.io/badge/versione-0.1.5--R061126-blue?style=flat-square" alt="versione"/>
   <img src="https://img.shields.io/badge/react-19-61DAFB?style=flat-square&logo=react&logoColor=white" alt="react"/>
   <img src="https://img.shields.io/badge/vite-8-646CFF?style=flat-square&logo=vite&logoColor=white" alt="vite"/>
   <img src="https://img.shields.io/badge/licenza-proprietaria-critical?style=flat-square" alt="licenza"/>
@@ -34,6 +34,8 @@ GitHub Actions
   workflow_dispatch     → rigenera JSON + build + deploy
 ```
 
+Vengono inclusi solo i repository pubblici: un repository reso privato esce dal sito alla prima rigenerazione dei dati.
+
 Non richiede backend: i dati GitHub dei progetti e i post del blog vengono generati dentro GitHub Actions e inclusi come JSON statici nell'artifact GitHub Pages. I JSON generati sono committati nel repository come ultimo stato noto buono: ogni run (push/schedule/dispatch) li rigenera e li ricommitta, così il sito ha sempre dati validi da servire anche se un run futuro non riesce a fare fetch.
 
 ---
@@ -42,13 +44,13 @@ Non richiede backend: i dati GitHub dei progetti e i post del blog vengono gener
 
 | Sezione | Descrizione |
 |---|---|
-| **Home** | Hero animato, 3 card competenze con modale di dettaglio, dashboard ultimo progetto + ultimo articolo + 4 mini card riepilogative |
-| **About Me** | Profilo personale, background professionale, certificazioni |
-| **About vlT** | Storia e filosofia del brand vlT, skills infrastruttura e sviluppo |
-| **Progetti** | Browser repository GitHub con ricerca e filtro lingua, modale con README renderizzato, statistiche e licenza |
-| **Blog** | Articoli con hero card, filtri per tag, ricerca full-text, lettura inline con cover image |
+| **Home** | Apertura in motion design: logo vlT centrato a tutto schermo che si costruisce a linee disegnate, poi nome e slogan "From hypervisor to interface"; il gruppo si riduce nell'header e infine entrano in animazione titolo e card; l'entrata completa si riproduce a ogni caricamento, durante la navigazione interna parte già nello stato finale. Tre card competenze che si espandono da sole, al clic e al passaggio del mouse; card ultimo progetto e ultimo articolo con anteprima animata all'hover; 2 caroselli di mini card che entrano quando compaiono in vista |
+| **About Me** | Profilo con nome animato, pillole di contatto LinkedIn/Email (l'Email apre un modale con oggetto e testo precompilati e modificabili), testo con selettore laterale che segue il paragrafo letto, card «Dove lavoro», certificazioni Credly |
+| **About vlT** | Storia e filosofia del brand vlT, card di competenze infrastruttura e sviluppo |
+| **Progetti** | Card progetto con la stessa animazione hover della home (anteprima con linguaggi, file e commit), ricerca con pulsante di cancellazione, filtro per linguaggio dinamico rispetto alla ricerca, modale con README renderizzato, statistiche e licenza |
+| **Blog** | Card articolo orizzontali con la stessa animazione hover della home (copertina espansa), ricerca con pulsante di cancellazione, filtri per tag dinamici rispetto alla ricerca, lettura in modale con cover image |
 
-Tema chiaro/scuro selezionabile dal pulsante in navbar (persistito in localStorage, default sul tema di sistema). Il logo in footer e le label "Built with React & Vite" / versione aprono il modale **About vlT Website** con versione, build, data aggiornamento e elenco dipendenze.
+Tema chiaro/scuro selezionabile dal pulsante in navbar (persistito in localStorage, default sul tema di sistema). Accanto al tema, in navbar, ci sono il cambio lingua italiano/inglese (persistito in localStorage, default sulla lingua del browser; tutti i testi sono nel dizionario `src/lib/uiText.js`) e il pulsante info che apre il modale About. Il logo in footer e le label "Built with React & Vite" / versione aprono il modale **About vlT Website** con logo animato + wordmark "website", versione, build, data aggiornamento e elenco dipendenze.
 
 ---
 
@@ -57,6 +59,7 @@ Tema chiaro/scuro selezionabile dal pulsante in navbar (persistito in localStora
 | Sorgente | Dati | Modalità |
 |---|---|---|
 | `public/projects.json` | Lista repo, README HTML, immagini, licenze, statistiche, dashboard per-repo (`dash`: linguaggi, file root, ultimi 5 commit, ultima release) | Generato e **committato** da CI a ogni deploy e ogni ora |
+| `public/credly.json` | Badge Credly pubblici (nome, ente, immagine originale, date, link) per le card certificazioni di About Me; vengono mostrati tutti i badge pubblici del profilo | Generato da `scripts/fetch-credly.js` (endpoint pubblico del profilo Credly) e **committato** da CI a ogni deploy e ogni ora; se il fetch fallisce resta l'ultimo file valido |
 | `public/posts.json` | Articoli blog | Generato da RSS Hashnode e **committato** da CI a ogni deploy e ogni ora; fallback Playwright se Vercel sfida il fetch HTTP |
 
 Entrambi i file sono tracciati in git (non più in `.gitignore`): rappresentano l'ultimo stato noto buono, sempre disponibile per il deploy anche se un run CI futuro fallisce il fetch.
@@ -80,7 +83,8 @@ vlt-website/
 │
 ├── scripts/
 │   ├── fetch-projects.js   # fetch GitHub API → public/projects.json
-│   └── fetch-posts.js      # fetch RSS Hashnode → public/posts.json
+│   ├── fetch-posts.js      # fetch RSS Hashnode → public/posts.json
+│   └── fetch-credly.js     # fetch badge Credly → public/credly.json
 │
 ├── .github/
 │   └── workflows/
@@ -89,12 +93,21 @@ vlt-website/
 ├── public/
 │   ├── vltcube.svg
 │   ├── projects.json       # generato e committato da CI (fallback sempre disponibile)
-│   └── posts.json          # generato e committato da CI (fallback sempre disponibile)
+│   ├── posts.json          # generato e committato da CI (fallback sempre disponibile)
+│   └── credly.json         # badge Credly, generato e committato da CI
 │
 └── src/
     ├── main.jsx
     ├── lib/
-    │   └── theme.js            # preferenza tema (system/light/dark), applica data-theme su <html>
+    │   ├── uiText.js           # dizionario IT/EN, hook useText, cambio lingua
+    │   ├── theme.js            # preferenza tema (system/light/dark), applica data-theme su <html>
+    │   ├── themed.js           # adatta i colori al tema attivo
+    │   ├── timing.js           # tempi del carosello competenze letti dalle variabili d'ambiente
+    │   ├── intro.js            # stato dell'apertura e preferenza di movimento ridotto
+    │   ├── nameMotion.js       # animazione del nome dalle iniziali
+    │   ├── network.js          # dati dello sfondo a rete
+    │   ├── useReveal.js        # ingresso in animazione allo scroll
+    │   └── vendorIcons.js      # icone per tecnologia
     ├── context/
     │   └── DataContext.jsx     # lettura JSON statici, caching TTL localStorage
     ├── components/
@@ -102,13 +115,23 @@ vlt-website/
     │   ├── Navbar.jsx
     │   ├── Theme.jsx           # pulsante toggle tema chiaro/scuro
     │   ├── Hero.jsx
-    │   ├── Landing.jsx         # home: skill cards + dashboard 2 big card + 4 mini card
+    │   ├── Landing.jsx         # home: titolo, carosello competenze, card in evidenza + mini card
+    │   ├── DashShowcase.jsx    # home: ultimo progetto e ultimo articolo
+    │   ├── DashMini.jsx        # home: caroselli di mini card
+    │   ├── DashShared.jsx      # helper condivisi (pill, icone linguaggio, colori tag, rotazione)
+    │   ├── ShowCards.jsx       # card progetto/articolo con anteprima hover, usate in home, Progetti e Blog
     │   ├── AboutMe.jsx
+    │   ├── AnimatedName.jsx    # nome animato dalle iniziali
+    │   ├── WorkCard.jsx        # card «Dove lavoro»
+    │   ├── S2ELogo.jsx / S2EEmblem.jsx
+    │   ├── ContactModal.jsx    # modale contatto con oggetto e testo precompilati
     │   ├── VltView.jsx
-    │   ├── ProjectsView.jsx    # browser repository con search e filtro lingua
-    │   ├── BlogView.jsx        # articoli con hero card, tag filter e search
+    │   ├── ProjectsView.jsx    # elenco progetti con ricerca e filtro linguaggio dinamico
+    │   ├── BlogView.jsx        # elenco articoli con ricerca e filtro tag dinamico
     │   ├── VltLogo.jsx         # logo animato cubo SVG + testo vlT
-    │   ├── Modal.jsx           # modale skill card (home)
+    │   ├── NetBackdrop.jsx     # sfondo a rete animata
+    │   ├── RepoMark.jsx        # filigrana del progetto nelle card
+    │   ├── SitePill.jsx        # pill con indirizzo del sito GitHub Pages
     │   ├── RepoModal.jsx       # modale repo: README + dettagli + licenza
     │   ├── BlogPostModal.jsx   # modale articolo: hero cover + contenuto completo
     │   ├── LicenseModal.jsx    # modale testo licenza (riusato anche da AboutModal)
@@ -116,6 +139,8 @@ vlt-website/
     ├── css/                    # variabili tema (index.css) + un file per componente/vista
     └── res/
         ├── vltcube.svg
+        ├── nexcube.svg
+        ├── svgdesigner.svg
         ├── vltportrait.jpg
         └── landinglogo.webp
 ```
@@ -140,12 +165,30 @@ Colori intenzionalmente non tematizzati (restano fissi in entrambi i temi): badg
 Il file `.env` è committato nel repo (nessun dato sensibile):
 
 ```env
-VITE_GITHUB_USER=vlT-vl
-VITE_BLOG_URL=https://vlt.hashnode.dev
-VITE_COMPANY_NAME=S2E | Business Technology Consultants
-VITE_COMPANY_URL=https://it.linkedin.com/company/s2e-solutions-to-enterprises
-VITE_BASE_URL=/
+VITE_GITHUB_USER=
+VITE_BLOG_URL=
+VITE_COMPANY_NAME=
+VITE_COMPANY_URL=
+VITE_COMPANY_SITE_URL=
+VITE_CONTACT_EMAIL=
+VITE_BASE_URL=
+VITE_WHAT_FIRST_EXPAND_SECONDS=
+VITE_WHAT_REST_SECONDS=
+VITE_WHAT_EXPAND_SECONDS=
+VITE_WHAT_COLLAPSE_SECONDS=
+VITE_WHAT_TEXT_START_DELAY_SECONDS=
+VITE_WHAT_PARAGRAPH_PAUSE_SECONDS=
+VITE_WHAT_TEXT_END_PAUSE_SECONDS=
+VITE_WHAT_REVEAL_DELAY_SECONDS=
+VITE_WHAT_REVEAL_STAGGER_SECONDS=
+VITE_WHAT_REVEAL_SECONDS=
+VITE_WHAT_IN_SECONDS=
+VITE_WHAT_OUT_SECONDS=
+VITE_WHAT_GAP_SECONDS=
+VITE_WHAT_PILL_SECONDS=
 ```
+
+Le variabili `VITE_WHAT_*` regolano i tempi (in secondi) del carosello delle competenze in home: prima espansione, pausa a card chiuse tra un'espansione e l'altra, durata di apertura e chiusura, ingresso e uscita del contenuto, attesa prima dello scorrimento del testo, pausa tra paragrafi e pausa finale, ritardo e cadenza della comparsa degli elementi, velocità del carosello delle pill. I tempi si impostano solo da qui, senza valori fissi nel codice. `VITE_CONTACT_EMAIL` è l'indirizzo del modale di contatto in About Me; `VITE_COMPANY_SITE_URL` è il link della card «Dove lavoro».
 
 `VITE_BASE_URL` deve corrispondere al path GitHub Pages. Con dominio custom impostare `/`; con path repo impostare `/nome-repo/`.
 
@@ -160,13 +203,14 @@ npm run build     # build produzione in dist/ (bundle minificato oxc, no source 
 npm run preview   # anteprima locale del build produzione
 ```
 
-`npm run dev` esegue automaticamente lo script `predev` (`CI=true node scripts/fetch-projects.js && CI=true node scripts/fetch-posts.js`) prima di avviare Vite, così `public/projects.json`/`public/posts.json` sono sempre freschi in locale. `GITHUB_TOKEN` non è richiesto esplicitamente: `fetch-projects.js` usa `gh auth token` in automatico se disponibile.
+`npm run dev` esegue automaticamente lo script `predev` (`CI=true node scripts/fetch-projects.js && CI=true node scripts/fetch-posts.js && CI=true node scripts/fetch-credly.js`) prima di avviare Vite, così `public/projects.json`/`public/posts.json` sono sempre freschi in locale. `GITHUB_TOKEN` non è richiesto esplicitamente: `fetch-projects.js` usa `gh auth token` in automatico se disponibile.
 
-Per rigenerare solo uno dei due JSON senza avviare Vite:
+Per rigenerare solo uno dei JSON senza avviare Vite:
 
 ```bash
 npm run fetch:projects
 npm run fetch:posts
+npm run fetch:credly
 ```
 
 `fetch-posts.js` prova prima l'RSS Hashnode con HTTP normale; se Vercel risponde con challenge/429 usa Playwright Chromium per leggere `https://vlt.hashnode.dev/rss.xml` come un browser e poi produce lo stesso schema JSON.
@@ -188,9 +232,10 @@ Il deploy è completamente automatizzato via **GitHub Actions**:
 3. `node scripts/fetch-projects.js` — GitHub API → `public/projects.json`
 4. `npx playwright install --with-deps chromium`
 5. `node scripts/fetch-posts.js` — RSS Hashnode → `public/posts.json`
-6. **Commit** dei JSON aggiornati su `sourcecode` (solo se cambiati; messaggio con `[skip ci]` per non ritriggerare il workflow via push)
-7. `npm run build` — bundle ottimizzato in `dist/`
-8. Upload artifact + deploy su GitHub Pages
+6. `node scripts/fetch-credly.js` — badge Credly → `public/credly.json`
+7. **Commit** dei JSON aggiornati su `sourcecode` (solo se cambiati; messaggio con `[skip ci]` per non ritriggerare il workflow via push)
+8. `npm run build` — bundle ottimizzato in `dist/`
+9. Upload artifact + deploy su GitHub Pages
 
 Il workflow committa i JSON rigenerati (`permissions: contents: write`) così restano sempre disponibili nel repo come fallback, oltre a finire nell'artifact pubblicato da GitHub Pages.
 
@@ -203,9 +248,9 @@ Il workflow committa i JSON rigenerati (`permissions: contents: write`) così re
 
 | Campo | Valore |
 |---|---|
-| Versione | 0.1.3 |
-| Build | R070726 |
-| Aggiornato | 7 Luglio 2026 |
+| Versione | 0.1.5 |
+| Build | R061126 |
+| Aggiornato | 6 Novembre 2026 |
 
 ---
 

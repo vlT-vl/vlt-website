@@ -1,0 +1,269 @@
+/* contactmodal.css                                                          */
+/*****************************************************************************/
+
+.cmo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: cmoIn 0.2s ease both;
+}
+
+.cmo-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow: hidden;
+  --cm: #0d8a7a;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-top: 3px solid var(--cm);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.cmo-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--cm) 14%, var(--bg-elevated-2)), var(--bg-elevated-2) 70%);
+}
+
+.cmo-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  color: #fff;
+  background: var(--cm);
+  border-radius: 50%;
+}
+
+.cmo-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.cmo-eyebrow {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cm);
+}
+
+.cmo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.cmo-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.cmo-close:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+
+.cmo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem 1.75rem;
+  overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cmo-intro {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.cmo-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.cmo-info-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.cmo-info-row svg {
+  color: var(--text-muted);
+}
+
+a.cmo-info-row:hover span {
+  text-decoration: underline;
+}
+
+.cmo-row {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 1rem;
+}
+
+.cmo-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cmo-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.cmo-reset {
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.62rem;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  color: var(--cm);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.cmo-input,
+.cmo-static {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-elevated-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cmo-input:focus {
+  border-color: var(--cm);
+}
+
+.cmo-static {
+  color: var(--text-muted);
+}
+
+.cmo-textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.cmo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cmo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--text);
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cmo-btn:hover {
+  background: var(--bg-hover);
+}
+
+.cmo-btn--primary {
+  color: #fff;
+  background: var(--cm);
+  border-color: var(--cm);
+}
+
+.cmo-btn--primary:hover {
+  background: #0b7366;
+  border-color: #0b7366;
+}
+
+
+@media (max-width: 640px) {
+  .cmo-overlay { padding: 0.75rem; }
+  .cmo-header { padding: 1rem 1.1rem; }
+  .cmo-body { padding: 1.1rem; }
+  .cmo-row { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cmo-overlay { animation: cmoIn 0.3s ease both; }
+  .cmo-card { animation: cmoCardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .cmo-header-icon { animation: cmoIcon 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.12s backwards; }
+  .cmo-header-text,
+  .cmo-close { animation: cmoRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.16s backwards; }
+  .cmo-body > * { animation: cmoRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) calc(0.2s + var(--k, 0) * 0.06s) backwards; }
+
+  .cmo-overlay.is-leaving { animation: cmoOut 0.28s ease both; }
+  .cmo-overlay.is-leaving .cmo-card { animation: cmoCardOut 0.28s cubic-bezier(0.4, 0, 1, 1) both; }
+}
+
+@keyframes cmoIn { from { opacity: 0; } }
+@keyframes cmoOut { to { opacity: 0; } }
+@keyframes cmoCardIn { from { opacity: 0; transform: translateY(14px) scale(0.985); } }
+@keyframes cmoCardOut { to { opacity: 0; transform: translateY(8px) scale(0.99); } }
+@keyframes cmoRise { from { opacity: 0; transform: translateY(8px); } }
+@keyframes cmoIcon { from { opacity: 0; transform: scale(0.7); } }

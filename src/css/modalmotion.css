@@ -1,0 +1,308 @@
+/* modalmotion.css — apertura dei modali in motion design                    */
+/*****************************************************************************/
+
+.modal-card,
+.rmo-card,
+.bpm-card {
+  animation: mmCard 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.modal-icon {
+  animation: mmPop 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards;
+}
+
+.modal-eyebrow {
+  animation: mmSlide 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s backwards;
+}
+
+.modal-title {
+  animation: mmRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.36s backwards;
+}
+
+.modal-text {
+  animation: mmRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.modal-text:nth-child(1) { animation-delay: 0.46s; }
+.modal-text:nth-child(2) { animation-delay: 0.56s; }
+.modal-text:nth-child(3) { animation-delay: 0.66s; }
+.modal-text:nth-child(n + 4) { animation-delay: 0.76s; }
+
+.modal-tag {
+  animation: mmRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.modal-tag:nth-child(1) { animation-delay: 0.8s; }
+.modal-tag:nth-child(2) { animation-delay: 0.84s; }
+.modal-tag:nth-child(3) { animation-delay: 0.88s; }
+.modal-tag:nth-child(4) { animation-delay: 0.92s; }
+.modal-tag:nth-child(5) { animation-delay: 0.96s; }
+.modal-tag:nth-child(6) { animation-delay: 1s; }
+.modal-tag:nth-child(n + 7) { animation-delay: 1.04s; }
+
+.rmo-header-img-group {
+  animation: mmPop 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.18s backwards;
+}
+
+.rmo-header-info {
+  animation: mmRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.28s backwards;
+}
+
+.rmo-actions {
+  animation: mmSlide 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.38s backwards;
+}
+
+.rmo-stats-bar {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.42s backwards;
+}
+
+.rmo-topics {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.5s backwards;
+}
+
+.rmo-tabs {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.56s backwards;
+}
+
+.rmo-body {
+  animation: mmRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.66s backwards;
+}
+
+.bpm-hero-img {
+  animation: mmZoom 1.2s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.bpm-tags {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.32s backwards;
+}
+
+.bpm-title {
+  animation: mmRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s backwards;
+}
+
+.bpm-info {
+  animation: mmRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.48s backwards;
+}
+
+.bpm-body {
+  animation: mmRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.58s backwards;
+}
+
+.modal-close,
+.rmo-close,
+.bpm-close {
+  animation: mmFade 0.5s ease 0.5s backwards;
+}
+
+@keyframes mmCard {
+  from { opacity: 0; transform: translateY(32px) scale(0.965); }
+}
+
+@keyframes mmRise {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
+@keyframes mmSlide {
+  from { opacity: 0; transform: translateX(-10px); }
+}
+
+@keyframes mmPop {
+  from { opacity: 0; transform: scale(0.7); }
+}
+
+@keyframes mmZoom {
+  from { opacity: 0; transform: scale(1.14); }
+}
+
+@keyframes mmFade {
+  from { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-card, .rmo-card, .bpm-card,
+  .modal-card *, .rmo-card *, .bpm-card * {
+    animation: none !important;
+  }
+}
+
+/* ── Elementi interni: ingresso a cascata ── */
+
+.bpm-content > * {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.bpm-content > *:nth-child(1) { animation-delay: 0.72s; }
+.bpm-content > *:nth-child(2) { animation-delay: 0.79s; }
+.bpm-content > *:nth-child(3) { animation-delay: 0.86s; }
+.bpm-content > *:nth-child(4) { animation-delay: 0.93s; }
+.bpm-content > *:nth-child(5) { animation-delay: 1.00s; }
+.bpm-content > *:nth-child(6) { animation-delay: 1.07s; }
+.bpm-content > *:nth-child(7) { animation-delay: 1.14s; }
+.bpm-content > *:nth-child(8) { animation-delay: 1.21s; }
+.bpm-content > *:nth-child(9) { animation-delay: 1.28s; }
+.bpm-content > *:nth-child(10) { animation-delay: 1.35s; }
+.bpm-content > *:nth-child(n + 11) { animation-delay: 1.42s; }
+
+.rmo-readme > * {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.rmo-readme > *:nth-child(1) { animation-delay: 0.80s; }
+.rmo-readme > *:nth-child(2) { animation-delay: 0.87s; }
+.rmo-readme > *:nth-child(3) { animation-delay: 0.94s; }
+.rmo-readme > *:nth-child(4) { animation-delay: 1.01s; }
+.rmo-readme > *:nth-child(5) { animation-delay: 1.08s; }
+.rmo-readme > *:nth-child(6) { animation-delay: 1.15s; }
+.rmo-readme > *:nth-child(7) { animation-delay: 1.22s; }
+.rmo-readme > *:nth-child(8) { animation-delay: 1.29s; }
+.rmo-readme > *:nth-child(9) { animation-delay: 1.36s; }
+.rmo-readme > *:nth-child(10) { animation-delay: 1.43s; }
+.rmo-readme > *:nth-child(n + 11) { animation-delay: 1.50s; }
+
+.rmo-section {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.rmo-section:nth-child(1) { animation-delay: 0.70s; }
+.rmo-section:nth-child(2) { animation-delay: 0.82s; }
+.rmo-section:nth-child(3) { animation-delay: 0.94s; }
+.rmo-section:nth-child(4) { animation-delay: 1.06s; }
+.rmo-section:nth-child(5) { animation-delay: 1.18s; }
+.rmo-section:nth-child(6) { animation-delay: 1.30s; }
+.rmo-section:nth-child(n + 7) { animation-delay: 1.42s; }
+
+.rmo-file-row {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.rmo-file-row:nth-child(1) { animation-delay: 0.85s; }
+.rmo-file-row:nth-child(2) { animation-delay: 0.89s; }
+.rmo-file-row:nth-child(3) { animation-delay: 0.93s; }
+.rmo-file-row:nth-child(4) { animation-delay: 0.97s; }
+.rmo-file-row:nth-child(5) { animation-delay: 1.01s; }
+.rmo-file-row:nth-child(6) { animation-delay: 1.05s; }
+.rmo-file-row:nth-child(7) { animation-delay: 1.09s; }
+.rmo-file-row:nth-child(8) { animation-delay: 1.13s; }
+.rmo-file-row:nth-child(9) { animation-delay: 1.17s; }
+.rmo-file-row:nth-child(10) { animation-delay: 1.21s; }
+.rmo-file-row:nth-child(n + 11) { animation-delay: 1.25s; }
+
+.rmo-commit-row {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.rmo-commit-row:nth-child(1) { animation-delay: 0.85s; }
+.rmo-commit-row:nth-child(2) { animation-delay: 0.92s; }
+.rmo-commit-row:nth-child(3) { animation-delay: 0.99s; }
+.rmo-commit-row:nth-child(4) { animation-delay: 1.06s; }
+.rmo-commit-row:nth-child(5) { animation-delay: 1.13s; }
+.rmo-commit-row:nth-child(6) { animation-delay: 1.20s; }
+.rmo-commit-row:nth-child(n + 7) { animation-delay: 1.27s; }
+
+.rmo-lang-item {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.rmo-lang-item:nth-child(1) { animation-delay: 0.85s; }
+.rmo-lang-item:nth-child(2) { animation-delay: 0.90s; }
+.rmo-lang-item:nth-child(3) { animation-delay: 0.95s; }
+.rmo-lang-item:nth-child(4) { animation-delay: 1.00s; }
+.rmo-lang-item:nth-child(5) { animation-delay: 1.05s; }
+.rmo-lang-item:nth-child(6) { animation-delay: 1.10s; }
+.rmo-lang-item:nth-child(7) { animation-delay: 1.15s; }
+.rmo-lang-item:nth-child(8) { animation-delay: 1.20s; }
+.rmo-lang-item:nth-child(n + 9) { animation-delay: 1.25s; }
+
+.rmo-topic {
+  animation: mmPop 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.rmo-topic:nth-child(1) { animation-delay: 0.58s; }
+.rmo-topic:nth-child(2) { animation-delay: 0.62s; }
+.rmo-topic:nth-child(3) { animation-delay: 0.66s; }
+.rmo-topic:nth-child(4) { animation-delay: 0.70s; }
+.rmo-topic:nth-child(5) { animation-delay: 0.74s; }
+.rmo-topic:nth-child(6) { animation-delay: 0.78s; }
+.rmo-topic:nth-child(7) { animation-delay: 0.82s; }
+.rmo-topic:nth-child(8) { animation-delay: 0.86s; }
+.rmo-topic:nth-child(9) { animation-delay: 0.90s; }
+.rmo-topic:nth-child(10) { animation-delay: 0.94s; }
+.rmo-topic:nth-child(n + 11) { animation-delay: 0.98s; }
+
+.bpm-tags > * {
+  animation: mmPop 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+.bpm-tags > *:nth-child(1) { animation-delay: 0.36s; }
+.bpm-tags > *:nth-child(2) { animation-delay: 0.41s; }
+.bpm-tags > *:nth-child(3) { animation-delay: 0.46s; }
+.bpm-tags > *:nth-child(4) { animation-delay: 0.51s; }
+.bpm-tags > *:nth-child(5) { animation-delay: 0.56s; }
+.bpm-tags > *:nth-child(6) { animation-delay: 0.61s; }
+.bpm-tags > *:nth-child(n + 7) { animation-delay: 0.66s; }
+
+@keyframes mmGrow {
+  from { transform: scaleX(0); }
+}
+
+.rmo-lang-bar {
+  transform-origin: left center;
+  animation: mmGrow 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.8s backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bpm-content > *, .rmo-readme > *, .rmo-section, .rmo-file-row, .rmo-commit-row, .rmo-lang-item, .rmo-topic, .bpm-tags > *, .rmo-lang-bar {
+    animation: none !important;
+  }
+}
+
+/* ── Modale info e licenza ── */
+
+.amo-card,
+.lmo-card {
+  animation: mmCard 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.amo-header-left {
+  animation: mmSlide 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards;
+}
+
+.amo-grid {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.85s backwards;
+}
+
+.amo-grid + .amo-grid {
+  animation-delay: 0.95s;
+}
+
+.amo-deps {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.05s backwards;
+}
+
+.amo-notice {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.15s backwards;
+}
+
+.lmo-header {
+  animation: mmRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s backwards;
+}
+
+.lmo-body {
+  animation: mmRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amo-card, .lmo-card, .amo-card *, .lmo-card * {
+    animation: none !important;
+  }
+}
+
+.rmo-card.is-settled .rmo-body,
+.rmo-card.is-settled .rmo-readme > *,
+.rmo-card.is-settled .rmo-section,
+.rmo-card.is-settled .rmo-file-row,
+.rmo-card.is-settled .rmo-commit-row,
+.rmo-card.is-settled .rmo-lang-item,
+.rmo-card.is-settled .rmo-lang-bar {
+  animation-delay: 0.04s;
+}

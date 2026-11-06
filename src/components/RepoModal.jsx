@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import '../css/repomodal.css'
+import '../css/modalmotion.css'
 import { HiXMark } from 'react-icons/hi2'
 import { SiGithub, SiGo, SiJavascript, SiTypescript, SiPython, SiGnubash, SiCss, SiHtml5, SiVuedotjs, SiRust, SiCplusplus } from 'react-icons/si'
 import { TbBrandPowershell } from 'react-icons/tb'
 import { GoStar, GoRepoForked, GoEye, GoFile, GoFileDirectory, GoGitCommit, GoTag, GoRepo } from 'react-icons/go'
 import { FaScaleBalanced } from 'react-icons/fa6'
 import { useData } from '../context/DataContext.jsx'
+import { useText } from '../lib/uiText.js'
+import SitePill from './SitePill.jsx'
+import { themed } from '../lib/themed.js'
 
 const LANG_COLORS = {
   Go:          '#22D3EE',
@@ -31,38 +35,45 @@ const LANG_ICONS = {
 
 const LangIcon = ({ lang, cls }) => {
   const Icon = LANG_ICONS[lang]
-  const color = LANG_COLORS[lang] ?? '#888'
+  const color = themed(LANG_COLORS[lang] ?? '#888')
   return Icon ? <Icon className={cls} style={{ color }} /> : null
 }
 
-const timeAgo = iso => {
+const timeAgo = (iso, t) => {
   const diff = Date.now() - new Date(iso)
   const m = Math.floor(diff / 60000)
-  if (m < 1)   return 'adesso'
-  if (m < 60)  return `${m}m fa`
+  if (m < 1)   return t('ago.now')
+  if (m < 60)  return t('ago.m', { n: m })
   const h = Math.floor(m / 60)
-  if (h < 24)  return `${h}h fa`
+  if (h < 24)  return t('ago.h', { n: h })
   const d = Math.floor(h / 24)
-  if (d < 7)   return `${d}g fa`
+  if (d < 7)   return t('ago.d', { n: d })
   const w = Math.floor(d / 7)
-  if (w < 5)   return `${w}w fa`
+  if (w < 5)   return t('ago.w', { n: w })
   const mo = Math.floor(d / 30)
-  if (mo < 12) return `${mo} mesi fa`
-  return `${Math.floor(d / 365)}a fa`
+  if (mo < 12) return t('ago.mo', { n: mo })
+  return t('ago.y', { n: Math.floor(d / 365) })
 }
 
 const fmtSize = kb => kb < 1024 ? `${kb} KB` : `${(kb / 1024).toFixed(1)} MB`
 
 const RepoModal = ({ repo, image, onClose }) => {
+  const { t, repoDesc } = useText()
   const { fetchRepoDash, fetchReadme } = useData()
 
   const [activeTab,     setActiveTab]    = useState('readme')
+  const [settled,       setSettled]      = useState(false)
   const [readme,        setReadme]       = useState(null)
   const [readmeLoading, setReadmeLoading] = useState(true)
   const [dash,          setDash]         = useState(null)
   const [dashLoading,   setDashLoading]  = useState(false)
 
   /* Keydown + body lock + README fetch (default tab) */
+  useEffect(() => {
+    const settle = setTimeout(() => setSettled(true), 1800)
+    return () => clearTimeout(settle)
+  }, [])
+
   useEffect(() => {
     const onKey = e => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', onKey)
@@ -95,7 +106,7 @@ const RepoModal = ({ repo, image, onClose }) => {
 
   return createPortal(
     <div className="rmo-overlay" onClick={onClose}>
-      <div className="rmo-card" onClick={e => e.stopPropagation()}>
+      <div className={`rmo-card${settled ? ' is-settled' : ''}`} onClick={e => e.stopPropagation()}>
       <div className="rmo-scroll">
 
         {/* ── Header ── */}
@@ -123,8 +134,9 @@ const RepoModal = ({ repo, image, onClose }) => {
                 )}
               </div>
               {repo.description && (
-                <p className="rmo-repo-desc">{repo.description}</p>
+                <p className="rmo-repo-desc">{repoDesc(repo)}</p>
               )}
+              {repo.pagesUrl && <div className="repo-site-row"><SitePill url={repo.pagesUrl} /></div>}
             </div>
           </div>
           <div className="rmo-actions">
@@ -132,10 +144,10 @@ const RepoModal = ({ repo, image, onClose }) => {
               href={repo.html_url}
               target="_blank" rel="noopener noreferrer"
               onClick={e => e.stopPropagation()}
-              aria-label="Vedi su GitHub">
+              aria-label={t('repo.github')}>
               <SiGithub />
             </a>
-            <button className="rmo-close" onClick={onClose} aria-label="Chiudi">
+            <button className="rmo-close" onClick={onClose} aria-label={t('common.close')}>
               <HiXMark />
             </button>
           </div>
@@ -181,7 +193,7 @@ const RepoModal = ({ repo, image, onClose }) => {
             className={`rmo-tab${activeTab === 'dash' ? ' rmo-tab--active' : ''}`}
             onClick={() => setActiveTab('dash')}
           >
-            Dettagli
+            {t('repo.details')}
           </button>
         </div>
 
@@ -192,7 +204,7 @@ const RepoModal = ({ repo, image, onClose }) => {
               ? <div className="rmo-loading"><div className="rmo-spinner" /></div>
               : readme
                 ? <div className="rmo-readme" dangerouslySetInnerHTML={{ __html: readme }} />
-                : <p className="rmo-readme-empty">README non disponibile per questo repository.</p>
+                : <p className="rmo-readme-empty">{t('repo.noReadme')}</p>
             }
           </div>
         )}
@@ -207,13 +219,13 @@ const RepoModal = ({ repo, image, onClose }) => {
                     {/* Languages */}
                     {totalBytes > 0 && (
                       <section className="rmo-section">
-                        <h3 className="rmo-section-title">Linguaggi</h3>
+                        <h3 className="rmo-section-title">{t('repo.languages')}</h3>
                         <div className="rmo-lang-bar">
                           {Object.entries(dash.languages).map(([lang, bytes]) => (
                             <div key={lang} className="rmo-lang-seg"
                               style={{
                                 width: `${(bytes / totalBytes * 100).toFixed(1)}%`,
-                                background: LANG_COLORS[lang] ?? '#555',
+                                background: themed(LANG_COLORS[lang] ?? '#555'),
                               }}
                               title={`${lang} ${(bytes / totalBytes * 100).toFixed(1)}%`}
                             />
@@ -236,7 +248,7 @@ const RepoModal = ({ repo, image, onClose }) => {
                     {/* File tree */}
                     {dash.contents.length > 0 && (
                       <section className="rmo-section">
-                        <h3 className="rmo-section-title">File</h3>
+                        <h3 className="rmo-section-title">{t('repo.files')}</h3>
                         <div className="rmo-files">
                           {dash.contents.map(f => (
                             <a key={f.sha} className="rmo-file-row"
@@ -256,7 +268,7 @@ const RepoModal = ({ repo, image, onClose }) => {
                     {/* Commits */}
                     {dash.commits.length > 0 && (
                       <section className="rmo-section">
-                        <h3 className="rmo-section-title">Commit recenti</h3>
+                        <h3 className="rmo-section-title">{t('repo.commits')}</h3>
                         <div className="rmo-commits">
                           {dash.commits.map(c => (
                             <a key={c.sha} className="rmo-commit-row"
@@ -274,7 +286,7 @@ const RepoModal = ({ repo, image, onClose }) => {
                                   </span>
                                   <span className="rmo-commit-dot">·</span>
                                   <span className="rmo-commit-time">
-                                    {timeAgo(c.commit?.author?.date ?? c.commit?.committer?.date)}
+                                    {timeAgo(c.commit?.author?.date ?? c.commit?.committer?.date, t)}
                                   </span>
                                   <span className="rmo-commit-sha">{c.sha.slice(0, 7)}</span>
                                 </span>
@@ -288,7 +300,7 @@ const RepoModal = ({ repo, image, onClose }) => {
                     {/* Latest release */}
                     {dash.release && (
                       <section className="rmo-section">
-                        <h3 className="rmo-section-title">Ultima release</h3>
+                        <h3 className="rmo-section-title">{t('repo.release')}</h3>
                         <a className="rmo-release"
                           href={dash.release.html_url}
                           target="_blank" rel="noopener noreferrer"
@@ -299,7 +311,7 @@ const RepoModal = ({ repo, image, onClose }) => {
                             <span className="rmo-release-name">{dash.release.name}</span>
                           )}
                           <span className="rmo-release-time">
-                            {timeAgo(dash.release.published_at)}
+                            {timeAgo(dash.release.published_at, t)}
                           </span>
                         </a>
                       </section>

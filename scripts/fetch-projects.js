@@ -75,6 +75,8 @@ const compactRepo = repo => ({
   updated_at:       repo.updated_at,
   archived:         repo.archived ?? false,
   fork:             repo.fork ?? false,
+  homepage:         repo.homepage || null,
+  has_pages:        repo.has_pages ?? false,
 })
 
 export const getGithubUser = () =>
@@ -149,6 +151,24 @@ export async function generateProjectsPayload({ user = getGithubUser(), token = 
       console.warn(`[fetch-projects] README ${repo.full_name}: ${e.message}`)
       data.readmeHtml = prev?.readmeHtml ?? null
       data.readmeImage = prev?.readmeImage ?? null
+    }
+
+    data.pagesUrl = null
+    if (repo.has_pages) {
+      try {
+        const pagesRes = await apiFetch(`https://api.github.com/repos/${repo.full_name}/pages`)
+        if (pagesRes?.ok) {
+          const pages = await pagesRes.json()
+          data.pagesUrl = pages?.html_url ?? null
+        } else if (pagesRes && pagesRes.status === 404) {
+          data.pagesUrl = null
+        } else {
+          data.pagesUrl = prev?.pagesUrl ?? null
+        }
+      } catch (e) {
+        console.warn(`[fetch-projects] pages ${repo.full_name}: ${e.message}`)
+        data.pagesUrl = prev?.pagesUrl ?? null
+      }
     }
 
     if (repo.license) {

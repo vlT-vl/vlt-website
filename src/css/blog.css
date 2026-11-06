@@ -55,7 +55,6 @@
   flex-direction: column;
   gap: 1.1rem;
   transition: border-color 0.2s, box-shadow 0.2s;
-  animation: heroPostIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
 }
 
 @keyframes heroPostIn {
@@ -265,6 +264,38 @@
 
 .view-search-input::-webkit-search-cancel-button { -webkit-appearance: none; }
 
+.view-search-clear {
+  position: absolute;
+  right: 0.55rem;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: 0;
+  font-size: 1rem;
+  color: var(--text-dim);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: color 0.2s, background 0.2s;
+  animation: clearIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.view-search-clear:hover,
+.view-search-clear:focus-visible {
+  color: var(--text);
+  background: var(--bg-hover);
+}
+
+@keyframes clearIn {
+  from { opacity: 0; transform: translateY(-50%) scale(0.6); }
+}
+
+.view-search-input { padding-right: 2.6rem; }
+
 .view-filter-count {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.62rem;
@@ -332,7 +363,6 @@
   overflow: hidden;
   cursor: pointer;
   transition: border-color 0.25s, border-left-color 0.25s, transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s, background 0.25s;
-  animation: postCardIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .post-card:hover {

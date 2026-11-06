@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import { FiSun, FiMoon } from 'react-icons/fi'
 import { getThemePreference, resolveTheme, toggleTheme, watchSystemTheme } from '../lib/theme.js'
+import { useText } from '../lib/uiText.js'
 import '../css/theme.css'
 
 const Theme = ({ className = '' }) => {
+  const { t } = useText()
   const [theme, setTheme] = useState(() => resolveTheme(getThemePreference()))
 
   useEffect(() => {
@@ -21,8 +23,8 @@ const Theme = ({ className = '' }) => {
     <button
       className={`theme-toggle${className ? ` ${className}` : ''}`}
       onClick={handleToggle}
-      aria-label={theme === 'dark' ? 'Attiva tema chiaro' : 'Attiva tema scuro'}
-      title={theme === 'dark' ? 'Tema chiaro' : 'Tema scuro'}
+      aria-label={theme === 'dark' ? t('theme.toLight') : t('theme.toDark')}
+      title={theme === 'dark' ? t('theme.light') : t('theme.dark')}
     >
       {theme === 'dark' ? <FiSun /> : <FiMoon />}
     </button>

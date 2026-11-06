@@ -11,20 +11,54 @@
   cursor: pointer;
 }
 
-/* Cubo: scorre a sinistra */
 .vlt-cube {
   width: var(--cube-w);
+  aspect-ratio: 364 / 311;
   height: auto;
   flex-shrink: 0;
+  overflow: visible;
   transition: transform 0.4s ease;
+}
+
+.vlt-line,
+.vlt-run {
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-opacity: 0;
+}
+
+.vlt-line {
+  stroke-dasharray: 1;
+  animation: vltDraw var(--lt-dur, 1.2s) cubic-bezier(0.65, 0, 0.35, 1) var(--lt-d, 0s) backwards;
+}
+
+.vlt-piece-r .vlt-line {
+  animation-delay: calc(var(--lt-d, 0s) + var(--lt-dur, 1.2s) * 0.12);
+}
+
+.vlt-fill {
+  animation: vltFillIn calc(var(--lt-dur, 1.2s) * 0.6) ease-out calc(var(--lt-d, 0s) + var(--lt-dur, 1.2s) * 0.7) backwards;
+}
+
+.vlt-piece-r .vlt-fill {
+  animation-delay: calc(var(--lt-d, 0s) + var(--lt-dur, 1.2s) * 0.85);
+}
+
+.vlt-run {
+  stroke: #ffd9d4;
+  stroke-dasharray: 0.07 1;
+  animation: vltRun calc(var(--lt-dur, 1.2s) * 0.9) cubic-bezier(0.45, 0, 0.25, 1) calc(var(--lt-d, 0s) + var(--lt-dur, 1.2s)) both;
+}
+
+.vlt-piece-r .vlt-run {
+  animation-delay: calc(var(--lt-d, 0s) + var(--lt-dur, 1.2s) * 1.1);
 }
 
 .vlt-logo:hover .vlt-cube {
   transform: translateX(calc(var(--cube-w) * -0.18));
 }
 
-/* Testo: position absolute → non tocca il layout, cubo resta centrato.
-   Arriva da destra in simultanea con lo slide del cubo. */
 .vlt-text {
   font-family: 'Montserrat', sans-serif;
   font-size: calc(var(--cube-w) * 0.58);
@@ -45,22 +79,22 @@
   transform: translateX(0);
 }
 
-/* ── Static expanded variant (brand page) ── */
-/* Cubo: già in posizione espansa, animazione d'ingresso one-shot */
+.vlt-logo--static {
+  width: calc(var(--cube-w) * 2.6);
+}
+
 .vlt-logo--static .vlt-cube {
   transform: translateX(calc(var(--cube-w) * -0.18));
   transition: none;
-  animation: staticCubeIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0s both;
 }
 
 .vlt-logo--static .vlt-text {
   opacity: 1;
   transform: translateX(0);
   transition: none;
-  animation: staticTextIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+  animation: staticTextIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--lt-text-d, calc(var(--lt-d, 0s) + 0.6s)) backwards;
 }
 
-/* Disabilita effetti hover sullo static */
 .vlt-logo--static:hover .vlt-cube {
   transform: translateX(calc(var(--cube-w) * -0.18));
 }
@@ -70,12 +104,39 @@
   transform: translateX(0);
 }
 
-@keyframes staticCubeIn {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(var(--cube-w) * -0.18)); }
+.vlt-logo-center {
+  display: flex;
+  justify-content: center;
+  transform: translateX(var(--shift-to, 0px));
+  animation: vltCenter 0.8s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--lt-text-d, calc(var(--lt-d, 0s) + 0.6s)) - 0.06s) backwards;
+}
+
+.vlt-logo-center .vlt-logo--static .vlt-cube,
+.vlt-logo-center .vlt-logo--static:hover .vlt-cube {
+  transform: translateX(0);
+}
+
+@keyframes vltCenter {
+  from { transform: translateX(var(--shift-from, 0px)); }
+}
+
+@keyframes vltDraw {
+  0%   { stroke-dashoffset: 1; stroke-opacity: 1; }
+  70%  { stroke-dashoffset: 0; stroke-opacity: 1; }
+  100% { stroke-dashoffset: 0; stroke-opacity: 0; }
+}
+
+@keyframes vltFillIn {
+  from { fill-opacity: 0; transform: translateY(6px); }
+}
+
+@keyframes vltRun {
+  0%   { stroke-dashoffset: 0.07; stroke-opacity: 0; }
+  8%   { stroke-opacity: 1; }
+  92%  { stroke-opacity: 1; }
+  100% { stroke-dashoffset: -1; stroke-opacity: 0; }
 }
 
 @keyframes staticTextIn {
   from { opacity: 0; transform: translateX(14px); }
-  to   { opacity: 1; transform: translateX(0); }
 }

@@ -1,0 +1,56 @@
+/* reveal.css — ingresso in motion design allo scroll                        */
+/*****************************************************************************/
+
+.rv-armed:not(.is-in) {
+  opacity: 0;
+}
+
+.rv-armed.is-in {
+  animation: rvIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--rv-wait, 0s) + var(--i, 0) * 0.08s) backwards;
+}
+
+.rv-armed.is-in.rv-track {
+  animation-name: rvTrack;
+}
+
+@keyframes rvIn {
+  from { opacity: 0; transform: translateY(34px) scale(0.94); filter: blur(5px); }
+}
+
+@keyframes rvTrack {
+  from { opacity: 0; letter-spacing: 0.9em; }
+}
+
+.rv-rule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border);
+  pointer-events: none;
+}
+
+.rv-rule--top { top: 0; }
+.rv-rule--bottom { bottom: 0; }
+
+.rv-armed.is-in.rv-rule {
+  animation-name: rvLine;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@keyframes rvLine {
+  from { opacity: 1; transform: scaleX(0); }
+}
+
+@keyframes ruleDraw {
+  from { transform: scaleX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-armed,
+  .rv-armed.is-in {
+    opacity: 1;
+    animation: none;
+  }
+}

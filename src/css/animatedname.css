@@ -1,0 +1,54 @@
+/* animatedname.css                                                          */
+/*****************************************************************************/
+
+.an {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.an-line {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.an-word {
+  display: inline-flex;
+  align-items: baseline;
+  will-change: transform;
+}
+
+.an-gap {
+  display: inline-block;
+  width: 0.3em;
+}
+
+.an-mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.an-initial {
+  display: inline-block;
+  animation: heroRise 0.75s var(--ease-out) var(--d) backwards;
+}
+
+.an-rest {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .an,
+  .an * {
+    animation: none !important;
+  }
+}
