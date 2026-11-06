@@ -235,3 +235,10 @@ main {
   .ftr-brand { grid-column: auto; }
   .ftr-bottom { flex-direction: column; gap: 0.4rem; align-items: flex-start; }
 }
+
+@media (max-width: 560px) {
+  .ftr-bottom { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+  .ftr-copy,
+  .ftr-stack,
+  .ftr-version { white-space: nowrap; }
+}

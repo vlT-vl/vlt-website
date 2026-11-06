@@ -102,3 +102,32 @@ html.lang-switching main,
 html.lang-switching .ftr {
   opacity: 0;
 }
+
+@media (pointer: coarse) {
+  .nav-btn,
+  .navbar-social-btn,
+  .theme-toggle,
+  .filter-btn,
+  .ftr-nav-link,
+  .ftr-ext-link,
+  .cert-all,
+  .aboutme-inline-link {
+    position: relative;
+  }
+
+  .nav-btn::before,
+  .navbar-social-btn::before,
+  .theme-toggle::before,
+  .filter-btn::before,
+  .ftr-nav-link::before,
+  .ftr-ext-link::before,
+  .cert-all::before,
+  .aboutme-inline-link::before {
+    content: '';
+    position: absolute;
+    inset: -0.45rem -0.35rem;
+  }
+
+  .navbar-social-btn::before { inset: -0.7rem; }
+  .theme-toggle::before { inset: -0.25rem; }
+}

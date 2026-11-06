@@ -86,8 +86,20 @@ const Hero = ({ onReady }) => {
     }
 
     place()
-    window.addEventListener('resize', place)
-    return () => window.removeEventListener('resize', place)
+    let width = window.innerWidth
+    const onResize = () => {
+      if (window.innerWidth === width) return
+      width = window.innerWidth
+      place()
+    }
+    window.addEventListener('resize', onResize)
+    const stop = fontsReady
+      ? setTimeout(() => window.removeEventListener('resize', onResize), UNLOCK_MS)
+      : null
+    return () => {
+      clearTimeout(stop)
+      window.removeEventListener('resize', onResize)
+    }
   }, [settled, fontsReady])
 
   useLayoutEffect(() => {

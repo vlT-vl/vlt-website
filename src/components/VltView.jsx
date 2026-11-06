@@ -41,7 +41,7 @@ const devSkills = [
 const SkillCard = ({ s, label, sub, i, dup }) => (
   <div
     className="skill-item"
-    data-reveal={dup ? undefined : ''}
+    data-reveal=""
     data-dup={dup ? 'true' : undefined}
     aria-hidden={dup ? true : undefined}
     style={{ '--i': i % 4 }}

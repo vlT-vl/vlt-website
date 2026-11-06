@@ -969,3 +969,20 @@
     transition-delay: 0.6s;
   }
 }
+
+.ds--embed .ds-card .ds-main > * {
+  animation-delay: calc(var(--dd, 0s) + 0.05s + var(--si, 0) * 0.07s);
+}
+
+.ds--embed .ds-card .ds-visual,
+.ds--embed .ds-card .ds-side {
+  animation-delay: calc(var(--dd, 0s) + 0.1s);
+}
+
+@media (max-width: 620px) {
+  .ds-card:has(.site-corner) .ds-main { padding-top: 3rem; }
+}
+
+@media (max-width: 620px) {
+  .ds-mini .site-corner--mini { max-width: calc(100% - 10.5rem); }
+}

@@ -5,6 +5,7 @@ Le funzionalità principali del sito, in ordine cronologico inverso.
 ## 2026-11-06 — 0.1.5 / R061126
 
 - About vlT: le card delle tecnologie scorrono ora in carosello continuo, come le pillole delle card competenze della home (due righe in direzioni opposte per l'infrastruttura, una per lo sviluppo); si fermano al passaggio del mouse. Le card mantengono la forma di prima. Con il movimento ridotto restano ferme in griglia.
+- Mobile: la card competenze aperta non lascia più uno spazio vuoto sotto di sé, la pill del sito non si sovrappone più alle card progetto e la barra di navigazione è più compatta.
 - Lo sfondo con la rete animata della home compare ora in tutte le pagine (Progetti, Blog, About Me, About vlT), appena percettibile e sfocato.
 
 ## 2026-11-05 — 0.1.5 / R051126

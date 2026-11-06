@@ -115,7 +115,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0.7rem var(--pad) 0;
+    padding: 0.5rem var(--pad) 0;
     gap: 0;
   }
 
@@ -127,8 +127,8 @@
     width: 100%;
     justify-content: space-between;
     gap: 0;
-    padding: 0.5rem 0;
-    margin-top: 0.5rem;
+    padding: 0.35rem 0;
+    margin-top: 0.35rem;
     border-top: 1px solid var(--border);
     overflow-x: auto;
     scrollbar-width: none;

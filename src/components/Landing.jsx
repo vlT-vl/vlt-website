@@ -221,6 +221,32 @@ const Landing = () => {
 
   useEffect(() => { fetchPosts() }, [fetchPosts])
 
+  useEffect(() => {
+    const stage = stageRef.current
+    const grid = stage?.querySelector('.what-grid')
+    if (!stage || !grid || !window.matchMedia) return undefined
+    const mq = window.matchMedia('(max-width: 900px)')
+    const sync = () => {
+      if (!mq.matches) {
+        stage.style.removeProperty('--grid-h')
+        stage.style.removeProperty('--focus-h')
+        return
+      }
+      stage.style.setProperty('--grid-h', `${grid.scrollHeight}px`)
+      const x = xRefs.current[focusRef.current?.i]
+      if (x) stage.style.setProperty('--focus-h', `${x.offsetHeight + 24}px`)
+      else stage.style.removeProperty('--focus-h')
+    }
+    sync()
+    const ro = new ResizeObserver(sync)
+    ro.observe(grid)
+    mq.addEventListener('change', sync)
+    return () => {
+      ro.disconnect()
+      mq.removeEventListener('change', sync)
+    }
+  }, [focus?.i, focus?.n])
+
   const put = f => {
     focusRef.current = f
     setFocus(f)
