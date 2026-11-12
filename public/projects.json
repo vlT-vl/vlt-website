@@ -11,7 +11,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 8926,
+      "size": 8928,
       "topics": [],
       "license": {
         "key": "other",
@@ -20,8 +20,8 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-11T17:12:08Z",
-      "updated_at": "2026-11-11T18:12:12Z",
+      "pushed_at": "2026-11-12T00:46:08Z",
+      "updated_at": "2026-11-12T01:46:11Z",
       "archived": false,
       "fork": false,
       "homepage": null,
@@ -90,13 +90,30 @@
             "html_url": "https://github.com/vlT-vl/nxget.packages/tree/api/scripts"
           },
           {
-            "sha": "2a543ad72f8e62a4e1d79e63baa2f488fe716b4f",
+            "sha": "4b2cfa7d309d593863eb126bad52b809922f0e4e",
             "name": "v1",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/nxget.packages/tree/api/v1"
           }
         ],
         "commits": [
+          {
+            "sha": "4a5492b466d8a54b56ba44951e51cd8a33e52fed",
+            "html_url": "https://github.com/vlT-vl/nxget.packages/commit/4a5492b466d8a54b56ba44951e51cd8a33e52fed",
+            "commit": {
+              "message": "chore: update releases.json",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-12T00:46:07Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-12T00:46:07Z"
+              }
+            }
+          },
           {
             "sha": "0e518324f11cd3dbddeb334d1751005f93d94294",
             "html_url": "https://github.com/vlT-vl/nxget.packages/commit/0e518324f11cd3dbddeb334d1751005f93d94294",
@@ -164,23 +181,6 @@
                 "date": "2026-11-10T03:36:00Z"
               }
             }
-          },
-          {
-            "sha": "5a84d311d092654f9e334582cc4167030b87010f",
-            "html_url": "https://github.com/vlT-vl/nxget.packages/commit/5a84d311d092654f9e334582cc4167030b87010f",
-            "commit": {
-              "message": "chore: update releases.json",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-09T19:51:28Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-09T19:51:28Z"
-              }
-            }
           }
         ],
         "release": null
@@ -196,7 +196,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 24363,
+      "size": 24382,
       "topics": [],
       "license": {
         "key": "other",
@@ -205,8 +205,8 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-11T13:17:19Z",
-      "updated_at": "2026-11-11T14:17:22Z",
+      "pushed_at": "2026-11-11T23:56:56Z",
+      "updated_at": "2026-11-12T00:56:59Z",
       "archived": false,
       "fork": false,
       "homepage": null,
@@ -265,7 +265,7 @@
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/blob/sourcecode/package.json"
           },
           {
-            "sha": "622309e5524304667f389317118348038774e0d3",
+            "sha": "b656c689060b967581af7ff4a850a9162e55d95d",
             "name": "public",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/tree/sourcecode/public"
@@ -302,6 +302,23 @@
           }
         ],
         "commits": [
+          {
+            "sha": "4dea134a7094a09b488aff4c3b7c28f2cdc930ed",
+            "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/4dea134a7094a09b488aff4c3b7c28f2cdc930ed",
+            "commit": {
+              "message": "chore(data): aggiorna CVE e news [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-11T23:56:54Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-11T23:56:54Z"
+              }
+            }
+          },
           {
             "sha": "a55677e3cf485f022bec75bbd64808598e157ec5",
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/a55677e3cf485f022bec75bbd64808598e157ec5",
@@ -369,23 +386,6 @@
                 "date": "2026-11-10T14:00:25Z"
               }
             }
-          },
-          {
-            "sha": "57c85f76d84b98f04b9fb2552149fadcdc3415b1",
-            "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/57c85f76d84b98f04b9fb2552149fadcdc3415b1",
-            "commit": {
-              "message": "chore(data): aggiorna CVE e news [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-10T01:05:51Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-10T01:05:51Z"
-              }
-            }
           }
         ],
         "release": null
@@ -401,7 +401,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 3122,
+      "size": 3249,
       "topics": [],
       "license": {
         "key": "other",
@@ -410,8 +410,8 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-11T12:22:53Z",
-      "updated_at": "2026-11-11T13:22:57Z",
+      "pushed_at": "2026-11-11T19:58:47Z",
+      "updated_at": "2026-11-11T20:58:50Z",
       "archived": false,
       "fork": false,
       "homepage": null,
@@ -476,7 +476,7 @@
             "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/package.json"
           },
           {
-            "sha": "9328c8bf4192f622438e6e063ffe10f241ee5026",
+            "sha": "8e72d014d31e0e8ef7919ea9b37b7afda0791054",
             "name": "public",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/public"
@@ -501,6 +501,23 @@
           }
         ],
         "commits": [
+          {
+            "sha": "df2febf0b03aae851465dea697a970250a203589",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/df2febf0b03aae851465dea697a970250a203589",
+            "commit": {
+              "message": "chore: aggiorna projects.json, posts.json e credly.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-11T19:58:46Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-11T19:58:46Z"
+              }
+            }
+          },
           {
             "sha": "8c00fec34ed76b1961b985cd43cedd0a12ba4ecc",
             "html_url": "https://github.com/vlT-vl/vlt-website/commit/8c00fec34ed76b1961b985cd43cedd0a12ba4ecc",
@@ -566,23 +583,6 @@
                 "name": "github-actions[bot]",
                 "email": "github-actions[bot]@users.noreply.github.com",
                 "date": "2026-11-10T18:26:47Z"
-              }
-            }
-          },
-          {
-            "sha": "d427b59ecf674b0f9e261defb0f07908eca3e34e",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/d427b59ecf674b0f9e261defb0f07908eca3e34e",
-            "commit": {
-              "message": "chore: aggiorna projects.json, posts.json e credly.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-10T10:42:55Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-10T10:42:55Z"
               }
             }
           }
