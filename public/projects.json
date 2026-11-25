@@ -20,7 +20,7 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-24T17:59:42Z",
+      "pushed_at": "2026-11-25T03:14:12Z",
       "updated_at": "2026-11-12T15:19:04Z",
       "archived": false,
       "fork": false,
@@ -80,7 +80,7 @@
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/blob/sourcecode/package.json"
           },
           {
-            "sha": "32b6e2eb0fcb0b4abfc64f95f4008c5a51e25cc3",
+            "sha": "3dcc576c4227b68826f60c9636bf10721be60c50",
             "name": "public",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/tree/sourcecode/public"
@@ -117,6 +117,23 @@
           }
         ],
         "commits": [
+          {
+            "sha": "fa78776282e1f5fc15e2938a9972f77658aad97c",
+            "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/fa78776282e1f5fc15e2938a9972f77658aad97c",
+            "commit": {
+              "message": "chore(data): aggiorna CVE e news [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-25T03:14:11Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-25T03:14:11Z"
+              }
+            }
+          },
           {
             "sha": "b51c82023621a07c67e684bff76ec092cb8bd78e",
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/b51c82023621a07c67e684bff76ec092cb8bd78e",
@@ -184,23 +201,6 @@
                 "date": "2026-11-23T05:57:52Z"
               }
             }
-          },
-          {
-            "sha": "7add9c96f41eb979b148ab85a90ed14de437c800",
-            "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/7add9c96f41eb979b148ab85a90ed14de437c800",
-            "commit": {
-              "message": "chore(data): aggiorna CVE e news [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-23T00:02:47Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-23T00:02:47Z"
-              }
-            }
           }
         ],
         "release": null
@@ -216,7 +216,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 9180,
+      "size": 9181,
       "topics": [],
       "license": {
         "key": "other",
@@ -225,7 +225,7 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-24T13:47:14Z",
+      "pushed_at": "2026-11-24T23:55:01Z",
       "updated_at": "2026-11-12T12:18:38Z",
       "archived": false,
       "fork": false,
@@ -295,13 +295,30 @@
             "html_url": "https://github.com/vlT-vl/nxget.packages/tree/api/scripts"
           },
           {
-            "sha": "c24513034b926087abff654d7cde526866c754e1",
+            "sha": "b45a5212bf4637d5aafbda954373196723bace5a",
             "name": "v1",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/nxget.packages/tree/api/v1"
           }
         ],
         "commits": [
+          {
+            "sha": "31e6cbf6c3806b47aeb018f480a0cc81e80efa49",
+            "html_url": "https://github.com/vlT-vl/nxget.packages/commit/31e6cbf6c3806b47aeb018f480a0cc81e80efa49",
+            "commit": {
+              "message": "chore: update releases.json",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-24T23:54:59Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-24T23:54:59Z"
+              }
+            }
+          },
           {
             "sha": "d1f30b32320da049f6655427a93032fbb245610f",
             "html_url": "https://github.com/vlT-vl/nxget.packages/commit/d1f30b32320da049f6655427a93032fbb245610f",
@@ -369,23 +386,6 @@
                 "date": "2026-11-23T01:46:12Z"
               }
             }
-          },
-          {
-            "sha": "9d5ecea614328ecab904b7542725258c4ca3a814",
-            "html_url": "https://github.com/vlT-vl/nxget.packages/commit/9d5ecea614328ecab904b7542725258c4ca3a814",
-            "commit": {
-              "message": "chore: update releases.json",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-22T19:44:13Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-22T19:44:13Z"
-              }
-            }
           }
         ],
         "release": null
@@ -401,7 +401,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 3979,
+      "size": 3981,
       "topics": [],
       "license": {
         "key": "other",
@@ -410,7 +410,7 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-24T08:02:28Z",
+      "pushed_at": "2026-11-24T19:53:01Z",
       "updated_at": "2026-11-12T10:09:40Z",
       "archived": false,
       "fork": false,
@@ -476,7 +476,7 @@
             "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/package.json"
           },
           {
-            "sha": "6f31c4aa89d2dbd52a22a2bf188911d60900c3b4",
+            "sha": "9e00c8df9603a0a4ecc40d820f0f3bfbf74ed7cc",
             "name": "public",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/public"
@@ -501,6 +501,23 @@
           }
         ],
         "commits": [
+          {
+            "sha": "067138bcd0ab74195ec650e0d5ce6c2f1297d346",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/067138bcd0ab74195ec650e0d5ce6c2f1297d346",
+            "commit": {
+              "message": "chore: aggiorna projects.json, posts.json e credly.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-24T19:53:00Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-24T19:53:00Z"
+              }
+            }
+          },
           {
             "sha": "d61ad6f074485acfa54265eb7747300ff5ae2dc1",
             "html_url": "https://github.com/vlT-vl/vlt-website/commit/d61ad6f074485acfa54265eb7747300ff5ae2dc1",
@@ -566,23 +583,6 @@
                 "name": "github-actions[bot]",
                 "email": "github-actions[bot]@users.noreply.github.com",
                 "date": "2026-11-23T02:09:01Z"
-              }
-            }
-          },
-          {
-            "sha": "13373faf94571736bd335ef0ca93cd8f3cf1fb8b",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/13373faf94571736bd335ef0ca93cd8f3cf1fb8b",
-            "commit": {
-              "message": "chore: aggiorna projects.json, posts.json e credly.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-22T21:28:28Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-22T21:28:28Z"
               }
             }
           }
