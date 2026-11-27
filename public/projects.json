@@ -20,7 +20,7 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-27T03:11:00Z",
+      "pushed_at": "2026-11-27T17:06:57Z",
       "updated_at": "2026-11-12T15:19:04Z",
       "archived": false,
       "fork": false,
@@ -80,7 +80,7 @@
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/blob/sourcecode/package.json"
           },
           {
-            "sha": "a4a8987a3a24f34f8bb17592719a7f947f7e2c99",
+            "sha": "8f6a7acd62fd77fad445c89a0faabf6e8ec38b72",
             "name": "public",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/tree/sourcecode/public"
@@ -117,6 +117,23 @@
           }
         ],
         "commits": [
+          {
+            "sha": "9543c0925289115be73c4bd5c99ca6375cd51a85",
+            "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/9543c0925289115be73c4bd5c99ca6375cd51a85",
+            "commit": {
+              "message": "chore(data): aggiorna CVE e news [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-27T17:06:56Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-27T17:06:56Z"
+              }
+            }
+          },
           {
             "sha": "34251ab3f9b4d8ac4e04a0e240c55b06372b0c60",
             "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/34251ab3f9b4d8ac4e04a0e240c55b06372b0c60",
@@ -184,21 +201,152 @@
                 "date": "2026-11-25T17:58:14Z"
               }
             }
+          }
+        ],
+        "release": null
+      }
+    },
+    {
+      "id": 1471873499,
+      "name": "pmxtools-website",
+      "full_name": "vlT-vl/pmxtools-website",
+      "html_url": "https://github.com/vlT-vl/pmxtools-website",
+      "description": "pmxtools website (published build)",
+      "language": "HTML",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "watchers_count": 0,
+      "size": 706,
+      "topics": [],
+      "license": null,
+      "pushed_at": "2026-11-27T13:23:41Z",
+      "updated_at": "2026-11-25T15:16:04Z",
+      "archived": false,
+      "fork": false,
+      "homepage": null,
+      "has_pages": true,
+      "readmeHtml": null,
+      "readmeImage": null,
+      "pagesUrl": "https://pmxtools.it/",
+      "dash": {
+        "languages": {
+          "HTML": 977
+        },
+        "contents": [
+          {
+            "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "name": ".nojekyll",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/.nojekyll"
           },
           {
-            "sha": "fa78776282e1f5fc15e2938a9972f77658aad97c",
-            "html_url": "https://github.com/vlT-vl/nex-tech-hub/commit/fa78776282e1f5fc15e2938a9972f77658aad97c",
+            "sha": "3aef2d80019219e428daee56f763908aeea5fabe",
+            "name": "CNAME",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/CNAME"
+          },
+          {
+            "sha": "2bd267f6c3822b769a56cc605560ae412de88e82",
+            "name": "assets",
+            "type": "dir",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/tree/production/assets"
+          },
+          {
+            "sha": "a3e745b84095f98863ceb43fa4cfb41c85735cce",
+            "name": "favicon.svg",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/favicon.svg"
+          },
+          {
+            "sha": "7c6f43a19d35dd89ce13095e4b0966a4826eedda",
+            "name": "index.html",
+            "type": "file",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/index.html"
+          }
+        ],
+        "commits": [
+          {
+            "sha": "e65f4d54356e71d29d10f8e96861690cd6a7156e",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/e65f4d54356e71d29d10f8e96861690cd6a7156e",
             "commit": {
-              "message": "chore(data): aggiorna CVE e news [skip ci]",
+              "message": "Deploy c7ee8939a60e6f5e3deec95319df130189e14bf0",
               "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-25T03:14:11Z"
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-27T13:23:40Z"
               },
               "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-25T03:14:11Z"
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-27T13:23:40Z"
+              }
+            }
+          },
+          {
+            "sha": "375ee2118eb70ac0a495f858770da4f1a983763b",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/375ee2118eb70ac0a495f858770da4f1a983763b",
+            "commit": {
+              "message": "Deploy 6cb89274f24f518b61c913f920b7ccc20f7db510",
+              "author": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-27T11:16:44Z"
+              },
+              "committer": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-27T11:16:44Z"
+              }
+            }
+          },
+          {
+            "sha": "8219febb73d4f4bcbb8d1a57d87fd6f4dd21cba8",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/8219febb73d4f4bcbb8d1a57d87fd6f4dd21cba8",
+            "commit": {
+              "message": "Deploy dc9e2ea4fa20fedf6758f81a444d5af5395a7d46",
+              "author": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-27T09:58:33Z"
+              },
+              "committer": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-27T09:58:33Z"
+              }
+            }
+          },
+          {
+            "sha": "56a1c553171d5500e722809f43d1b5719034dceb",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/56a1c553171d5500e722809f43d1b5719034dceb",
+            "commit": {
+              "message": "Deploy 7ef38186d5d3821ef90b4bff826a294cf59fbf4c",
+              "author": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-25T16:10:53Z"
+              },
+              "committer": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-25T16:10:53Z"
+              }
+            }
+          },
+          {
+            "sha": "fffc3bd2ddc4ef3a56e03a02f2d4462b7ca9beb2",
+            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/fffc3bd2ddc4ef3a56e03a02f2d4462b7ca9beb2",
+            "commit": {
+              "message": "Deploy a3adc3680a73e868c59d521b67d75ecb578f5298",
+              "author": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-25T15:15:57Z"
+              },
+              "committer": {
+                "name": "Veronesi Lorenzo | vlT",
+                "email": "57793867+vlT-vl@users.noreply.github.com",
+                "date": "2026-11-25T15:15:57Z"
               }
             }
           }
@@ -216,7 +364,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 9438,
+      "size": 9439,
       "topics": [],
       "license": {
         "key": "other",
@@ -225,7 +373,7 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-27T01:45:30Z",
+      "pushed_at": "2026-11-27T12:27:45Z",
       "updated_at": "2026-11-12T12:18:38Z",
       "archived": false,
       "fork": false,
@@ -295,13 +443,30 @@
             "html_url": "https://github.com/vlT-vl/nxget.packages/tree/api/scripts"
           },
           {
-            "sha": "b1ffb4c04de555f97e6a3b5697430f5060f7af30",
+            "sha": "00e506b5c1837f771c8d08c366843dc685451f95",
             "name": "v1",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/nxget.packages/tree/api/v1"
           }
         ],
         "commits": [
+          {
+            "sha": "245ce63319037c68a08b649932549ea32a92c32f",
+            "html_url": "https://github.com/vlT-vl/nxget.packages/commit/245ce63319037c68a08b649932549ea32a92c32f",
+            "commit": {
+              "message": "chore: update releases.json",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-27T12:27:44Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-27T12:27:44Z"
+              }
+            }
+          },
           {
             "sha": "1156c98cfbbf995f6358a015350ee9bdd7833a68",
             "html_url": "https://github.com/vlT-vl/nxget.packages/commit/1156c98cfbbf995f6358a015350ee9bdd7833a68",
@@ -369,23 +534,6 @@
                 "date": "2026-11-25T19:19:36Z"
               }
             }
-          },
-          {
-            "sha": "f5240203482e2923b545d5261bf46c4b583c6070",
-            "html_url": "https://github.com/vlT-vl/nxget.packages/commit/f5240203482e2923b545d5261bf46c4b583c6070",
-            "commit": {
-              "message": "feat: add bambu-studio, anycubic-slicer-next and ohmygame manifests",
-              "author": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2026-11-25T15:49:28Z"
-              },
-              "committer": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "vlt.vltech@gmail.com",
-                "date": "2026-11-25T15:59:15Z"
-              }
-            }
           }
         ],
         "release": null
@@ -401,7 +549,7 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "watchers_count": 0,
-      "size": 4388,
+      "size": 4524,
       "topics": [],
       "license": {
         "key": "other",
@@ -410,7 +558,7 @@
         "url": null,
         "node_id": "MDc6TGljZW5zZTA="
       },
-      "pushed_at": "2026-11-26T23:27:18Z",
+      "pushed_at": "2026-11-27T06:23:01Z",
       "updated_at": "2026-11-12T10:09:40Z",
       "archived": false,
       "fork": false,
@@ -476,7 +624,7 @@
             "html_url": "https://github.com/vlT-vl/vlt-website/blob/sourcecode/package.json"
           },
           {
-            "sha": "c0ba567e1b97d215c0e807b213de1e2187e677c3",
+            "sha": "3aee448f0b3853c8c7a80cc2df16b74a1900a852",
             "name": "public",
             "type": "dir",
             "html_url": "https://github.com/vlT-vl/vlt-website/tree/sourcecode/public"
@@ -501,6 +649,23 @@
           }
         ],
         "commits": [
+          {
+            "sha": "ab275ac17a45648fe3302712d434c1d22c084b6e",
+            "html_url": "https://github.com/vlT-vl/vlt-website/commit/ab275ac17a45648fe3302712d434c1d22c084b6e",
+            "commit": {
+              "message": "chore: aggiorna projects.json, posts.json e credly.json [skip ci]",
+              "author": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-27T06:23:00Z"
+              },
+              "committer": {
+                "name": "github-actions[bot]",
+                "email": "github-actions[bot]@users.noreply.github.com",
+                "date": "2026-11-27T06:23:00Z"
+              }
+            }
+          },
           {
             "sha": "9883542b46cffb5cb4e8564061ac87e8afcc2133",
             "html_url": "https://github.com/vlT-vl/vlt-website/commit/9883542b46cffb5cb4e8564061ac87e8afcc2133",
@@ -566,23 +731,6 @@
                 "name": "github-actions[bot]",
                 "email": "github-actions[bot]@users.noreply.github.com",
                 "date": "2026-11-25T22:54:51Z"
-              }
-            }
-          },
-          {
-            "sha": "1ca50ecd9ed71027d2921b8d7d24296988d877c6",
-            "html_url": "https://github.com/vlT-vl/vlt-website/commit/1ca50ecd9ed71027d2921b8d7d24296988d877c6",
-            "commit": {
-              "message": "chore: aggiorna projects.json, posts.json e credly.json [skip ci]",
-              "author": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-25T13:49:25Z"
-              },
-              "committer": {
-                "name": "github-actions[bot]",
-                "email": "github-actions[bot]@users.noreply.github.com",
-                "date": "2026-11-25T13:49:25Z"
               }
             }
           }
@@ -770,137 +918,6 @@
                 "name": "Veronesi Lorenzo | vlT",
                 "email": "vlt.vltech@gmail.com",
                 "date": "2026-10-02T15:23:02Z"
-              }
-            }
-          }
-        ],
-        "release": null
-      }
-    },
-    {
-      "id": 1471873499,
-      "name": "pmxtools-website",
-      "full_name": "vlT-vl/pmxtools-website",
-      "html_url": "https://github.com/vlT-vl/pmxtools-website",
-      "description": "pmxtools website (published build)",
-      "language": "HTML",
-      "stargazers_count": 0,
-      "forks_count": 0,
-      "watchers_count": 0,
-      "size": 243,
-      "topics": [],
-      "license": null,
-      "pushed_at": "2026-11-25T16:10:54Z",
-      "updated_at": "2026-11-25T15:16:04Z",
-      "archived": false,
-      "fork": false,
-      "homepage": null,
-      "has_pages": true,
-      "readmeHtml": null,
-      "readmeImage": null,
-      "pagesUrl": "http://pmxtools.it/",
-      "dash": {
-        "languages": {
-          "HTML": 841
-        },
-        "contents": [
-          {
-            "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
-            "name": ".nojekyll",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/.nojekyll"
-          },
-          {
-            "sha": "3aef2d80019219e428daee56f763908aeea5fabe",
-            "name": "CNAME",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/CNAME"
-          },
-          {
-            "sha": "0f8db3ca9a1f88acdd7a67915347afa9c1e5e1bf",
-            "name": "assets",
-            "type": "dir",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/tree/production/assets"
-          },
-          {
-            "sha": "a3e745b84095f98863ceb43fa4cfb41c85735cce",
-            "name": "favicon.svg",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/favicon.svg"
-          },
-          {
-            "sha": "8d5c545b7a550df53a0a74d144076276d59c51af",
-            "name": "index.html",
-            "type": "file",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/blob/production/index.html"
-          }
-        ],
-        "commits": [
-          {
-            "sha": "56a1c553171d5500e722809f43d1b5719034dceb",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/56a1c553171d5500e722809f43d1b5719034dceb",
-            "commit": {
-              "message": "Deploy 7ef38186d5d3821ef90b4bff826a294cf59fbf4c",
-              "author": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "57793867+vlT-vl@users.noreply.github.com",
-                "date": "2026-11-25T16:10:53Z"
-              },
-              "committer": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "57793867+vlT-vl@users.noreply.github.com",
-                "date": "2026-11-25T16:10:53Z"
-              }
-            }
-          },
-          {
-            "sha": "fffc3bd2ddc4ef3a56e03a02f2d4462b7ca9beb2",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/fffc3bd2ddc4ef3a56e03a02f2d4462b7ca9beb2",
-            "commit": {
-              "message": "Deploy a3adc3680a73e868c59d521b67d75ecb578f5298",
-              "author": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "57793867+vlT-vl@users.noreply.github.com",
-                "date": "2026-11-25T15:15:57Z"
-              },
-              "committer": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "57793867+vlT-vl@users.noreply.github.com",
-                "date": "2026-11-25T15:15:57Z"
-              }
-            }
-          },
-          {
-            "sha": "b512d8e44ad066f95fc5e1af12ac61c0ccac6277",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/b512d8e44ad066f95fc5e1af12ac61c0ccac6277",
-            "commit": {
-              "message": "Create CNAME",
-              "author": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "57793867+vlT-vl@users.noreply.github.com",
-                "date": "2026-11-25T14:13:03Z"
-              },
-              "committer": {
-                "name": "GitHub",
-                "email": "noreply@github.com",
-                "date": "2026-11-25T14:13:03Z"
-              }
-            }
-          },
-          {
-            "sha": "e8ee445a845b26aa801b06f30a089147ffd3a7d9",
-            "html_url": "https://github.com/vlT-vl/pmxtools-website/commit/e8ee445a845b26aa801b06f30a089147ffd3a7d9",
-            "commit": {
-              "message": "Initial commit",
-              "author": {
-                "name": "Veronesi Lorenzo | vlT",
-                "email": "57793867+vlT-vl@users.noreply.github.com",
-                "date": "2026-11-25T14:12:52Z"
-              },
-              "committer": {
-                "name": "GitHub",
-                "email": "noreply@github.com",
-                "date": "2026-11-25T14:12:52Z"
               }
             }
           }
